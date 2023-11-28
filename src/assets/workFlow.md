@@ -1,4 +1,4 @@
-![Ehsan@sh](./Favicon.ico)
+![Ehsan@sh](../../public/Favicon.ico)
 
 ## Overview
 This document outlines the development steps for a single-page React application, designed as a web developer's portfolio to showcase work and skills to potential employers.
