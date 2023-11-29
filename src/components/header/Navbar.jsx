@@ -13,6 +13,8 @@ import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 import MenuIcon from '@mui/icons-material/Menu';
+import { useScrollTrigger } from '@mui/material';
+import { Slide } from '@mui/material';
 // ============================================================
 
 // Styling the component
@@ -29,42 +31,45 @@ const Link = styled(RouterLink)`
 // Creating the component
 // ============================================================
 const Navbar = () => {
+    const trigger = useScrollTrigger();
     return (
 
         <Box sx={{ flexGrow: 1 }}>
-            <AppBar position="static">
-                <Toolbar>
-                    <IconButton
-                        size="large"
-                        edge="start"
-                        color="inherit"
-                        aria-label="menu"
-                        sx={{ mr: 2 }}
-                    >
-                        <MenuIcon />
-                    </IconButton>
-                    <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-                        <Link to="/" style={{ textDecoration: 'none' }}>
+            <Slide appear={false} direction="down" in={!trigger}>
+                <AppBar position="static">
+                    <Toolbar>
+                        <IconButton
+                            size="large"
+                            edge="start"
+                            color="inherit"
+                            aria-label="menu"
+                            sx={{ mr: 2 }}
+                        >
+                            <MenuIcon />
+                        </IconButton>
+                        <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+                            <Link to="/" style={{ textDecoration: 'none' }}>
                             About
-                        </Link>
-                    </Typography>
-                    <Button color="inherit">
-                        <Link to="/portfolio" style={{ textDecoration: 'none' }}>
+                            </Link>
+                        </Typography>
+                        <Button color="inherit">
+                            <Link to="/portfolio" style={{ textDecoration: 'none' }}>
                             Portfolio
-                        </Link>
-                    </Button>
-                    <Button color="inherit">
-                        <Link to="/contact" style={{ textDecoration: 'none' }}>
+                            </Link>
+                        </Button>
+                        <Button color="inherit">
+                            <Link to="/contact" style={{ textDecoration: 'none' }}>
                             Contact
-                        </Link>
-                    </Button>
-                    <Button color="inherit">
-                        <Link to="/resume" style={{ textDecoration: 'none' }}>
+                            </Link>
+                        </Button>
+                        <Button color="inherit">
+                            <Link to="/resume" style={{ textDecoration: 'none' }}>
                             Resume
-                        </Link>
-                    </Button>
-                </Toolbar>
-            </AppBar>
+                            </Link>
+                        </Button>
+                    </Toolbar>
+                </AppBar>
+            </Slide>
         </Box>
 
     );
