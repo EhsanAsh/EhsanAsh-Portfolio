@@ -19,15 +19,15 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 // ============================================================
 import App from './App.jsx';
 import About from './pages/About.jsx';
-import Contact from './pages/Contact.jsx';
-import Portfolio from './pages/Portfolio.jsx';
-import Resume from './pages/Resume.jsx';
+// import Contact from './pages/Contact.jsx';
+// import Portfolio from './pages/Portfolio.jsx';
+// import Resume from './pages/Resume.jsx';
 import Error from './pages/Error.jsx';
 // ============================================================
 
 // Importing custom Styles and Utils
 // ============================================================
-import './index.css';
+// import './index.css';
 import theme from './utils/theme.js';
 // ============================================================
 
@@ -51,18 +51,18 @@ const routes = [
                 index: true,
                 element: <About />,
             },
-            {
-                path: '/portfolio',
-                element: <Portfolio />,
-            },
-            {
-                path: '/resume',
-                element: <Resume />,
-            },
-            {
-                path: '/contact',
-                element: <Contact />,
-            },
+            // {
+            //     path: '/portfolio',
+            //     element: <Portfolio />,
+            // },
+            // {
+            //     path: '/resume',
+            //     element: <Resume />,
+            // },
+            // {
+            //     path: '/contact',
+            //     element: <Contact />,
+            // },
             {
                 path: '*',
                 element: <Error message='Sorry, the page you requested could not be found.' />,
