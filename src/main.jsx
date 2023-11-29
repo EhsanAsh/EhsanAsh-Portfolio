@@ -9,9 +9,6 @@
 // Importing libraries
 // ============================================================
 import { createRoot } from 'react-dom/client';
-// CssBaseline kickstart an elegant, consistent, and simple baseline to build upon.
-import CssBaseline from '@mui/material/CssBaseline';
-import { ThemeProvider } from '@mui/material/styles';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 // ============================================================
 
@@ -23,12 +20,6 @@ import About from './pages/About.jsx';
 // import Portfolio from './pages/Portfolio.jsx';
 // import Resume from './pages/Resume.jsx';
 import Error from './pages/Error.jsx';
-// ============================================================
-
-// Importing custom Styles and Utils
-// ============================================================
-// import './index.css';
-import theme from './utils/theme.js';
 // ============================================================
 
 // Importing fontsource
@@ -83,9 +74,8 @@ const root = createRoot(rootElement);
 // Rendering the app
 // ============================================================
 root.render(
-    <ThemeProvider theme={theme}>
-        <CssBaseline />
-        <RouterProvider router={router} />
-    </ThemeProvider>,
+    <RouterProvider router={router}>
+        <App />
+    </RouterProvider>,
 );
 // ============================================================
