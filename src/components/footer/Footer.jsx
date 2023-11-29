@@ -3,7 +3,7 @@
 
 // Importing Material UI components
 // ============================================================
-import { makeStyles } from '@material-ui/core/styles';
+import { makeStyles } from '@mui/system';
 import Typography from '@material-ui/core/Typography';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';

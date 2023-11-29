@@ -4,7 +4,7 @@
 
 // Importing React and other important libraries
 // ============================================================
-import { makeStyles } from '@mui/styles';
+import { makeStyles } from '@mui/system';
 import { Box, Typography } from '@mui/material';
 import { Card } from '@mui/material';
 import { CardContent } from '@mui/material';
