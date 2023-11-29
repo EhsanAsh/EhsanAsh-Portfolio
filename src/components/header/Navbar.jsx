@@ -15,10 +15,6 @@ import Typography from '@mui/material/Typography';
 import MenuIcon from '@mui/icons-material/Menu';
 // ============================================================
 
-// Importing components
-// ============================================================
-// ============================================================
-
 // Styling the component
 // ============================================================
 const Link = styled(RouterLink)`

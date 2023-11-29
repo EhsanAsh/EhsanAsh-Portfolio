@@ -3,6 +3,9 @@
 // (https://github.com/mui/material-ui/tree/master/examples/material-ui-vite)
 // ============================================================
 
+// TODO: Check the index.css Delete if not needed
+// TODO: Add Style
+
 // Importing libraries
 // ============================================================
 import { createRoot } from 'react-dom/client';
