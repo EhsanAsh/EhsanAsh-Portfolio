@@ -1,16 +1,26 @@
 // This file is for the About page, and it is a functional component. It is a simple page that displays a short description of the website and the developer. An image of the developer is also displayed. The image is a link to the developer's LinkedIn profile and displayed as a card. the image is inside the assets folder. the image and description, both are animated and they are all done using Material UI. The code for this page is shown below:
 // ============================================================
-// TODO: Move useStyles to hooks
+// TODO: remove unused stuff
+// TODO: move style to another file
+// TODO: modify theme in the theme file
+// TODO: modify mediaStyled and Avatar
+
+// Importing images
+// ============================================================
+import ehsan from '../assets/image/ehsan.jpg';
+// ============================================================
 
 // Importing React and other important libraries
 // ============================================================
-import { makeStyles } from '@mui/system';
-import { Box, Typography } from '@mui/material';
+import { styled } from '@mui/system';
+import { Link } from '@mui/material';
+import { Typography } from '@mui/material';
 import { Card } from '@mui/material';
 import { CardContent } from '@mui/material';
 import { CardMedia } from '@mui/material';
 import { Grid } from '@mui/material';
-import { Container } from '@mui/material';
+// import { Avatar } from '@mui/material';
+import { Icon } from '@mui/material';
 import { Grow } from '@mui/material';
 import { Paper } from '@mui/material';
 import { Divider } from '@mui/material';
@@ -21,76 +31,85 @@ import { LinkedIn } from '@mui/icons-material';
 import { Twitter } from '@mui/icons-material';
 import { IconButton } from '@mui/material';
 import { Tooltip } from '@mui/material';
-// import { useMediaQuery } from '@mui/material';
-import { useScrollPosition } from '@mui/material';
 import { useEffect } from 'react';
 import { useState } from 'react';
-// import { useLocation } from 'react-router-dom';
-// import { useHistory } from 'react-router-dom';
-// import { useRouteMatch } from 'react-router-dom';
 // ============================================================
 
-// Importing images
+// Creating Styled Components
 // ============================================================
-import ehsan from '../assets/image/ehsan.jpg';
-// ============================================================
+const Root = styled('div')(({ theme }) => ({
+    flexGrow: 1,
+    backgroundColor: theme.palette.background.paper,
+}));
 
-// Importing Material UI icons
-// ============================================================
-// import { ExpandMore } from '@mui/icons-material';
+const Main = styled('div')({
+    marginTop: '100px',
+    marginBottom: '100px',
+});
+
+const StyledCard = styled(Card)({
+    maxWidth: 345,
+});
+
+const StyledMedia = styled(CardMedia)({
+    height: 300,
+});
+
+// const StyledAvatar = styled(Avatar)(({ theme }) => ({
+//     width: theme.spacing(20),
+//     height: theme.spacing(30),
+// }));
+
+const StyledPaper = styled(Paper)(({ theme }) => ({
+    padding: theme.spacing(2),
+    textAlign: 'center',
+    color: theme.palette.text.secondary,
+}));
+
+const StyledDivider = styled(Divider)({
+    marginTop: '20px',
+    marginBottom: '20px',
+});
+
+const Title = styled(Typography)({
+    marginTop: '20px',
+    marginBottom: '20px',
+});
+
+const StyledButton = styled(Button)({
+    marginTop: '20px',
+    marginBottom: '20px',
+});
+
+const StyledIcon = styled(Icon)({
+    marginRight: '10px',
+});
+
+const StyledLink = styled(Link)({
+    textDecoration: 'none',
+});
 // ============================================================
 
 // Functional component
 // ============================================================
-const useStyles = makeStyles((theme) => ({
-    root: {
-        flexGrow: 1,
-        backgroundColor: theme.palette.background.paper,
-    },
-    main: {
-        marginTop: '100px',
-        marginBottom: '100px',
-    },
-    card: {
-        maxWidth: 345,
-    },
-    media: {
-        height: 300,
-    },
-    avatar: {
-        width: theme.spacing(20),
-        height: theme.spacing(20),
-    },
-    paper: {
-        padding: theme.spacing(2),
-        textAlign: 'center',
-        color: theme.palette.text.secondary,
-    },
-    divider: {
-        marginTop: '20px',
-        marginBottom: '20px',
-    },
-    title: {
-        marginTop: '20px',
-        marginBottom: '20px',
-    },
-    button: {
-        marginTop: '20px',
-        marginBottom: '20px',
-    },
-    icon: {
-        marginRight: '10px',
-    },
-    link: {
-        textDecoration: 'none',
-    },
-}));
-
 const About = () => {
-    const classes = useStyles();
     // const matches = useMediaQuery(theme.breakpoints.up('md'));
     const [checked, setChecked] = useState(false);
     const GROW_TIMEOUT = 1000;
+    useEffect(() => {
+        setChecked(true);
+    }, []);
+    // const { y } = useScroll();
+    // Show a back to top button when the user has scrolled down 100px or more
+    // const [showBackToTop, setShowBackToTop] = useState(false);
+
+    // useEffect(() => {
+    //     if (y > 100) {
+    //         setShowBackToTop(true);
+    //     } else {
+    //         setShowBackToTop(false);
+    //     }
+    // }, [y]);
     const socialLinks = [
         {
             name: 'Github',
@@ -108,31 +127,15 @@ const About = () => {
             icon: <Twitter />,
         },
     ];
-    // const location = useLocation();
-    // const history = useHistory();
-    // const match = useRouteMatch('/about');
-
-    useEffect(() => {
-        setChecked(true);
-    }, []);
-
-    useScrollPosition(({ prevPos, currPos }) => {
-        if (currPos.y < -100) {
-            setChecked(true);
-        } else {
-            setChecked(false);
-        }
-    });
 
     return (
-        <Box>
-            <Container className={classes.main}>
+        <Root>
+            <Main>
                 <Grid container spacing={3}>
                     <Grid item xs={12} md={6}>
                         <Grow in={checked} {...(checked ? { timeout: GROW_TIMEOUT } : {})}>
-                            <Card className={classes.card}>
-                                <CardMedia
-                                    className={classes.media}
+                            <StyledCard>
+                                <StyledMedia
                                     image={ehsan}
                                     title="Ehsan Ashrafipour Portfolio"
                                     alt="Author of this website"
@@ -154,14 +157,13 @@ const About = () => {
                                         <Tooltip title={link.name} key={link.name}>
                                             <IconButton
                                                 onClick={() => window.open(link.url)}
-                                                className={classes.icon}
                                             >
-                                                {link.icon}
+                                                <StyledIcon>{link.icon}</StyledIcon>
                                             </IconButton>
                                         </Tooltip>
                                     ))}
                                 </CardActions>
-                            </Card>
+                            </StyledCard>
                         </Grow>
                     </Grid>
 
@@ -170,15 +172,14 @@ const About = () => {
                             in={checked}
                             {...(checked ? { timeout: 1000 } : {})}
                         >
-                            <Paper elevation={3} className={classes.paper}>
-                                <Typography
+                            <StyledPaper elevation={3}>
+                                <Title
                                     variant="h4"
                                     component="div"
-                                    className={classes.title}
                                 >
                                     About
-                                </Typography>
-                                <Divider className={classes.divider} />
+                                </Title>
+                                <StyledDivider />
                                 <Typography variant="body2" color="text.secondary">
                                     This website is a portfolio website. It is a simple website
                                     that displays the developer&apos;s projects. It is a full stack
@@ -188,26 +189,25 @@ const About = () => {
                                     on Heroku. The code for this website is available on
                                     GitHub. The link to the GitHub repository is given below.
                                 </Typography>
-                                <Button
-                                    variant="contained"
-                                    className={classes.button}
-                                    onClick={() => {
-                                        window.open(
-                                            socialLinks[0].url,
-                                        );
-                                    }
-                                    }
-                                >
-                                    <GitHub className={classes.socialLinks[0].icon} />
-                                      GitHub
-                                </Button>
-                            </Paper>
+                                <StyledLink href={socialLinks[0].url} target="_blank">
+                                    <StyledButton variant="contained">
+                                        <GitHub />
+                                            GitHub
+                                    </StyledButton>
+                                </StyledLink>
+                            </StyledPaper>
                         </Grow>
                     </Grid>
                 </Grid>
-            </Container>
-        </Box>
+                {/* {showBackToTop && (
+                    <button onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
+                            Back to top
+                    </button>
+                )} */}
+            </Main>
+        </Root>
     );
+
 };
 // ============================================================
 
