@@ -1,35 +1,47 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+// Desc: This is the App component. It is the root component of the app.
+// ============================================================
+// TODO: Add a Box component to the App component
+// TODO: Add a Container component to the App component
+// TODO: Add style
+// TODO: States, Props, and Hooks
 
-function App() {
-  const [count, setCount] = useState(0)
+// Importing modules
+// ============================================================
+import { Outlet } from 'react-router-dom';
+// CssBaseline kickstart an elegant, consistent, and simple baseline to build upon.
+import CssBaseline from '@mui/material/CssBaseline';
+import { ThemeProvider } from '@mui/material/styles';
+// ============================================================
 
-  return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
-}
+// Importing custom Styles and Utils
+// ============================================================
+// import './index.css';
+import theme from './utils/theme.js';
+// ============================================================
 
-export default App
+// Importing components
+// ============================================================
+import Header from './components/header/Header';
+import Footer from './components/footer/Footer';
+// ============================================================
+
+// Creating the component
+// ============================================================
+const App = () => {
+    return (
+
+        <ThemeProvider theme={theme}>
+            <CssBaseline />
+            <Header />
+            <Outlet />
+            <Footer />
+        </ThemeProvider>
+
+    );
+};
+// ============================================================
+
+// Exporting the component
+// ============================================================
+export default App;
+// ============================================================
