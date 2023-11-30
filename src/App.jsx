@@ -15,6 +15,11 @@ import CssBaseline from '@mui/material/CssBaseline';
 import { ThemeProvider } from '@mui/material/styles';
 // ============================================================
 
+// Importing styles
+// ============================================================
+import './App.css';
+// ============================================================
+
 // Importing Theme
 // ============================================================
 import theme from './utils/theme.js';
