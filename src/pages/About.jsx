@@ -4,6 +4,7 @@
 // TODO: move style to another file
 // TODO: modify theme in the theme file
 // TODO: modify mediaStyled and Avatar
+// TODO: check onClicks and maybe move them in another js file
 
 // Importing images
 // ============================================================
