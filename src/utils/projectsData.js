@@ -30,7 +30,7 @@ const projectsData = [
         description:
             'TravIS is a web-based application designed to simplify travel itinerary management for frequent travelers.',
         image: TravIS,
-        deployed: 'https://uoftgroup3.github.io/toronto-newcomers-guide/',
+        deployed: 'https://travis231017-9762a24c277b.herokuapp.com/',
         github: 'https://github.com/EhsanAsh/TravIs',
     },
 
@@ -40,7 +40,7 @@ const projectsData = [
         description:
             'Welcome to the Toronto Newcomers\' Guide! This platform is crafted specifically for newcomers to the Greater Toronto Area (GTA). The guide aims to provide you with valuable information to ease your transition and adaptation to your new environment.',
         image: TNG,
-        deployed: 'https://ehsan-burger-logger.herokuapp.com/',
+        deployed: 'https://uoftgroup3.github.io/toronto-newcomers-guide/',
         github: 'https://github.com/EhsanAsh/toronto-newcomers-guide',
     },
 
