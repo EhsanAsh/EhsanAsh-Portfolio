@@ -1,9 +1,10 @@
-// This file is for the About page, and it is a functional component. It is a simple page that displays a short description of the website and the developer. An image of the developer is also displayed. The image is a link to the developer's LinkedIn profile and displayed as a card. the image is inside the assets folder. the image and description, both are animated and they are all done using Material UI. The code for this page is shown below:
+// This file is for the About page, and it is a functional component. It is a simple page that displays a short description of the website and the developer. An image of the developer is also displayed. The image is a link to the developer's LinkedIn profile and displayed as a card.
 // ============================================================
 // TODO: remove unused stuff
 // TODO: move style to another file
 // TODO: modify theme in the theme file
 // TODO: modify mediaStyled and Avatar
+// TODO: check onClicks and maybe move them in another js file
 
 // Importing images
 // ============================================================
@@ -33,6 +34,7 @@ import { IconButton } from '@mui/material';
 import { Tooltip } from '@mui/material';
 import { useEffect } from 'react';
 import { useState } from 'react';
+import { Link as MuiLink } from '@mui/material';
 // ============================================================
 
 // Creating Styled Components
@@ -135,11 +137,13 @@ const About = () => {
                     <Grid item xs={12} md={6}>
                         <Grow in={checked} {...(checked ? { timeout: GROW_TIMEOUT } : {})}>
                             <StyledCard>
-                                <StyledMedia
-                                    image={ehsan}
-                                    title="Ehsan Ashrafipour Portfolio"
-                                    alt="Author of this website"
-                                />
+                                <MuiLink href="https://www.linkedin.com/in/ehsan-ashrafipour-922056245/" target="_blank">
+                                    <StyledMedia
+                                        image={ehsan}
+                                        title="Click to view my LinkedIn profile"
+                                        alt="Author of this website"
+                                    />
+                                </MuiLink>
                                 <CardContent>
                                     <Typography gutterBottom variant="h5" component="div">
                                         Ehsan Ashrafipour

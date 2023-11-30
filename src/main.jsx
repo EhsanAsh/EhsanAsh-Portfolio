@@ -1,6 +1,4 @@
 //Desc: Entry point of the app
-// used the following repo as reference for the CssBaseline:
-// (https://github.com/mui/material-ui/tree/master/examples/material-ui-vite)
 // ============================================================
 
 // TODO: Check the index.css Delete if not needed
@@ -17,7 +15,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import App from './App.jsx';
 import About from './pages/About.jsx';
 // import Contact from './pages/Contact.jsx';
-// import Portfolio from './pages/Portfolio.jsx';
+import Portfolio from './pages/Portfolio.jsx';
 // import Resume from './pages/Resume.jsx';
 import Error from './pages/Error.jsx';
 // ============================================================
@@ -42,10 +40,10 @@ const routes = [
                 index: true,
                 element: <About />,
             },
-            // {
-            //     path: '/portfolio',
-            //     element: <Portfolio />,
-            // },
+            {
+                path: '/portfolio',
+                element: <Portfolio />,
+            },
             // {
             //     path: '/resume',
             //     element: <Resume />,
