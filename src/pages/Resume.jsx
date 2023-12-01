@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 // Desc: This file contains the code for the resume page. the list component is imported from src/components/resume/List.jsx and the MyDocument component is imported from src/components/resume/MyDocument.jsx. the list component is used to display the skills and the MyDocument component is used to download the resume in pdf format.
 // to create a download link for the resume page I used the following resources:
 // https://react-pdf.org/advanced.
@@ -27,7 +28,7 @@ import { FaDownload } from 'react-icons/fa';
 
 // Import react-router-dom package
 // =========================================================
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 // =========================================================
 
 // Import react and material UI components and styling packages
@@ -44,14 +45,13 @@ import { Grow } from '@mui/material';
 const StyledBox = styled(Box)({
     display: 'flex',
     flexDirection: 'column',
-    alignItems: 'center',
-    justifyContent: 'center',
-    height: '100vh',
+    justifyContent: 'flex-start',
+    height: 'auto',
 });
 
 const StyledButton = styled(Button)({
     marginTop: '1rem',
-    width: '10rem',
+    width: '30%',
     height: '3rem',
     fontSize: '1.2rem',
 });
@@ -60,16 +60,29 @@ const StyledButton = styled(Button)({
 // Creating the Resume component:
 // =========================================================
 const Resume = () => {
+
+    const navigate = useNavigate();
+
+    const handleClick = () => {
+        navigate('/resume');
+    };
+
     return (
+
         <StyledBox>
-            <Typography variant="h3" sx={{ textAlign: 'center' }}>Resume</Typography>
-            <Grow in={true} timeout={1000}>
-                <ListComponent />
-            </Grow>
+            <Typography variant="h3" sx={{ textAlign: 'center' }}>
+                Resume
+            </Typography>
             <PDFDownloadLink document={<MyDocument />} fileName="resume.pdf">
-                {({ blob, url, loading, error }) => (loading ? 'Loading document...' : <StyledButton variant="contained" endIcon={<FaDownload />} component={Link} to="/resume">Download Developer Resume</StyledButton>)}
+                {({ blob, url, loading, error }) => (loading ? 'Loading document...' : <StyledButton variant="contained" endIcon={<FaDownload />} onClick={handleClick}>Download Developer Resume</StyledButton>)}
             </PDFDownloadLink>
+            <Grow in={true} timeout={1000}>
+                <div>
+                    <ListComponent />
+                </div>
+            </Grow>
         </StyledBox>
+
     );
 };
 // =========================================================

@@ -1,4 +1,4 @@
-// Desc: This file contains the code for MyDocument component which will be used in the resume page inside the PDFDownloadLink component document prop to download the resume in pdf format.
+// Desc: This file contains the code for MyDocument component which will be used in the resume page inside the PDFDownloadLink component document prop. All styles and configurations are related to the document that will be downloaded as the developer's Resume
 // for this file I used the following resources:
 // https://react-pdf.org/advanced.
 // https://www.npmjs.com/package/@react-pdf/renderer
@@ -30,10 +30,10 @@ const MyDocument = () => (
     <Document>
         <Page size="A4" style={styles.page}>
             <View style={styles.section}>
-                <Text>Section #1</Text>
+                <Text>Ehsan Ashrafipour</Text>
             </View>
             <View style={styles.section}>
-                <Text>Section #2</Text>
+                <Text>Still working on it</Text>
             </View>
         </Page>
     </Document>
