@@ -1,6 +1,26 @@
 // Desc: This file exports title and item data for the list component. There are two titles: Front - end Proficiency and Back - end Proficiency.
 // =================================================================
 
+// Importing packages
+// =================================================================
+import {
+    faHtml5,
+    faCss3Alt,
+    faJsSquare,
+    faBootstrap,
+    faReact,
+    faNodeJs
+}
+    from '@fortawesome/free-brands-svg-icons';
+import {
+    faCode,
+    faMobileAlt,
+    faServer,
+    faDatabase
+}
+    from '@fortawesome/free-solid-svg-icons';
+// =================================================================
+
 // Defining the data
 // =================================================================
 const frontEnd = {
@@ -8,52 +28,52 @@ const frontEnd = {
     items: [
         {
             name: 'HTML',
-            icon: 'fab fa-html5',
+            icon: faHtml5,
             color: '#e34f26',
         },
         {
             name: 'CSS',
-            icon: 'fab fa-css3-alt',
+            icon: faCss3Alt,
             color: '#264de4',
         },
         {
             name: 'JavaScript',
-            icon: 'fab fa-js-square',
+            icon: faJsSquare,
             color: '#f7df1e',
         },
         {
             name: 'jQuery',
-            icon: 'fas fa-code',
+            icon: faCode,
             color: '#0769ad',
         },
         {
             name: 'Bootstrap',
-            icon: 'fab fa-bootstrap',
+            icon: faBootstrap,
             color: '#563d7c',
         },
         {
             name: 'Material UI',
-            icon: 'fab fa-react',
+            icon: faReact,
             color: '#0081CB',
         },
         {
             name: 'Responsive Design',
-            icon: 'fas fa-mobile-alt',
+            icon: faMobileAlt,
             color: '#000000',
         },
         {
             name: 'PWA',
-            icon: 'fas fa-mobile-alt',
+            icon: faMobileAlt,
             color: '#000000',
         },
         {
             name: 'React',
-            icon: 'fab fa-react',
+            icon: faReact,
             color: '#61DBFB',
         },
         {
             name: 'Redux',
-            icon: 'fab fa-react',
+            icon: faReact,
             color: '#764abc',
         },
     ],
@@ -64,47 +84,47 @@ const backEnd = {
     items: [
         {
             name: 'Node.js',
-            icon: 'fab fa-node-js',
+            icon: faNodeJs,
             color: '#68a063',
         },
         {
             name: 'Express',
-            icon: 'fas fa-server',
+            icon: faServer,
             color: '#000000',
         },
         {
             name: 'MongoDB',
-            icon: 'fas fa-database',
+            icon: faDatabase,
             color: '#47a248',
         },
         {
             name: 'MySQL and Sequelize',
-            icon: 'fas fa-database',
+            icon: faDatabase,
             color: '#4479a1',
         },
         {
             name: 'RESTful APIs',
-            icon: 'fas fa-server',
+            icon: faServer,
             color: '#000000',
         },
         {
             name: 'GraphQL',
-            icon: 'fas fa-server',
+            icon: faServer,
             color: '#e535ab',
         },
         {
             name: 'Apollo',
-            icon: 'fas fa-server',
+            icon: faServer,
             color: '#000000',
         },
         {
             name: 'JWT',
-            icon: 'fas fa-server',
+            icon: faServer,
             color: '#000000',
         },
         {
             name: 'MERN Stack',
-            icon: 'fas fa-server',
+            icon: faServer,
             color: '#000000',
         },
     ],
