@@ -5,12 +5,11 @@
 // https://www.emailjs.com/docs/
 // ===================================================
 
-// Importing Validation function
+// Importing Validation function and EmailJS
 // ========================================================
 import { validateEmail } from './validation';
 //EmailJS helps to send emails using client-side technologies only
 import emailjs from '@emailjs/browser';
-import 'dotenv/config';
 // ========================================================
 
 // Input handler
