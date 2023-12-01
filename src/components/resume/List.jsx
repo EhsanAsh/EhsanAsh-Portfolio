@@ -16,7 +16,7 @@ import { Grow } from '@mui/material';
 
 // importing the list items
 // =========================================================
-import { frontEnd, backEnd } from '../utils/listData';
+import { frontEnd, backEnd } from '../../utils/listData';
 
 // Creating Styled Components
 // =========================================================
