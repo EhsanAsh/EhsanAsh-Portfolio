@@ -1,9 +1,16 @@
-// Desc: This file contains user input and submit handler for the form component
+// Desc: This file contains user input and submit
+// handler for the form component
+// for this file I have used the following documentations:
+// https://www.npmjs.com/package/@emailjs/browser
+// https://www.emailjs.com/docs/
 // ===================================================
 
 // Importing Validation function
 // ========================================================
 import { validateEmail } from './validation';
+//EmailJS helps to send emails using client-side technologies only
+import emailjs from '@emailjs/browser';
+import 'dotenv/config';
 // ========================================================
 
 // Input handler
@@ -24,7 +31,7 @@ const handleInputChange = (event, setFunctions) => {
 
 // Submit handler
 // ===================================================
-const submitHandler = (event, email, setFunctions) => {
+const submitHandler = (event, email, name, text, setFunctions) => {
 
     event.preventDefault();
 
@@ -33,10 +40,35 @@ const submitHandler = (event, email, setFunctions) => {
         return;
     }
 
-    setFunctions.name('');
-    setFunctions.email('');
-    setFunctions.text('');
-    setFunctions.error('');
+    // setting up the email template
+    const templateParams = {
+        from_name: name,
+        from_email: email,
+        message: text
+    };
+
+    // using emailjs to send email
+    emailjs.send(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+        templateParams,
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+    )
+        .then((response) => {
+            console.log(response.status, response.text);
+            if (response.status === 200) {
+                setFunctions.submitted(true);
+                setFunctions.success('Email sent successfully!');
+            }
+            setFunctions.email('');
+            setFunctions.name('');
+            setFunctions.text('');
+            setFunctions.error('');
+        }, (error) => {
+            console.log(error.text);
+            setFunctions.error('Email failed to send');
+        });
+
 };
 // ===================================================
 

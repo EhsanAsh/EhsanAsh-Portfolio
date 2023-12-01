@@ -21,6 +21,8 @@ const Form = () => {
     const [name, setName] = useState('');
     const [errorMessage, setErrorMessage] = useState('');
     const [text, setText] = useState('');
+    const [isSubmitted, setIsSubmitted] = useState(false);
+    const [successMessage, setSuccessMessage] = useState('');
 
     // Define an object to be sent through onchange
     // method to be used by handleInputChange function.
@@ -29,6 +31,16 @@ const Form = () => {
         text: setText,
         error: setErrorMessage,
         name: setName,
+        success: setSuccessMessage,
+        submitted: setIsSubmitted,
+    };
+
+    // Define a function to be sent through onsubmit
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        submitHandler(event, email, name, text, setFunctions);
+        setIsSubmitted(false);
+        setSuccessMessage('');
     };
 
     return (
@@ -37,9 +49,7 @@ const Form = () => {
 
             <h1>Welcome {name}</h1>
 
-            <form
-                onSubmit={event => submitHandler(event, email, setFunctions)}
-            >
+            <form onSubmit={handleSubmit}>
                 < label htmlFor='email'>Email address:</label>
                 <input
                     id='email'
@@ -76,7 +86,7 @@ const Form = () => {
                     Hello Ehsan. Your Portfolio page looks great!!!
                 </textarea>
 
-                <button type='button'>
+                <button type='submit'>
                     Send
                 </button>
             </form>
@@ -84,6 +94,17 @@ const Form = () => {
             && (
                 <div>
                     <p>{errorMessage}</p>
+                </div>
+            )}
+            {successMessage
+            && (
+                <div>
+                    <p>{successMessage}</p>
+                </div>
+            )}
+            {isSubmitted && (
+                <div>
+                    <p>Form submitted successfully!</p>
                 </div>
             )}
         </div>
