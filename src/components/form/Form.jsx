@@ -60,6 +60,7 @@ const Form = () => {
                     onChange={
                         event => handleInputChange(event, setFunctions)
                     }
+                    required
                 />
 
                 < label htmlFor='name'>Name:</label>
@@ -72,6 +73,7 @@ const Form = () => {
                     onChange={
                         event => handleInputChange(event, setFunctions)
                     }
+                    required
                 />
 
                 < label htmlFor='message'>Message:</label>
@@ -82,6 +84,7 @@ const Form = () => {
                     onChange={
                         event => handleInputChange(event, setFunctions)
                     }
+                    required
                 >
                     Hello Ehsan. Your Portfolio page looks great!!!
                 </textarea>
