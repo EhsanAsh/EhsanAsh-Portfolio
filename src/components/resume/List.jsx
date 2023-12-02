@@ -1,4 +1,6 @@
 // Desc: This file contains the code for the list component which will be used in resume page.
+// to create the list component I used the following resources:
+// https://mui.com/material-ui/react-list/
 // =========================================================
 
 // Import react and material UI components and styling packages
@@ -12,7 +14,8 @@ import {
     Avatar,
     ListItemText,
     Divider,
-    Grow
+    Grow,
+    ListSubheader
 }
     from '@mui/material';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -25,19 +28,21 @@ import { frontEnd, backEnd } from '../../utils/listData';
 // Creating Styled Components
 // =========================================================
 const StyledList = styled(List)({
-    display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'center',
     width: '100%',
     maxWidth: 360,
-    backgroundColor: 'rgba(227, 233, 240, 0.3)',
-    marginTop: '1rem',
+    bgcolor: 'background.paper',
+    position: 'relative',
+    overflow: 'auto',
+    maxHeight: 500,
+    '& ul': { padding: 0 },
+    backgroundColor: 'rgba(227, 233, 240, 0.2)',
+    margin: '3rem',
 });
 
 const StyledListItem = styled(ListItem)({
-    '&&:hover': {
-        backgroundColor: 'transparent !important',
-    },
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'center',
 });
 
 const StyledAvatar = styled(Avatar)(({ theme }) => ({
@@ -57,39 +62,55 @@ const StyledListItemText = styled(ListItemText)({
 // =========================================================
 const ListComponent = () => {
     return (
-        <StyledList>
-            <div>
-                <Typography variant="h6" sx={{ textAlign: 'center' }}>{frontEnd.title}</Typography>
-            </div>
-            <Divider />
-            {/* mapping  through frontEnd items which each item has three properties: name, icon, and color */}
-            {frontEnd.items.map((item) => (
-                <Grow in={true} timeout={1000} key={item.name}>
-                    <StyledListItem>
-                        <ListItemAvatar>
-                            <StyledAvatar sx={{ bgcolor: item.color }}>
-                                <FontAwesomeIcon icon={item.icon} />
-                            </StyledAvatar>
-                        </ListItemAvatar>
-                        <StyledListItemText primary={item.name} />
-                    </StyledListItem>
-                </Grow>
-            ))}
-            <Divider />
-            <Typography variant="h6" sx={{ textAlign: 'center' }}>{backEnd.title}</Typography>
-            <Divider />
-            {/* mapping  through backEnd items which each item has three properties: name, icon, and color */}
-            {backEnd.items.map((item) => (
-                <Grow in={true} timeout={1000} key={item.name}>
-                    <StyledListItem>
-                        <ListItemAvatar>
-                            <StyledAvatar sx={{ bgcolor: item.color }}>
-                                <FontAwesomeIcon icon={item.icon} />
-                            </StyledAvatar>
-                        </ListItemAvatar>
-                        <StyledListItemText primary={item.name} />
-                    </StyledListItem>
-                </Grow>
+        <StyledList subheader={<li />}>
+            {[0].map((sectionId) => (
+                <li key={`section-${sectionId}`}>
+                    <ul>
+                        <ListSubheader>
+                            <Typography variant="h6" sx={{ textAlign: 'center' }}>{frontEnd.title}</Typography>
+                            <Divider />
+                        </ListSubheader>
+                        {/* mapping  through frontEnd items which each item has three properties: name, icon, and color */}
+                        {[0].map((row) => (
+                            <StyledListItem key={`row-${sectionId}-${row}`}>
+                                {frontEnd.items.map((item) => (
+                                    <Grow in={true} timeout={1000} key={item.name}>
+                                        <ListItem>
+                                            <ListItemAvatar>
+                                                <StyledAvatar sx={{ bgcolor: item.color }}>
+                                                    <FontAwesomeIcon icon={item.icon} />
+                                                </StyledAvatar>
+                                            </ListItemAvatar>
+                                            <StyledListItemText primary={item.name} />
+                                        </ListItem>
+                                    </Grow>
+                                ))}
+                            </StyledListItem>
+                        ))}
+                        <ListSubheader>
+                            <Divider />
+                            <Typography variant="h6" sx={{ textAlign: 'center' }}>{backEnd.title}</Typography>
+                            <Divider />
+                        </ListSubheader>
+                        {/* mapping  through backEnd items which each item has three properties: name, icon, and color */}
+                        {[0].map((row) => (
+                            <StyledListItem key={`row-${sectionId}-${row}`}>
+                                {backEnd.items.map((item) => (
+                                    <Grow in={true} timeout={1000} key={item.name}>
+                                        <ListItem>
+                                            <ListItemAvatar>
+                                                <StyledAvatar sx={{ bgcolor: item.color }}>
+                                                    <FontAwesomeIcon icon={item.icon} />
+                                                </StyledAvatar>
+                                            </ListItemAvatar>
+                                            <StyledListItemText primary={item.name} />
+                                        </ListItem>
+                                    </Grow>
+                                ))}
+                            </StyledListItem>
+                        ))}
+                    </ul>
+                </li>
             ))}
         </StyledList>
     );
