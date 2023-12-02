@@ -2,10 +2,6 @@
 // used the following repo as reference for the CssBaseline:
 // (https://github.com/mui/material-ui/tree/master/examples/material-ui-vite)
 // ============================================================
-// TODO: Add a Box component to the App component
-// TODO: Add a Container component to the App component
-// TODO: Add style
-// TODO: States, Props, and Hooks
 
 // Importing modules
 // ============================================================

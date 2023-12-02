@@ -1,9 +1,6 @@
 //Desc: Entry point of the app
 // ============================================================
 
-// TODO: Check the index.css Delete if not needed
-// TODO: Add Style
-
 // Importing libraries
 // ============================================================
 import { createRoot } from 'react-dom/client';

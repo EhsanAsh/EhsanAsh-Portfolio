@@ -19,7 +19,7 @@ import Navbar from './Navbar';
 // ============================================================
 const HeaderBox = styled(Box)({
     backgroundColor: '#f0ebd8',
-    color: '#265073',
+    color: '#457b9d',
     padding: '1rem',
 });
 // ============================================================

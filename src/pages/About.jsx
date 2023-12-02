@@ -1,10 +1,5 @@
 // This file is for the About page, and it is a functional component. It is a simple page that displays a short description of the website and the developer. An image of the developer is also displayed. The image is a link to the developer's LinkedIn profile and displayed as a card.
 // ============================================================
-// TODO: remove unused stuff
-// TODO: move style to another file
-// TODO: modify theme in the theme file
-// TODO: modify mediaStyled and Avatar
-// TODO: check onClicks and maybe move them in another js file
 
 // Importing images
 // ============================================================

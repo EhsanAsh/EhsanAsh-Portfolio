@@ -16,7 +16,6 @@ import emailjs from '@emailjs/browser';
 // ===================================================
 const handleInputChange = (event, setFunctions) => {
 
-    // getting the value and name
     const { target } = event;
     const inputType = target.name;
     const inputValue = target.value;

@@ -7,10 +7,6 @@
 // be used to set the state of the projects and to render them to the page.
 // ===============================================================
 
-//TODO: Modify the main theme
-//TODO: Add style
-//TODO: StyledMedia and StyledAvatar
-
 // Importing all necessary packages
 // ===============================================================
 import { useState, useEffect } from 'react';
@@ -77,7 +73,7 @@ const Portfolio = () => {
     return (
         <Root>
             <Main>
-                <Typography variant="h3" sx={{ textAlign: 'center', color:'#f1faee'}} gutterBottom>
+                <Typography variant="h3" sx={{ textAlign: 'center', color:'#457b9d'}} gutterBottom>
                     Projects
                 </Typography>
                 <Grid container spacing={2}>
