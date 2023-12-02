@@ -7,6 +7,9 @@
 import { useState } from 'react';
 import { styled } from '@mui/system';
 import { TextField, Button, Typography, Box } from '@mui/material';
+import { Card} from '@mui/material';
+import EmailIcon from '@mui/icons-material/Email';
+import PhoneIcon from '@mui/icons-material/Phone';
 // ========================================================
 
 // Importing input and submit handler
@@ -68,6 +71,16 @@ const Form = () => {
         margin: '.3rem',
     });
 
+    const StyledCard = styled(Card)({
+        marginTop: '1rem',
+        padding: '1rem',
+        backgroundColor: '#f5f5f5',
+        '&:hover': {
+            backgroundColor: '#ffecd1',
+            transition: 'background-color 0.3s ease',
+        },
+    });
+
     return (
         <StyledBox component="form" onSubmit={handleSubmit} noValidate autoComplete="off">
             <Typography variant="h5" component="h1" sx={{ textAlign: 'center', color: '#457b9d' }}>
@@ -118,6 +131,21 @@ const Form = () => {
             />
 
             <StyledButton type="submit" variant="contained">Send</StyledButton>
+
+            <StyledCard>
+                <Box display="flex" alignItems="center" gap={1}>
+                    <EmailIcon />
+                    <Typography variant="body1">
+                        ehsan.ashrafipour@gmail.com
+                    </Typography>
+                </Box>
+                <Box display="flex" alignItems="center" gap={1}>
+                    <PhoneIcon />
+                    <Typography variant="body1">
+                        +1 (647) 448-1636
+                    </Typography>
+                </Box>
+            </StyledCard>
 
             {errorMessage && <Typography color="error">{errorMessage}</Typography>}
             {successMessage && <Typography color="success">{successMessage}</Typography>}
