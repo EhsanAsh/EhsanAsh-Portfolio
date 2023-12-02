@@ -17,11 +17,11 @@ import Navbar from './Navbar';
 
 // Styling the component
 // ============================================================
-const HeaderBox = styled(Box)`
-    background-color: #333333;
-    color: white;
-    padding: 1rem;
-`;
+const HeaderBox = styled(Box)({
+    backgroundColor: '#f0ebd8',
+    color: '#457b9d',
+    padding: '1rem',
+});
 // ============================================================
 
 // Creating the component

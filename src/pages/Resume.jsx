@@ -42,12 +42,15 @@ import { Grow } from '@mui/material';
 
 // creating Styled Components
 // =========================================================
-const StyledBox = styled(Box)({
+const StyledBox = styled(Box)(({ theme }) => ({
     display: 'flex',
     flexDirection: 'column',
-    justifyContent: 'flex-start',
+    justifyContent: 'center',
     height: 'auto',
-});
+    backgroundColor: theme.palette.background.main,
+    marginTop: '1rem',
+    marginBottom: '1rem',
+}));
 
 const StyledButton = styled(Button)({
     marginTop: '1rem',
@@ -70,7 +73,7 @@ const Resume = () => {
     return (
 
         <StyledBox>
-            <Typography variant="h3" sx={{ textAlign: 'center' }}>
+            <Typography variant="h3" sx={{ textAlign: 'center', color:'#457b9d' }}>
                 Resume
             </Typography>
             <PDFDownloadLink document={<MyDocument />} fileName="resume.pdf">

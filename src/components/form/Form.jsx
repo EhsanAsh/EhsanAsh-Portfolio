@@ -5,6 +5,8 @@
 // importing packages
 // ========================================================
 import { useState } from 'react';
+import { styled } from '@mui/system';
+import { TextField, Button, Typography, Box } from '@mui/material';
 // ========================================================
 
 // Importing input and submit handler
@@ -43,76 +45,85 @@ const Form = () => {
         setSuccessMessage('');
     };
 
+    const StyledBox = styled(Box)(({ theme }) => ({
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'space-between',
+        height: 'auto',
+        backgroundColor: theme.palette.background.main,
+        marginTop: '1rem',
+        marginBottom: '1rem',
+        padding: '1rem',
+    }));
+
+    const StyledButton = styled(Button)({
+        marginTop: '1rem',
+        marginBottom: '1rem',
+        maxWidth: '10rem',
+    });
+
+    const StyledTextField = styled(TextField)({
+        width: '100%',
+        maxWidth: '20rem',
+        margin: '.3rem',
+    });
+
     return (
+        <StyledBox component="form" onSubmit={handleSubmit} noValidate autoComplete="off">
+            <Typography variant="h5" component="h1" sx={{ textAlign: 'center', color: '#457b9d' }}>
+                Welcome {name}
+            </Typography>
 
-        <div>
+            <StyledTextField
+                id="email"
+                name="email"
+                label="Email Address"
+                type="email"
+                value={email}
+                onChange={event => handleInputChange(event, setFunctions)}
+                required
+                sx={{
+                    borderLeft: '.2rem solid #5a189a',
+                    borderRadius: '.5rem',
+                }}
+            />
 
-            <h1>Welcome {name}</h1>
+            <StyledTextField
+                id="name"
+                label="Name"
+                name='name'
+                type="text"
+                value={name}
+                onChange={event => handleInputChange(event, setFunctions)}
+                required
+                sx={{
+                    borderLeft: '.2rem solid #5a189a',
+                    borderRadius: '.5rem',
+                }}
+            />
 
-            <form onSubmit={handleSubmit}>
-                < label htmlFor='email'>Email address:</label>
-                <input
-                    id='email'
-                    name='email'
-                    type='email'
-                    value={email}
-                    placeholder='ehsanAsh@example.com'
-                    onChange={
-                        event => handleInputChange(event, setFunctions)
-                    }
-                    required
-                />
+            <StyledTextField
+                id="message"
+                label="Message"
+                name='text'
+                multiline
+                rows={4}
+                value={text}
+                onChange={event => handleInputChange(event, setFunctions)}
+                required
+                sx={{
+                    borderLeft: '.2rem solid #5a189a',
+                    borderRadius: '.5rem',
+                }}
+            />
 
-                < label htmlFor='name'>Name:</label>
-                <input
-                    id='name'
-                    name='name'
-                    type='text'
-                    value={name}
-                    placeholder='EhsanAsh'
-                    onChange={
-                        event => handleInputChange(event, setFunctions)
-                    }
-                    required
-                />
+            <StyledButton type="submit" variant="contained">Send</StyledButton>
 
-                < label htmlFor='message'>Message:</label>
-                <textarea
-                    id='message'
-                    name='text'
-                    value={text}
-                    onChange={
-                        event => handleInputChange(event, setFunctions)
-                    }
-                    required
-                >
-                    Hello Ehsan. Your Portfolio page looks great!!!
-                </textarea>
-
-                <button type='submit'>
-                    Send
-                </button>
-            </form>
-            {errorMessage
-            && (
-                <div>
-                    <p>{errorMessage}</p>
-                </div>
-            )}
-            {successMessage
-            && (
-                <div>
-                    <p>{successMessage}</p>
-                </div>
-            )}
-            {isSubmitted && (
-                <div>
-                    <p>Form submitted successfully!</p>
-                </div>
-            )}
-        </div>
+            {errorMessage && <Typography color="error">{errorMessage}</Typography>}
+            {successMessage && <Typography color="success">{successMessage}</Typography>}
+            {isSubmitted && <Typography>Form submitted successfully!</Typography>}
+        </StyledBox>
     );
-
 };
 // ========================================================
 

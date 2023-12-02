@@ -2,7 +2,6 @@
 // when the user navigates to a non - existent page or when an error occurs.
 // used (https://mui.com/material-ui/react-typography/) as reference.
 // ============================================================
-// TODO: Recheck the style
 
 // Importing modules
 // ============================================================

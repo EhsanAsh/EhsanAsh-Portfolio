@@ -2,7 +2,6 @@
 // for this file I used the following Github repo:
 // (https://github.com/mui/material-ui/tree/master/examples/material-ui-vite)
 // ============================================================
-// TODO: Add div and style if needed
 
 // Importing modules
 // ============================================================
