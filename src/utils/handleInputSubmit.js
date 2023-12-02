@@ -47,10 +47,10 @@ const submitHandler = (event, email, name, text, setFunctions) => {
 
     // using emailjs to send email
     emailjs.send(
-        import.meta.env.VITE_EMAILJS_SERVICE_ID,
-        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+        'service_au14aj7',
+        'template_xwsj1yr',
         templateParams,
-        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+        'g89omQwAW_K878FaC',
     )
         .then((response) => {
             console.log(response.status, response.text);
