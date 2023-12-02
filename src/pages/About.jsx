@@ -20,7 +20,6 @@ import { Card } from '@mui/material';
 import { CardContent } from '@mui/material';
 import { CardMedia } from '@mui/material';
 import { Grid } from '@mui/material';
-// import { Avatar } from '@mui/material';
 import { Icon } from '@mui/material';
 import { Grow } from '@mui/material';
 import { Paper } from '@mui/material';
@@ -41,36 +40,34 @@ import { Link as MuiLink } from '@mui/material';
 // ============================================================
 const Root = styled('div')(({ theme }) => ({
     flexGrow: 1,
-    backgroundColor: theme.palette.background.paper,
+    backgroundColor: theme.palette.background.main,
 }));
 
 const Main = styled('div')({
-    marginTop: '100px',
-    marginBottom: '100px',
+    marginTop: '2.5rem',
+    marginBottom: '1rem',
 });
 
 const StyledCard = styled(Card)({
     maxWidth: 345,
+    margin: '1.5rem',
 });
 
-const StyledMedia = styled(CardMedia)({
-    height: 300,
-});
-
-// const StyledAvatar = styled(Avatar)(({ theme }) => ({
-//     width: theme.spacing(20),
-//     height: theme.spacing(30),
-// }));
+const StyledMedia = styled(CardMedia)(({theme}) => ({
+    width: theme.spacing(35),
+    height: theme.spacing(30),
+}));
 
 const StyledPaper = styled(Paper)(({ theme }) => ({
     padding: theme.spacing(2),
     textAlign: 'center',
     color: theme.palette.text.secondary,
+    margin: '1.5rem',
 }));
 
 const StyledDivider = styled(Divider)({
-    marginTop: '20px',
-    marginBottom: '20px',
+    marginTop: '1rem',
+    marginBottom: '1rem',
 });
 
 const Title = styled(Typography)({
@@ -84,7 +81,7 @@ const StyledButton = styled(Button)({
 });
 
 const StyledIcon = styled(Icon)({
-    marginRight: '10px',
+    marginRight: '.3rem',
 });
 
 const StyledLink = styled(Link)({
@@ -101,17 +98,6 @@ const About = () => {
     useEffect(() => {
         setChecked(true);
     }, []);
-    // const { y } = useScroll();
-    // Show a back to top button when the user has scrolled down 100px or more
-    // const [showBackToTop, setShowBackToTop] = useState(false);
-
-    // useEffect(() => {
-    //     if (y > 100) {
-    //         setShowBackToTop(true);
-    //     } else {
-    //         setShowBackToTop(false);
-    //     }
-    // }, [y]);
     const socialLinks = [
         {
             name: 'Github',
@@ -203,11 +189,6 @@ const About = () => {
                         </Grow>
                     </Grid>
                 </Grid>
-                {/* {showBackToTop && (
-                    <button onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
-                            Back to top
-                    </button>
-                )} */}
             </Main>
         </Root>
     );

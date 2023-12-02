@@ -21,7 +21,6 @@ import { CardContent } from '@mui/material';
 import { CardMedia } from '@mui/material';
 import { Grid } from '@mui/material';
 import { Grow } from '@mui/material';
-import { Divider } from '@mui/material';
 import { CardActions } from '@mui/material';
 import { Button } from '@mui/material';
 import projectsData from '../utils/projectsData';
@@ -31,26 +30,25 @@ import projectsData from '../utils/projectsData';
 // ===============================================================
 const Root = styled('div')(({ theme }) => ({
     flexGrow: 1,
-    backgroundColor: theme.palette.background.paper,
+    backgroundColor: theme.palette.background.main,
 }));
 
 const Main = styled('div')({
-    marginTop: '100px',
-    marginBottom: '100px',
+    marginTop: '1rem',
+    marginBottom: '1rem',
 });
 
 const StyledCard = styled(Card)({
     maxWidth: 345,
+    maxHeight: 'auto',
+    marginLeft: '1.5rem',
 });
 
-const StyledMedia = styled(CardMedia)({
-    height: 300,
-});
-
-// const StyledAvatar = styled(Avatar)(({ theme }) => ({
-//     width: theme.spacing(20),
-//     height: theme.spacing(30),
-// }));
+const StyledMedia = styled(CardMedia)(({ theme }) => ({
+    backgroundSize: 'contain',
+    width: theme.spacing(40),
+    height: theme.spacing(37),
+}));
 // ===============================================================
 
 // Creating the Portfolio component
@@ -79,11 +77,10 @@ const Portfolio = () => {
     return (
         <Root>
             <Main>
-                <Typography variant="h5" gutterBottom>
+                <Typography variant="h3" sx={{ textAlign: 'center', color:'#f1faee'}} gutterBottom>
                     Projects
                 </Typography>
-                <Divider />
-                <Grid container spacing={3}>
+                <Grid container spacing={2}>
                     {projects.map((project) => (
                         <Grid item xs={12} md={4} key={project.id}>
                             <Grow
