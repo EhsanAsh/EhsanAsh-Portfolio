@@ -25,7 +25,12 @@ const theme = createTheme({
         error: {
             main: red.A400,
         },
+        background: {
+            paper: '#cae9ff',
+            main: '#748cab',
+        },
     },
+    spacing: 10,
 });
 // ====================================================
 
