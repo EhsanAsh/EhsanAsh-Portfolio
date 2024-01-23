@@ -34,11 +34,14 @@ const Main = styled('div')({
     marginBottom: '1rem',
 });
 
-const StyledCard = styled(Card)({
+const StyledCard = styled(Card)(({ theme }) => ({
     maxWidth: 345,
     maxHeight: 'auto',
     marginLeft: '1.5rem',
-});
+    [theme.breakpoints.up('sm')]: {
+        marginRight: '1.5rem',
+    },
+}));
 
 const StyledMedia = styled(CardMedia)(({ theme }) => ({
     backgroundSize: 'contain',
@@ -76,9 +79,9 @@ const Portfolio = () => {
                 <Typography variant="h3" sx={{ textAlign: 'center', color:'#457b9d'}} gutterBottom>
                     Projects
                 </Typography>
-                <Grid container spacing={2}>
+                <Grid container alignItems={'stretch'} spacing={2}>
                     {projects.map((project) => (
-                        <Grid item xs={12} md={4} key={project.id}>
+                        <Grid item xs={12} sm={6} md={6} lg={4} key={project.name}>
                             <Grow
                                 in={checked}
                                 {...(checked ? { timeout: GROW_TIMEOUT } : {})}

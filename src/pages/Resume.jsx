@@ -73,11 +73,19 @@ const Resume = () => {
     return (
 
         <StyledBox>
-            <Typography variant="h3" sx={{ textAlign: 'center', color:'#457b9d' }}>
+            <Typography variant="h3" sx={{ color:'#457b9d', textAlign: 'center'}}>
                 Resume
             </Typography>
             <PDFDownloadLink document={<MyDocument />} fileName="resume.pdf">
-                {({ blob, url, loading, error }) => (loading ? 'Loading document...' : <StyledButton variant="contained" endIcon={<FaDownload />} onClick={handleClick}>Download Developer Resume</StyledButton>)}
+                {({ blob, url, loading, error }) =>
+                    loading ? 'Loading document...' : (
+                        <StyledButton variant="contained" endIcon={<FaDownload />} onClick={handleClick}>
+                            <Typography variant={{ xs: 'caption', sm: 'body1', md: 'h6' }} noWrap>
+                                Download Developer Resume
+                            </Typography>
+                        </StyledButton>
+                    )
+                }
             </PDFDownloadLink>
             <Grow in={true} timeout={1000}>
                 <div>
