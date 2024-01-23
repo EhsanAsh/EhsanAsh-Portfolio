@@ -3,7 +3,7 @@
 
 // Importing images
 // ============================================================
-import ehsan from '../assets/image/ehsan.jpg';
+import ehsan from '../assets/image/ehsan.png';
 // ============================================================
 
 // Importing React and other important libraries
@@ -130,11 +130,7 @@ const About = () => {
                                         Ehsan Ashrafipour
                                     </Typography>
                                     <Typography variant="body2" color="text.secondary">
-                                        I am a full stack web developer. I have experience in
-                                        developing web applications using React, Node.js, Express.js,
-                                        MongoDB, and MySQL. I also have experience in developing
-                                        mobile applications using React Native. I am also familiar
-                                        with Python and Java.
+                                    An innovative and passionate Full-Stack Developer, recently graduated from the University of Toronto with a remarkable graduation score of 96.07 (A). I bring a rich and diverse background, combining over 10 years of experience in sales and marketing in the home and kitchen appliance sector, along with a recent but intensive journey into full-stack development. Known for an indescribable enthusiasm for coding, I am a self-proclaimed hard worker, fast learner, goal-oriented, and a collaborative team member. My career is punctuated by a childhood dream to become a programmer and application developer, a dream that I have pursued with relentless dedication. I thrive in environments that require creativity and problem-solving, always eager to develop innovative solutions that positively impact people&apos;s lives and the environment. My technical proficiency spans across various languages and frameworks, with a particular comfort in MERN stack technologies and a propensity for writing logical codes over styling and designing.
                                     </Typography>
                                 </CardContent>
                                 <CardActions>
@@ -166,13 +162,7 @@ const About = () => {
                                 </Title>
                                 <StyledDivider />
                                 <Typography variant="body2" color="text.secondary">
-                                    This website is a portfolio website. It is a simple website
-                                    that displays the developer&apos;s projects. It is a full stack
-                                    web application. It is built using React, Node.js,
-                                    Express.js, and MongoDB. It is a responsive website and it
-                                    is also a Progressive Web Application (PWA). It is hosted
-                                    on Heroku. The code for this website is available on
-                                    GitHub. The link to the GitHub repository is given below.
+                                Welcome to my React portfolio! This single-page application portfolio is designed for employers like you who are looking for candidates with experience building single-page applications. You can use this portfolio to view my work samples and assess whether I am a good fit for your open position.
                                 </Typography>
                                 <StyledLink href={socialLinks[0].url} target="_blank">
                                     <StyledButton variant="contained">
