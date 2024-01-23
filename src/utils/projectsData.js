@@ -6,7 +6,7 @@
 import JATE from '../assets/image/JATE.jpg';
 import TravIS from '../assets/image/TravIS.jpg';
 import TNG from '../assets/image/TNG.jpg';
-import NoteTaker from '../assets/image/NoteTaker.jpg';
+import AdsTrees from '../assets/image/AdsTrees.jpg';
 import WDS from '../assets/image/WDS.jpg';
 import CodeQuiz from '../assets/image/CodeQuiz.jpg';
 // ===============================================================
@@ -16,12 +16,12 @@ import CodeQuiz from '../assets/image/CodeQuiz.jpg';
 const projectsData = [
     {
         id: 1,
-        name: 'JATE',
+        name: 'AdsTrees',
         description:
-            'A browser-based text editor designed to function as a Progressive Web Application (PWA).',
-        image: JATE,
-        deployed: 'https://jate-b00o.onrender.com/',
-        github: 'https://github.com/EhsanAsh/JATE',
+            'AdsTrees is a revolutionary web application that intertwines the power of advertising with environmental sustainability.',
+        image: AdsTrees,
+        deployed: 'https://adstrees.onrender.com/',
+        github: 'https://github.com/EhsanAsh/AdsTrees',
     },
 
     {
@@ -46,12 +46,12 @@ const projectsData = [
 
     {
         id: 4,
-        name: 'Note Taker',
+        name: 'JATE',
         description:
-            'Note Taker is a web-based application designed for small business owners who want an efficient way to keep track of tasks and organize their thoughts.',
-        image: NoteTaker,
-        deployed: 'https://note-taker-092223-57aac5baa4f0.herokuapp.com/',
-        github: 'https://github.com/EhsanAsh/note-taker',
+            'A browser-based text editor designed to function as a Progressive Web Application (PWA).',
+        image: JATE,
+        deployed: 'https://jate-b00o.onrender.com/',
+        github: 'https://github.com/EhsanAsh/JATE',
     },
 
     {

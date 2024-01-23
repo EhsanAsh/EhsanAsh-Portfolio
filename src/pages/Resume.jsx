@@ -11,24 +11,9 @@
 import ListComponent from '../components/resume/List';
 // =========================================================
 
-// Import MyDocument component
-// =========================================================
-import MyDocument from '../components/resume/MyDocument';
-// =========================================================
-
-// Import react-to-pdf package
-// =========================================================
-import { PDFDownloadLink } from '@react-pdf/renderer';
-// =========================================================
-
 // Import react-icons package
 // =========================================================
 import { FaDownload } from 'react-icons/fa';
-// =========================================================
-
-// Import react-router-dom package
-// =========================================================
-import { useNavigate } from 'react-router-dom';
 // =========================================================
 
 // Import react and material UI components and styling packages
@@ -38,6 +23,8 @@ import { Typography } from '@mui/material';
 import { Box } from '@mui/material';
 import { Button } from '@mui/material';
 import { Grow } from '@mui/material';
+import { useTheme } from '@mui/material/styles';
+import useMediaQuery from '@mui/material/useMediaQuery';
 // =========================================================
 
 // creating Styled Components
@@ -54,9 +41,9 @@ const StyledBox = styled(Box)(({ theme }) => ({
 
 const StyledButton = styled(Button)({
     marginTop: '1rem',
-    width: '30%',
+    width: '35%',
     height: '3rem',
-    fontSize: '1.2rem',
+    alignSelf: 'center',
 });
 // =========================================================
 
@@ -64,34 +51,45 @@ const StyledButton = styled(Button)({
 // =========================================================
 const Resume = () => {
 
-    const navigate = useNavigate();
+    const theme = useTheme();
+    const isXs = useMediaQuery(theme.breakpoints.down('xs'));
+    const isSm = useMediaQuery(theme.breakpoints.between('sm', 'md'));
+    const isMdAndUp = useMediaQuery(theme.breakpoints.up('md'));
+
+    let variant;
+    if (isXs) {
+        variant = 'caption';
+    } else if (isSm) {
+        variant = 'body1';
+    } else if (isMdAndUp) {
+        variant = 'h6';
+    }
 
     const handleClick = () => {
-        navigate('/resume');
+        const publicUrl = `${window.location.protocol}//${window.location.host}`;
+        window.open(`${publicUrl}/EhsanAsh-CV.pdf`);
     };
 
     return (
 
         <StyledBox>
+
             <Typography variant="h3" sx={{ color:'#457b9d', textAlign: 'center'}}>
                 Resume
             </Typography>
-            <PDFDownloadLink document={<MyDocument />} fileName="resume.pdf">
-                {({ blob, url, loading, error }) =>
-                    loading ? 'Loading document...' : (
-                        <StyledButton variant="contained" endIcon={<FaDownload />} onClick={handleClick}>
-                            <Typography variant={{ xs: 'caption', sm: 'body1', md: 'h6' }} noWrap>
-                                Download Developer Resume
-                            </Typography>
-                        </StyledButton>
-                    )
-                }
-            </PDFDownloadLink>
+
+            <StyledButton variant="contained" endIcon={<FaDownload />} onClick={handleClick}>
+                <Typography variant={variant} noWrap>
+                    Download Developer Resume
+                </Typography>
+            </StyledButton>
+
             <Grow in={true} timeout={1000}>
                 <div>
                     <ListComponent />
                 </div>
             </Grow>
+
         </StyledBox>
 
     );

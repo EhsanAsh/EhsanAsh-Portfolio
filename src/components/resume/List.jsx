@@ -5,6 +5,7 @@
 
 // Import react and material UI components and styling packages
 // =========================================================
+import React from 'react';
 import { styled } from '@mui/system';
 import {
     Typography,
@@ -39,12 +40,6 @@ const StyledList = styled(List)({
     margin: '3rem',
 });
 
-const StyledListItem = styled(ListItem)({
-    display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'center',
-});
-
 const StyledAvatar = styled(Avatar)(({ theme }) => ({
     width: theme.spacing(6),
     height: theme.spacing(6),
@@ -71,8 +66,8 @@ const ListComponent = () => {
                             <Divider />
                         </ListSubheader>
                         {/* mapping  through frontEnd items which each item has three properties: name, icon, and color */}
-                        {[0].map((row) => (
-                            <StyledListItem key={`row-${sectionId}-${row}`}>
+                        {[0].map((row, index) => (
+                            <React.Fragment key={`row-${index}`}>
                                 {frontEnd.items.map((item) => (
                                     <Grow in={true} timeout={1000} key={item.name}>
                                         <ListItem>
@@ -85,7 +80,7 @@ const ListComponent = () => {
                                         </ListItem>
                                     </Grow>
                                 ))}
-                            </StyledListItem>
+                            </React.Fragment>
                         ))}
                         <ListSubheader>
                             <Divider />
@@ -93,8 +88,8 @@ const ListComponent = () => {
                             <Divider />
                         </ListSubheader>
                         {/* mapping  through backEnd items which each item has three properties: name, icon, and color */}
-                        {[0].map((row) => (
-                            <StyledListItem key={`row-${sectionId}-${row}`}>
+                        {[0].map((row, index) => (
+                            <React.Fragment key={`row-${index}`}>
                                 {backEnd.items.map((item) => (
                                     <Grow in={true} timeout={1000} key={item.name}>
                                         <ListItem>
@@ -107,7 +102,7 @@ const ListComponent = () => {
                                         </ListItem>
                                     </Grow>
                                 ))}
-                            </StyledListItem>
+                            </React.Fragment>
                         ))}
                     </ul>
                 </li>

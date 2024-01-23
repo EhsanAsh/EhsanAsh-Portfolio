@@ -44,9 +44,18 @@ const StyledCard = styled(Card)(({ theme }) => ({
 }));
 
 const StyledMedia = styled(CardMedia)(({ theme }) => ({
-    backgroundSize: 'contain',
-    width: theme.spacing(40),
-    height: theme.spacing(37),
+    backgroundSize: 'cover',
+    width: '100%',
+    paddingTop: '75%', // Set padding-top to maintain the 4:3 aspect ratio
+    [theme.breakpoints.up('sm')]: {
+        paddingTop: '75%',
+    },
+    [theme.breakpoints.up('md')]: {
+        paddingTop: '75%',
+    },
+    [theme.breakpoints.up('lg')]: {
+        paddingTop: '75%',
+    },
 }));
 // ===============================================================
 
