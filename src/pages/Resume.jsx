@@ -67,7 +67,7 @@ const Resume = () => {
 
     const handleClick = () => {
         const publicUrl = `${window.location.protocol}//${window.location.host}`;
-        window.open(`${publicUrl}/EhsanAsh-CV.pdf`);
+        window.open(`${publicUrl}/EhsanAsh-CV.docx`);
     };
 
     return (
