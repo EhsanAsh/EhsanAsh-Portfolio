@@ -17,14 +17,6 @@ import Resume from './pages/Resume.jsx';
 import Error from './pages/Error.jsx';
 // ============================================================
 
-// Importing fontsource
-// ============================================================
-import '@fontsource/roboto/300.css';
-import '@fontsource/roboto/400.css';
-import '@fontsource/roboto/500.css';
-import '@fontsource/roboto/700.css';
-// ============================================================
-
 // Creating routes
 // ============================================================
 const routes = [

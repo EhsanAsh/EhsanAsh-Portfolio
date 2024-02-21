@@ -5,7 +5,6 @@
 
 // Importing modules
 // ============================================================
-import { Box, Container, Typography } from '@mui/material';
 import { Link } from 'react-router-dom';
 // ============================================================
 
@@ -14,19 +13,15 @@ import { Link } from 'react-router-dom';
 
 const Error = ({ message }) => {
     return (
-        <Box sx={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
-            <Container component="main" sx={{ mt: 8, mb: 2 }} maxWidth="sm">
-                <Typography variant="h2" component="h1" gutterBottom>
-                    Error
-                </Typography>
-                <Typography variant="h5" component="h2" gutterBottom>
-                    {message}
-                </Typography>
-                <Typography variant="body1">
+        <div>
+            <div>
+                <h3>Error</h3>
+                <p>{message}</p>
+                <p>
                     <Link to="/">Return to the homepage</Link>
-                </Typography>
-            </Container>
-        </Box>
+                </p>
+            </div>
+        </div>
     );
 };
 // ============================================================
