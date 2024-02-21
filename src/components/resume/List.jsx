@@ -3,111 +3,59 @@
 // https://mui.com/material-ui/react-list/
 // =========================================================
 
-// Import react and material UI components and styling packages
-// =========================================================
-import React from 'react';
-import { styled } from '@mui/system';
-import {
-    Typography,
-    List,
-    ListItem,
-    ListItemAvatar,
-    Avatar,
-    ListItemText,
-    Divider,
-    Grow,
-    ListSubheader
-}
-    from '@mui/material';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-// =========================================================
-
 // importing the list items
 // =========================================================
 import { frontEnd, backEnd } from '../../utils/listData';
-
-// Creating Styled Components
-// =========================================================
-const StyledList = styled(List)({
-    width: '100%',
-    maxWidth: 360,
-    bgcolor: 'background.paper',
-    position: 'relative',
-    overflow: 'auto',
-    maxHeight: 500,
-    '& ul': { padding: 0 },
-    backgroundColor: 'rgba(227, 233, 240, 0.2)',
-    margin: '3rem',
-});
-
-const StyledAvatar = styled(Avatar)(({ theme }) => ({
-    width: theme.spacing(6),
-    height: theme.spacing(6),
-}));
-
-const StyledListItemText = styled(ListItemText)({
-    '& span': {
-        fontSize: '.8rem',
-        marginLeft: '.2rem',
-    },
-});
 // =========================================================
 
 // Creating the List component
 // =========================================================
 const ListComponent = () => {
     return (
-        <StyledList subheader={<li />}>
+        <div>
             {[0].map((sectionId) => (
                 <li key={`section-${sectionId}`}>
                     <ul>
-                        <ListSubheader>
-                            <Typography variant="h6" sx={{ textAlign: 'center' }}>{frontEnd.title}</Typography>
-                            <Divider />
-                        </ListSubheader>
+                        <li>
+                            <h6>{frontEnd.title}</h6>
+                        </li>
                         {/* mapping  through frontEnd items which each item has three properties: name, icon, and color */}
                         {[0].map((row, index) => (
-                            <React.Fragment key={`row-${index}`}>
+                            <div key={`row-${index}`}>
                                 {frontEnd.items.map((item) => (
-                                    <Grow in={true} timeout={1000} key={item.name}>
-                                        <ListItem>
-                                            <ListItemAvatar>
-                                                <StyledAvatar sx={{ bgcolor: item.color }}>
-                                                    <FontAwesomeIcon icon={item.icon} />
-                                                </StyledAvatar>
-                                            </ListItemAvatar>
-                                            <StyledListItemText primary={item.name} />
-                                        </ListItem>
-                                    </Grow>
+                                    <div key={item.name}>
+                                        <div>
+                                            <div>
+                                                {/* <FontAwesomeIcon icon={item.icon} /> */}
+                                            </div>
+                                        </div>
+                                        <div>{item.name}</div>
+                                    </div>
                                 ))}
-                            </React.Fragment>
+                            </div>
                         ))}
-                        <ListSubheader>
-                            <Divider />
-                            <Typography variant="h6" sx={{ textAlign: 'center' }}>{backEnd.title}</Typography>
-                            <Divider />
-                        </ListSubheader>
+                        <div>
+                            <p>{backEnd.title}</p>
+                        </div>
                         {/* mapping  through backEnd items which each item has three properties: name, icon, and color */}
                         {[0].map((row, index) => (
-                            <React.Fragment key={`row-${index}`}>
+                            <div key={`row-${index}`}>
                                 {backEnd.items.map((item) => (
-                                    <Grow in={true} timeout={1000} key={item.name}>
-                                        <ListItem>
-                                            <ListItemAvatar>
-                                                <StyledAvatar sx={{ bgcolor: item.color }}>
-                                                    <FontAwesomeIcon icon={item.icon} />
-                                                </StyledAvatar>
-                                            </ListItemAvatar>
-                                            <StyledListItemText primary={item.name} />
-                                        </ListItem>
-                                    </Grow>
+                                    <div key={item.name}>
+                                        <div>
+                                            <div>
+                                                {/* <FontAwesomeIcon icon={item.icon} /> */}
+                                            </div>
+                                        </div>
+                                        <div>{item.name} </div>
+                                    </div>
                                 ))}
-                            </React.Fragment>
+                            </div>
                         ))}
                     </ul>
                 </li>
             ))}
-        </StyledList>
+        </div>
     );
 };
 // =========================================================

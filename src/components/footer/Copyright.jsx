@@ -5,22 +5,19 @@
 
 // Importing modules
 // ============================================================
-// import * as React from 'react';
-import Typography from '@mui/material/Typography';
-import Link from '@mui/material/Link';
 // ============================================================
 
 // Creating the component
 // ============================================================
 const Copyright = () => {
     return (
-        <Typography variant="body2" color="text.secondary" align="center">
+        <span>
             {'Copyright © '}
-            <Link color="inherit" href="/">
+            <a href="/">
                 EhsanAsh
-            </Link>{' '}
+            </a>{' '}
             {new Date().getFullYear()}.
-        </Typography>
+        </span>
     );
 };
 // ============================================================

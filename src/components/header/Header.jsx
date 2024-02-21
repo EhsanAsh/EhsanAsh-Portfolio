@@ -5,9 +5,7 @@
 
 // Importing modules
 // ============================================================
-import { styled } from '@mui/material/styles';
-import Box from '@mui/material/Box';
-import Typography from '@mui/material/Typography';
+
 // ============================================================
 
 // Importing components
@@ -17,11 +15,6 @@ import Navbar from './Navbar';
 
 // Styling the component
 // ============================================================
-const HeaderBox = styled(Box)({
-    backgroundColor: '#f0ebd8',
-    color: '#457b9d',
-    padding: '1rem',
-});
 // ============================================================
 
 // Creating the component
@@ -29,15 +22,15 @@ const HeaderBox = styled(Box)({
 
 const Header = () => {
     return (
-        <HeaderBox>
-            <Typography variant="h3" component="div" align="center">
+        <div>
+            <p>
                 Ehsan Ashrafipour
-            </Typography>
-            <Typography variant="h5" component="div" align="center">
+            </p>
+            <p>
                 Full Stack Web Developer
-            </Typography>
+            </p>
             <Navbar />
-        </HeaderBox>
+        </div>
     );
 };
 // ============================================================
