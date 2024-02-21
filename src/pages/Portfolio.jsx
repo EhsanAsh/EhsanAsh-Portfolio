@@ -10,53 +10,7 @@
 // Importing all necessary packages
 // ===============================================================
 import { useState, useEffect } from 'react';
-import { styled } from '@mui/system';
-import { Typography } from '@mui/material';
-import { Card } from '@mui/material';
-import { CardContent } from '@mui/material';
-import { CardMedia } from '@mui/material';
-import { Grid } from '@mui/material';
-import { Grow } from '@mui/material';
-import { CardActions } from '@mui/material';
-import { Button } from '@mui/material';
 import projectsData from '../utils/projectsData';
-// ===============================================================
-
-// Creating Styled Components
-// ===============================================================
-const Root = styled('div')(({ theme }) => ({
-    flexGrow: 1,
-    backgroundColor: theme.palette.background.main,
-}));
-
-const Main = styled('div')({
-    marginTop: '1rem',
-    marginBottom: '1rem',
-});
-
-const StyledCard = styled(Card)(({ theme }) => ({
-    maxWidth: 345,
-    maxHeight: 'auto',
-    marginLeft: '1.5rem',
-    [theme.breakpoints.up('sm')]: {
-        marginRight: '1.5rem',
-    },
-}));
-
-const StyledMedia = styled(CardMedia)(({ theme }) => ({
-    backgroundSize: 'cover',
-    width: '100%',
-    paddingTop: '75%', // Set padding-top to maintain the 4:3 aspect ratio
-    [theme.breakpoints.up('sm')]: {
-        paddingTop: '75%',
-    },
-    [theme.breakpoints.up('md')]: {
-        paddingTop: '75%',
-    },
-    [theme.breakpoints.up('lg')]: {
-        paddingTop: '75%',
-    },
-}));
 // ===============================================================
 
 // Creating the Portfolio component
@@ -71,63 +25,37 @@ const Portfolio = () => {
     // setProjects(prevProjects => [...prevProjects, newProject]);
     // ===============================================================
 
-    // Creating a state to hold the checked value
-    // ===============================================================
-    const [checked, setChecked] = useState(false);
-    const GROW_TIMEOUT = 1000;
-    useEffect(() => {
-        setChecked(true);
-    }, []);
-    // ===============================================================
-
     // Returning the JSX
     // ===============================================================
     return (
-        <Root>
-            <Main>
-                <Typography variant="h3" sx={{ textAlign: 'center', color:'#457b9d'}} gutterBottom>
-                    Projects
-                </Typography>
-                <Grid container alignItems={'stretch'} spacing={2}>
+        <div>
+            <div>
+                <p> Projects</p>
+
+                <div>
                     {projects.map((project) => (
-                        <Grid item xs={12} sm={6} md={6} lg={4} key={project.name}>
-                            <Grow
-                                in={checked}
-                                {...(checked ? { timeout: GROW_TIMEOUT } : {})}
-                            >
-                                <StyledCard>
-                                    <StyledMedia
-                                        image={project.image}
-                                        title={project.name}
-                                        alt={project.name}
-                                    />
-                                    <CardContent>
-                                        <Typography gutterBottom variant="h5" component="div">
-                                            {project.name}
-                                        </Typography>
-                                        <Typography variant="body2" color="text.secondary">
-                                            {project.description}
-                                        </Typography>
-                                    </CardContent>
-                                    <CardActions>
-                                        <Button
-                                            size="small"
-                                            href={project.deployed}
-                                            target="_blank"
-                                        >
+                        <div key={project.name}>
+                            <div>
+                                <div>
+                                    <p>{project.name}</p>
+                                    <p>{project.description}</p>
+                                </div>
+                                <div>
+                                    <button
+                                        href={project.deployed}
+                                    >
                                             Deployed
-                                        </Button>
-                                        <Button size="small" href={project.github} target="_blank">
+                                    </button>
+                                    <button href={project.github}>
                                             GitHub
-                                        </Button>
-                                    </CardActions>
-                                </StyledCard>
-                            </Grow>
-                        </Grid>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
                     ))};
-                </Grid>
-            </Main>
-        </Root>
+                </div>
+            </div>
+        </div>
     );
 };
 // ===============================================================
