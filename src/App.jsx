@@ -25,7 +25,7 @@ const App = () => {
     return (
         <>
             <Header />
-            <Outlet />
+            <Outlet className="page" />
             <Footer />
         </>
     );

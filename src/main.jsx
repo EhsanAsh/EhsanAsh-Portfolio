@@ -5,6 +5,7 @@
 // ============================================================
 import { createRoot } from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { ChakraProvider } from '@chakra-ui/react';
 // ============================================================
 
 // Importing pages and components
@@ -14,7 +15,8 @@ import About from './pages/About.jsx';
 import Contact from './pages/Contact.jsx';
 import Portfolio from './pages/Portfolio.jsx';
 import Resume from './pages/Resume.jsx';
-import Error from './pages/Error.jsx';
+import ErrorPage from './pages/ErrorPage.jsx';
+import theme from './theme';
 // ============================================================
 
 // Creating routes
@@ -23,7 +25,7 @@ const routes = [
     {
         path: '/',
         element: <App />,
-        errorElement: <Error message='Sorry, an unexpected error has occurred.' />,
+        errorElement: <ErrorPage />,
         children: [
             {
                 index: true,
@@ -41,10 +43,6 @@ const routes = [
                 path: '/contact',
                 element: <Contact />,
             },
-            {
-                path: '*',
-                element: <Error message='Sorry, the page you requested could not be found.' />,
-            },
         ],
     }
 ];
@@ -61,8 +59,8 @@ const root = createRoot(rootElement);
 // Rendering the app
 // ============================================================
 root.render(
-    <RouterProvider router={router}>
-        <App />
-    </RouterProvider>,
+    <ChakraProvider theme={theme}>
+        <RouterProvider router={router} />
+    </ChakraProvider>
 );
 // ============================================================
