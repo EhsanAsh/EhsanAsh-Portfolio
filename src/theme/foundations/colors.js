@@ -12,7 +12,9 @@ const colors = {
         lightGreen: '#9AA61A',
         darkGreen: '#006571',
         lightGray: '#e5e5e5',
+        midGray: '#d9d9d9',
         error: '#9a031e',
+        title: '#f8d8a431',
     }
 };
 // ============================================================
