@@ -15,8 +15,8 @@ import './App.css';
 
 // Importing components
 // ============================================================
-import Header from './components/header/Header';
-import Footer from './components/footer/Footer';
+import Header from './components/header';
+import Footer from './components/footer';
 // ============================================================
 
 // Creating the component

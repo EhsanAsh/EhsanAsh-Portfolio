@@ -11,11 +11,11 @@ import { ChakraProvider } from '@chakra-ui/react';
 // Importing pages and components
 // ============================================================
 import App from './App.jsx';
-import About from './pages/About.jsx';
 import Contact from './pages/Contact.jsx';
 import Portfolio from './pages/Portfolio.jsx';
-import Resume from './pages/Resume.jsx';
 import ErrorPage from './pages/ErrorPage.jsx';
+import Projects from './pages/Projects.jsx';
+// import Home from './pages/Home.jsx';
 import theme from './theme';
 // ============================================================
 
@@ -27,17 +27,17 @@ const routes = [
         element: <App />,
         errorElement: <ErrorPage />,
         children: [
-            {
-                index: true,
-                element: <About />,
-            },
+            // {
+            //     index: true,
+            //     element: <Home />,
+            // },
             {
                 path: '/portfolio',
                 element: <Portfolio />,
             },
             {
-                path: '/resume',
-                element: <Resume />,
+                path: '/projects',
+                element: <Projects />,
             },
             {
                 path: '/contact',

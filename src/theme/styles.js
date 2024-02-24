@@ -13,15 +13,19 @@ const styles = {
         'html, body': {
             display: 'flex',
             flexDirection: 'column',
+            justifyContent: 'center',
+            alignItems: 'center',
+            flex: '1',
             height: '100vh',
             width: '100vw',
             color: 'brand.darkGreen',
-            bg: 'brand.lightGray',
+            bg: 'brand.midGray',
             fontFamily: 'robotoLight',
             fontWeight: 300,
             fontStyle: 'normal',
             fontSize: ['16px', '18px'],
             padding: '10px',
+            gap: '7px',
         },
 
         '.page': {
