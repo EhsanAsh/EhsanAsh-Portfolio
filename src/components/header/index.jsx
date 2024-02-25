@@ -5,7 +5,21 @@
 
 // Importing modules and css
 // ============================================================
-import { Flex, Spacer, Box, Button, Container, Text, Image } from '@chakra-ui/react';
+import {
+    Flex,
+    Spacer,
+    Box,
+    Container,
+    Text,
+    Image,
+    Tabs,
+    TabList,
+    Tab,
+    TabIndicator,
+} from '@chakra-ui/react';
+import { Link as ReactRouterLink } from 'react-router-dom';
+import { Link as ChakraLink } from '@chakra-ui/react';
+import { ExternalLinkIcon } from '@chakra-ui/icons';
 import './Header.css';
 // ============================================================
 
@@ -36,33 +50,60 @@ const Header = () => {
             bgImage={Hero}
             bgPosition={'center'}
         >
-            <Box>
-                <Button>
-                    <a href="/">
-                        Home
-                    </a>
-                </Button>
-                <Button>
-                    <a href="/portfolio">
-                        Portfolio
-                    </a>
-                </Button>
-                <Button>
-                    <a href="/projects">
-                        Projects
-                    </a>
-                </Button>
-                <Button>
-                    <a href="/contact">
-                        Contact Me
-                    </a>
-                </Button>
-                <Button>
-                    <a href="https://www.linkedin.com/in/ehsan-ashrafipour-922056245/">
-                        LinkedIn
-                    </a>
-                </Button>
-            </Box>
+            <Tabs
+                position="relative"
+                variant="unstyled"
+                color="white"
+                zIndex={10}
+                fontFamily={'montserratBody'}
+            >
+                <TabList>
+                    <Tab>
+                        <ChakraLink as={ReactRouterLink} to='/'>
+                            Home
+                        </ChakraLink>
+                    </Tab>
+                    <Tab>
+                        <ChakraLink as={ReactRouterLink} to='/portfolio'>
+                            Portfolio
+                        </ChakraLink>
+                    </Tab>
+                    <Tab>
+                        <ChakraLink as={ReactRouterLink} to='/projects'>
+                            Projects
+                        </ChakraLink>
+                    </Tab>
+                    <Tab>
+                        <ChakraLink as={ReactRouterLink} to='/contact'>
+                            Contact Me
+                        </ChakraLink>
+                    </Tab>
+                    <Tab>
+                        <ChakraLink
+                            as={ReactRouterLink}
+                            to='https://www.linkedin.com/in/ehsan-ashrafipour-922056245/'
+                            isExternal
+                        >
+                            LinkedIn<ExternalLinkIcon mx='2px' />
+                        </ChakraLink>
+                    </Tab>
+                    <Tab>
+                        <ChakraLink
+                            as={ReactRouterLink}
+                            to='https://github.com/EhsanAsh'
+                            isExternal
+                        >
+                            GitHub<ExternalLinkIcon mx='2px' />
+                        </ChakraLink>
+                    </Tab>
+                    <TabIndicator
+                        mt="35px"
+                        height="2px"
+                        bg="brand.lightGreen"
+                        borderRadius="2px"
+                    />
+                </TabList>
+            </Tabs>
             <Spacer />
             <Box
                 display="flex"

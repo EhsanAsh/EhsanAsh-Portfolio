@@ -34,6 +34,7 @@ svg text {
     stroke-dashoffset: -25%;
     stroke-dasharray: 50% 0;
     stroke-width: 0;
+    color: #e3526d;
   }
 }
 

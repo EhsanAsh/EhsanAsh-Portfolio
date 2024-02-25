@@ -31,15 +31,6 @@ const styles = {
             flex: '1 0 auto',
             overflow: 'auto',
         },
-
-        header: {
-
-        },
-
-        // a: {
-        //     textDecoration: 'none',
-        // },
-
     },
 };
 // ============================================================
