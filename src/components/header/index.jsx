@@ -87,7 +87,7 @@ const Header = () => {
                     <Box
                         display={'flex'}
                         flexDirection={'column'}
-                        alignItems={'center'}
+                        alignItems={'flex-start'}
                         gap={'0'}
                         lineHeight={'1.2'}
                     >
@@ -104,9 +104,9 @@ const Header = () => {
                         <svg>
                             <text
                                 x="45%"
-                                y="70%"
+                                y="50%"
                                 // dy=".35em"
-                                textAnchor="start"
+                                textAnchor="middle"
                             >
                                 Full-stack Application Developer
                             </text>
