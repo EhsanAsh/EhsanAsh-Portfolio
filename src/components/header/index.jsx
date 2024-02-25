@@ -3,9 +3,10 @@
 // It contains the navbar component and the header text.
 // ============================================================
 
-// Importing modules
+// Importing modules and css
 // ============================================================
 import { Flex, Spacer, Box, Button, Container, Text, Image } from '@chakra-ui/react';
+import './Header.css';
 // ============================================================
 
 // Importing images
@@ -65,9 +66,9 @@ const Header = () => {
             <Spacer />
             <Box
                 display="flex"
-                alignItems="center"
                 justifyContent="space-evenly"
-                gap={['10px', '10px', '20px', '25px']}
+                width='100%'
+                gap={['12px', '12px', '25px', '50px']}
             >
                 <Box>
                     <Image
@@ -77,14 +78,16 @@ const Header = () => {
                         alt='Ehsan Ashrafipour'
                         fallbackSrc='https://via.placeholder.com/150'
                         loading='lazy'
-                        border='5px solid #9AA61A'
-                        boxShadow='0 0 4px 2px #3f450333'
+                        border='5px solid #9a031f79'
+                        boxShadow='6px 6px 17px #abb1c294, -6px -6px 17px #5d0e0262'
+                        mb='50px'
                     />
                 </Box>
-                <Container variant={'hero'} lineHeight={'2'} gap={['3px', '3px', '5px']}>
+                <Container variant={'hero'} lineHeight={'2'} gap={0}>
                     <Box
                         display={'flex'}
                         flexDirection={'column'}
+                        alignItems={'center'}
                         gap={'0'}
                         lineHeight={'1.2'}
                     >
@@ -93,12 +96,22 @@ const Header = () => {
                             as={'h3'}
                             fontSize={['xs', 'sm', 'md', 'xl', '2xl']}
                             fontWeight={'400'}
-                            color='brand.lightGreen'
                         >
-                        BEng Mechanical Engineering
+                            BEng Mechanical Engineering
                         </Text>
                     </Box>
-                    <Text as={'h2'}>Full-stack Application Developer</Text>
+                    <div className='wrapper'>
+                        <svg>
+                            <text
+                                x="45%"
+                                y="70%"
+                                // dy=".35em"
+                                textAnchor="start"
+                            >
+                                Full-stack Application Developer
+                            </text>
+                        </svg>
+                    </div>
                 </Container>
             </Box>
         </Flex>

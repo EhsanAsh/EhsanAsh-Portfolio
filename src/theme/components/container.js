@@ -48,6 +48,7 @@ const Container = defineStyleConfig({
             fontStyle: 'normal',
             fontOpticalSizing: 'auto',
             fontWeight: 500,
+            color: 'white',
         },
 
     },
