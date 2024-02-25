@@ -22,10 +22,12 @@ const Container = defineStyleConfig({
         height: 'auto',
         width: '100%',
         margin: '0 auto',
-        gap: '5px',
     },
 
     sizes: {
+        base:{
+            p: '5px',
+        },
         sm: {
             p: '7px',
         },
@@ -41,8 +43,11 @@ const Container = defineStyleConfig({
 
         'hero': {
             fontFamily: 'josefinSlabTitle',
-            fontSize: ['md', 'lg', '3xl', '4xl', '5xl'],
+            fontSize: ['xl', 'xl', '3xl', '4xl', '5xl'],
             gap: '10px',
+            fontStyle: 'normal',
+            fontOpticalSizing: 'auto',
+            fontWeight: 500,
         },
 
     },

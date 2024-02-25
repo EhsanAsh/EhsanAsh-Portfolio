@@ -13,8 +13,8 @@ const styles = {
         'html, body': {
             display: 'flex',
             flexDirection: 'column',
-            justifyContent: 'center',
-            alignItems: 'center',
+            justifyContent: 'flex-start',
+            alignItems: 'stretch',
             flex: '1',
             height: '100vh',
             width: '100vw',
@@ -24,7 +24,6 @@ const styles = {
             fontWeight: 300,
             fontStyle: 'normal',
             fontSize: ['16px', '18px'],
-            padding: '10px',
             gap: '7px',
         },
 
