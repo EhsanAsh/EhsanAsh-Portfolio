@@ -7,17 +7,11 @@ import {
     Flex,
     Spacer,
     Box,
-    Container,
-    Text,
-    Image,
-    Tabs,
-    TabList,
-    Tab,
-    TabIndicator,
+    IconButton,
 } from '@chakra-ui/react';
 import { Link as ReactRouterLink } from 'react-router-dom';
 import { Link as ChakraLink } from '@chakra-ui/react';
-import { ExternalLinkIcon } from '@chakra-ui/icons';
+import { FaGithub, FaLinkedin, FaTwitterSquare } from 'react-icons/fa';
 // ============================================================
 
 // Importing Copyright component
@@ -35,26 +29,83 @@ const Footer = () => {
             minWidth='max-content'
             height={'auto'}
             alignItems='center'
-            justifyContent='flex-start'
+            justifyContent='center'
             alignSelf='stretch'
             flexShrink={0}
-            px='10'
-            py='5'
+            px='3'
+            py='1'
             bg='brand.footer'
             color='brand.lightGray'
+            position= 'fixed'
+            left= '0'
+            bottom= '0'
         >
-            <p>
-                <a href="https://github.com/EhsanAsh" color="inherit">
-                    {/* <GitHubIcon /> */}
-                </a>
-                <a href="https://www.linkedin.com/in/ehsan-ashrafipour-922056245/" color="inherit">
-                    {/* <LinkedInIcon /> */}
-                </a>
-                <a href="https://twitter.com/EhsanAsh_5123" color="inherit">
-                    {/* <TwitterIcon /> */}
-                </a>
-            </p>
-            <Copyright />
+            <Box p={4}>
+                <Copyright />
+            </Box>
+            <Spacer />
+            <Box
+                display="flex"
+                justifyContent={'space-evenly'}
+                alignItems="center"
+                p={2}
+                gap={2}
+            >
+                <ChakraLink
+                    as={ReactRouterLink}
+                    to="https://github.com/EhsanAsh"
+                    isExternal
+                >
+                    <IconButton
+                        aria-label="Github"
+                        icon={<FaGithub />}
+                        size="xs"
+                        colorScheme="white"
+                        variant="outline"
+                        border="none"
+                        _hover={{
+                            transform: 'translateY(-5px)',
+                        }}
+                        transition="all 0.2s"
+                    />
+                </ChakraLink>
+                <ChakraLink
+                    as={ReactRouterLink}
+                    to="https://www.linkedin.com/in/ehsan-ashrafipour-922056245/"
+                    isExternal
+                >
+                    <IconButton
+                        aria-label="LinkedIn"
+                        icon={<FaLinkedin />}
+                        colorScheme="white"
+                        size="xs"
+                        variant="outline"
+                        border="none"
+                        _hover={{
+                            transform: 'translateY(-5px)',
+                        }}
+                        transition="all 0.2s"
+                    />
+                </ChakraLink>
+                <ChakraLink
+                    as={ReactRouterLink}
+                    to="https://twitter.com/EhsanAsh_5123"
+                    isExternal
+                >
+                    <IconButton
+                        aria-label="Twitter"
+                        icon={<FaTwitterSquare />}
+                        colorScheme="white"
+                        size="xs"
+                        variant="outline"
+                        border="none"
+                        _hover={{
+                            transform: 'translateY(-5px)',
+                        }}
+                        transition="all 0.2s"
+                    />
+                </ChakraLink>
+            </Box>
         </Flex>
     );
 };
