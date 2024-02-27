@@ -82,10 +82,6 @@ const Portfolio = () => {
                     <div>
                         <div>
                             <h2>Portfolio</h2>
-
-                            <p>
-                                Welcome to my React portfolio! This single-page application portfolio is designed for employers like you who are looking for candidates with experience building single-page applications. You can use this portfolio to view my work samples and assess whether I am a good fit for your open position.
-                            </p>
                             <div href={socialLinks[0].url} target="_blank">
                                 <button>
                                     <span>GitHub</span>

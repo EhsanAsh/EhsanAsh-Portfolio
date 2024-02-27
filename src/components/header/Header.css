@@ -8,28 +8,28 @@ svg {
 svg text {
   animation: stroke 8s infinite alternate;
   stroke-width: 2;
-  stroke: #9a031e;
+  stroke: #fc8e11;
   font-size: 1.1rem;
 }
 @keyframes stroke {
   0% {
     fill: rgba(204, 158, 72, 0);
-    stroke: #9a031e;
+    stroke: #fc8e11;
     stroke-dashoffset: 25%;
     stroke-dasharray: 0 50%;
     stroke-width: 2;
   }
   70% {
     fill: rgba(72, 138, 204, 0);
-    stroke: #9a031fad;
+    stroke: #14213d;
   }
   80% {
     fill: rgba(72, 138, 204, 0);
-    stroke: #9a031f79;
+    stroke: #14213d;
     stroke-width: 3;
   }
   100% {
-    fill: #9a031e;
+    fill: #fc8e11;
     stroke: rgba(54, 95, 160, 0);
     stroke-dashoffset: -25%;
     stroke-dasharray: 50% 0;
@@ -40,7 +40,6 @@ svg text {
 .wrapper {
   display: flex;
   align-self: stretch;
-  /* flex: 0 1 100%; */
 }
 
 @media screen and (min-width: 768px) {

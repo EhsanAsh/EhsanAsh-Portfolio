@@ -45,15 +45,13 @@ const Header = () => {
             flexShrink={0}
             px='10'
             py='20'
-            gap='10'
-            mb='10'
+            gap='5'
             bgImage={Hero}
-            bgPosition={'center'}
+            bgPosition='center'
         >
             <Tabs
                 position="relative"
                 variant="unstyled"
-                color="white"
                 zIndex={10}
                 fontFamily={'montserratBody'}
             >
@@ -99,7 +97,7 @@ const Header = () => {
                     <TabIndicator
                         mt="35px"
                         height="2px"
-                        bg="brand.lightGreen"
+                        bg="brand.orange"
                         borderRadius="2px"
                     />
                 </TabList>
@@ -107,6 +105,7 @@ const Header = () => {
             <Spacer />
             <Box
                 display="flex"
+                // flexDir={{ base: 'column', md: 'row' }}
                 justifyContent="space-evenly"
                 width='100%'
                 gap={['12px', '12px', '25px', '50px']}
@@ -119,9 +118,11 @@ const Header = () => {
                         alt='Ehsan Ashrafipour'
                         fallbackSrc='https://via.placeholder.com/150'
                         loading='lazy'
-                        border='5px solid #9a031f79'
-                        boxShadow='6px 6px 17px #abb1c294, -6px -6px 17px #5d0e0262'
-                        mb='50px'
+                        border='5px solid #fca311'
+                        boxShadow='6px 6px 17px #14213d66, -6px -6px 17px #14213d66'
+                        objectFit='cover'
+                        objectPosition='center'
+                        mb={10}
                     />
                 </Box>
                 <Container variant={'hero'} lineHeight={'2'} gap={0}>
@@ -146,7 +147,6 @@ const Header = () => {
                             <text
                                 x="45%"
                                 y="50%"
-                                // dy=".35em"
                                 textAnchor="middle"
                             >
                                 Full-stack Application Developer

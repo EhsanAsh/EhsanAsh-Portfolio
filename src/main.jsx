@@ -15,7 +15,7 @@ import Contact from './pages/Contact.jsx';
 import Portfolio from './pages/Portfolio.jsx';
 import ErrorPage from './pages/ErrorPage.jsx';
 import Projects from './pages/Projects.jsx';
-// import Home from './pages/Home.jsx';
+import Home from './pages/Home.jsx';
 import theme from './theme';
 // ============================================================
 
@@ -27,10 +27,10 @@ const routes = [
         element: <App />,
         errorElement: <ErrorPage />,
         children: [
-            // {
-            //     index: true,
-            //     element: <Home />,
-            // },
+            {
+                index: true,
+                element: <Home />,
+            },
             {
                 path: '/portfolio',
                 element: <Portfolio />,
