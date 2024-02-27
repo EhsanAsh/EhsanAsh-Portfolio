@@ -5,17 +5,13 @@
 // ============================================================
 const colors = {
     transparent: 'transparent',
-    black: '#000',
-    white: '#fff',
     brand: {
+        white: '#fff',
         orange: '#fca311',
-        lightGreen: '#9AA61A',
-        darkGreen: '#006571',
+        darkBlue: '#14213d',
         lightGray: '#e5e5e5',
-        midGray: '#d9d9d9',
         error: '#9a031e',
-        title: '#41984D',
-        footer: '#457b9d',//#32476A#499bc4#1c739e#457b9d
+        lightGreen: '#9AA61A',
     }
 };
 // ============================================================
