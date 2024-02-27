@@ -15,10 +15,10 @@ import borders from './foundations/borders';
 import colors from './foundations/colors';
 import fonts from './foundations/fonts';
 // Component style overrides
-import Button from './components/button';
-import Input from './components/input';
-import Card from './components/card';
-import Container from './components/container';
+import Button from './components/Button';
+import Input from './components/Input';
+import { cardTheme } from './components/Card';
+import Container from './components/Container';
 // ============================================================
 
 // Define Overrides and configs for changing the color mode
@@ -32,7 +32,7 @@ const overrides = {
     components: {
         Button,
         Input,
-        Card,
+        Card: cardTheme,
         Container,
     },
 };
