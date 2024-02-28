@@ -1,19 +1,13 @@
 // Desc: This is the Copyright component
-// for this file I used the following Github repo:
-// (https://github.com/mui/material-ui/tree/master/examples/material-ui-vite)
-// ============================================================
-
-// Importing modules
-// ============================================================
 // ============================================================
 
 // Creating the component
 // ============================================================
 const Copyright = () => {
     return (
-        <span>
+        <span style={{ fontSize: '16px' }}>
             {'Copyright © '}
-            <a href="/">
+            <a href="/" style={{ textDecoration: 'underline' }}>
                 EhsanAsh
             </a>{' '}
             {new Date().getFullYear()}.
