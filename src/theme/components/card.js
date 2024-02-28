@@ -22,18 +22,17 @@ const { definePartsStyle, defineMultiStyleConfig } =
 const baseStyle = definePartsStyle({
 
     container: {
-        backgroundColor: 'brand.lightGray',
+        backgroundColor: '#e5e5e56b',
     },
     header: {
         paddingBottom: '2px',
-
     },
     body: {
         paddingTop: '2px',
-        fontFamily: 'montserratBody',
         fontSmooth: 'auto',
         fontOpticalSizing: 'auto',
-        fontWeight: '400'
+        fontWeight: '400',
+        fontSize: 'xs',
     },
     footer: {
         paddingTop: '4px'
@@ -64,9 +63,8 @@ const sizes = {
 const variants = {
     basic: definePartsStyle({
         container: {
-            borderColor: 'brand.orange',
-            borderWidth: '2px',
             color: 'brand.darkBlue',
+            border: 'none'
         },
     })
 };

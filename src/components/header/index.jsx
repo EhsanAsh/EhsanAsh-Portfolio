@@ -15,9 +15,8 @@ import {
     Tabs,
     TabList,
     Tab,
-    TabIndicator,
 } from '@chakra-ui/react';
-import { Link as ReactRouterLink } from 'react-router-dom';
+import { Link as ReactRouterLink, useLocation } from 'react-router-dom';
 import { Link as ChakraLink } from '@chakra-ui/react';
 import { ExternalLinkIcon } from '@chakra-ui/icons';
 import './Header.css';
@@ -33,6 +32,12 @@ import Hero from '../../assets/image/Hero.jpg';
 // ============================================================
 
 const Header = () => {
+
+    const location = useLocation();
+    const isHome = location.pathname === '/';
+    const isPortfolio = location.pathname === '/portfolio';
+    const isProjects = location.pathname === '/projects';
+    const isContact = location.pathname === '/contact';
 
     return (
 
@@ -53,25 +58,40 @@ const Header = () => {
                 position="relative"
                 variant="unstyled"
                 zIndex={10}
-                fontFamily={'montserratBody'}
             >
                 <TabList>
-                    <Tab>
+                    <Tab
+                        borderBottom={isHome ? '1px solid' : undefined}
+                        borderColor={isHome ? 'brand.orange' : undefined}
+                        transform={isHome ? 'scale(1.2)' : undefined}
+                    >
                         <ChakraLink as={ReactRouterLink} to='/'>
                             Home
                         </ChakraLink>
                     </Tab>
-                    <Tab>
+                    <Tab
+                        borderBottom={isPortfolio ? '1px solid' : undefined}
+                        borderColor={isPortfolio ? 'brand.orange' : undefined}
+                        transform={isPortfolio ? 'scale(1.2)' : undefined}
+                    >
                         <ChakraLink as={ReactRouterLink} to='/portfolio'>
                             Portfolio
                         </ChakraLink>
                     </Tab>
-                    <Tab>
+                    <Tab
+                        borderBottom={isProjects ? '1px solid' : undefined}
+                        borderColor={isProjects ? 'brand.orange' : undefined}
+                        transform={isProjects ? 'scale(1.2)' : undefined}
+                    >
                         <ChakraLink as={ReactRouterLink} to='/projects'>
                             Projects
                         </ChakraLink>
                     </Tab>
-                    <Tab>
+                    <Tab
+                        borderBottom={isContact ? '1px solid' : undefined}
+                        borderColor={isContact ? 'brand.orange' : undefined}
+                        transform={isContact ? 'scale(1.2)' : undefined}
+                    >
                         <ChakraLink as={ReactRouterLink} to='/contact'>
                             Contact Me
                         </ChakraLink>
@@ -94,12 +114,6 @@ const Header = () => {
                             GitHub<ExternalLinkIcon mx='2px' />
                         </ChakraLink>
                     </Tab>
-                    <TabIndicator
-                        mt="35px"
-                        height="2px"
-                        bg="brand.orange"
-                        borderRadius="2px"
-                    />
                 </TabList>
             </Tabs>
             <Spacer />
