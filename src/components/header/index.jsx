@@ -44,13 +44,12 @@ const Header = () => {
         <Flex
             direction={'column'}
             width='100%'
-            minWidth='max-content'
             alignItems='center'
             justifyContent='center'
             flexShrink={0}
             px='10'
-            py='20'
-            gap='5'
+            py='12'
+            gap='8'
             bgImage={Hero}
             bgPosition='center'
         >
@@ -65,7 +64,11 @@ const Header = () => {
                         borderColor={isHome ? 'brand.orange' : undefined}
                         transform={isHome ? 'scale(1.2)' : undefined}
                     >
-                        <ChakraLink as={ReactRouterLink} to='/'>
+                        <ChakraLink
+                            as={ReactRouterLink}
+                            to='/'
+                            fontSize={['xs', 'xs', 'sm', 'md']}
+                        >
                             Home
                         </ChakraLink>
                     </Tab>
@@ -74,7 +77,11 @@ const Header = () => {
                         borderColor={isPortfolio ? 'brand.orange' : undefined}
                         transform={isPortfolio ? 'scale(1.2)' : undefined}
                     >
-                        <ChakraLink as={ReactRouterLink} to='/portfolio'>
+                        <ChakraLink
+                            as={ReactRouterLink}
+                            to='/portfolio'
+                            fontSize={['xs', 'xs', 'sm', 'md']}
+                        >
                             Portfolio
                         </ChakraLink>
                     </Tab>
@@ -83,7 +90,11 @@ const Header = () => {
                         borderColor={isProjects ? 'brand.orange' : undefined}
                         transform={isProjects ? 'scale(1.2)' : undefined}
                     >
-                        <ChakraLink as={ReactRouterLink} to='/projects'>
+                        <ChakraLink
+                            as={ReactRouterLink}
+                            to='/projects'
+                            fontSize={['xs', 'xs', 'sm', 'md']}
+                        >
                             Projects
                         </ChakraLink>
                     </Tab>
@@ -92,7 +103,11 @@ const Header = () => {
                         borderColor={isContact ? 'brand.orange' : undefined}
                         transform={isContact ? 'scale(1.2)' : undefined}
                     >
-                        <ChakraLink as={ReactRouterLink} to='/contact'>
+                        <ChakraLink
+                            as={ReactRouterLink}
+                            to='/contact'
+                            fontSize={['xs', 'xs', 'sm', 'md']}
+                        >
                             Contact Me
                         </ChakraLink>
                     </Tab>
@@ -101,6 +116,7 @@ const Header = () => {
                             as={ReactRouterLink}
                             to='https://www.linkedin.com/in/ehsan-ashrafipour-922056245/'
                             isExternal
+                            fontSize={['xs', 'xs', 'sm', 'md']}
                         >
                             LinkedIn<ExternalLinkIcon mx='2px' />
                         </ChakraLink>
@@ -110,6 +126,7 @@ const Header = () => {
                             as={ReactRouterLink}
                             to='https://github.com/EhsanAsh'
                             isExternal
+                            fontSize={['xs', 'xs', 'sm', 'md']}
                         >
                             GitHub<ExternalLinkIcon mx='2px' />
                         </ChakraLink>
@@ -119,15 +136,17 @@ const Header = () => {
             <Spacer />
             <Box
                 display="flex"
-                // flexDir={{ base: 'column', md: 'row' }}
-                justifyContent="space-evenly"
+                flexDir={{ base: 'column', md: 'row' }}
+                justifyContent={{ base: 'center', md: 'flex-start' }}
+                alignItems={{ base: 'center', md: 'flex-start' }}
                 width='100%'
-                gap={['12px', '12px', '25px', '50px']}
+                gap={['12px', '12px', '25px']}
+                p='5px'
             >
                 <Box>
                     <Image
                         borderRadius='full'
-                        boxSize={{ base: '150px', md: '200px', xl: '250px'}}
+                        boxSize={{ base: '200px', xl: '250px'}}
                         src={ehsan}
                         alt='Ehsan Ashrafipour'
                         fallbackSrc='https://via.placeholder.com/150'
@@ -136,22 +155,21 @@ const Header = () => {
                         boxShadow='6px 6px 17px #14213d66, -6px -6px 17px #14213d66'
                         objectFit='cover'
                         objectPosition='center'
-                        mb={10}
                     />
                 </Box>
                 <Container variant={'hero'} lineHeight={'2'} gap={0}>
                     <Box
                         display={'flex'}
                         flexDirection={'column'}
-                        alignItems={'flex-start'}
+                        alignItems={{ base: 'center', md: 'flex-start' }}
                         gap={'0'}
                         lineHeight={'1.2'}
                     >
                         <Text as={'h2'}>Ehsan Ashrafipour</Text>
                         <Text
                             as={'h3'}
-                            fontSize={['xs', 'sm', 'md', 'xl', '2xl']}
-                            fontWeight={'400'}
+                            fontSize={['lg', 'xl', 'xl', 'xl', '2xl']}
+                            fontWeight={'500'}
                         >
                             BEng Mechanical Engineering
                         </Text>
@@ -159,8 +177,8 @@ const Header = () => {
                     <div className='wrapper'>
                         <svg>
                             <text
-                                x="45%"
-                                y="50%"
+                                x="50%"
+                                y="45%"
                                 textAnchor="middle"
                             >
                                 Full-stack Application Developer

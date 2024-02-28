@@ -9,7 +9,7 @@ svg text {
   animation: stroke 8s infinite alternate;
   stroke-width: 2;
   stroke: #fc8e11;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
 }
 @keyframes stroke {
   0% {
@@ -42,9 +42,21 @@ svg text {
   align-self: stretch;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 480px) {
   svg text {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
+  }
+}
+
+@media screen and (min-width: 780px) {
+  svg text {
+    font-size: 1.7rem;
+  }
+}
+
+@media screen and (min-width: 850px) {
+  svg text {
+    font-size: 2rem;
   }
 }
 
