@@ -31,20 +31,19 @@ function Home() {
             alignItems='center'
             justifyContent='center'
             alignSelf='stretch'
+            gap={20}
             px='60px'
             transform={[
-                'translateY(-65px)',
-                'translateY(-70px)',
-                'translateY(-75px)',
-                'translateY(-80px)'
+                'translateY(-63px)',
+                'translateY(-68px)',
+                'translateY(-73px)',
+                'translateY(-78px)'
             ]}
         >
             <Box
                 gap={7}
                 position="relative"
-                h="100vh"
                 lineHeight='1.7'
-                maxWidth='900px'
             >
                 <Center>
                     <Card>
@@ -55,10 +54,11 @@ function Home() {
                         >
                             <Heading
                                 as="h2"
-                                size="lg"
+                                size="md"
                                 fontFamily={'josefinSlabTitle'}
+                                color='brand.darkBlue'
                             >
-                                Welcome to my React portfolio!
+                                WELCOME TO MY REACT PORTFOLIO!
                             </Heading>
                         </CardHeader>
                         <CardBody py={3}>
@@ -66,14 +66,153 @@ function Home() {
                             <Text>Click the button below to proceed to the Portfolio page.</Text>
                         </CardBody>
                         <CardFooter>
-                            <Button colorScheme="orange" size="lg" variant="solid">
+                            <Button
+                                colorScheme="orange"
+                                size="md"
+                                variant="outline"
+                                borderRadius={0}
+                                _hover={{ color: 'brand.lightGreen' }}
+                            >
                                 <ChakraLink as={ReactRouterLink} to='/portfolio'>
                                     Portfolio
                                 </ChakraLink>
                             </Button>
                         </CardFooter>
                     </Card>
+                    <Card>
+                        <CardHeader
+                            borderBottom={'solid 2px'}
+                            borderColor={'brand.orange'}
+                            pb={2}
+                        >
+                            <Heading
+                                as="h2"
+                                size="md"
+                                fontFamily={'josefinSlabTitle'}
+                                color='brand.darkBlue'
+                            >
+                                PROJECTS
+                            </Heading>
+                        </CardHeader>
+                        <CardBody py={3}>
+                            <Text>AdsTrees, a revolutionary web application that intertwines the power of advertising with environmental sustainability. It offers a unique platform where viewers can watch premium ads voluntarily, and in return, trees are planted, contributing to a greener planet...</Text>
+                            <Text>Click the button below to proceed to the Projects page.</Text>
+                        </CardBody>
+                        <CardFooter>
+                            <Button
+                                colorScheme="orange"
+                                size="md"
+                                variant="outline"
+                                borderRadius={0}
+                                _hover={{ color: 'brand.lightGreen' }}
+                            >
+                                <ChakraLink as={ReactRouterLink} to='/projects'>
+                                    Projects
+                                </ChakraLink>
+                            </Button>
+                        </CardFooter>
+                    </Card>
+                    <Card>
+                        <CardHeader
+                            borderBottom={'solid 2px'}
+                            borderColor={'brand.orange'}
+                            pb={2}
+                        >
+                            <Heading
+                                as="h2"
+                                size="md"
+                                fontFamily={'josefinSlabTitle'}
+                                color='brand.darkBlue'
+                            >
+                                WHY HIRE ME!
+                            </Heading>
+                        </CardHeader>
+                        <CardBody py={3}>
+                            <Text>I&apos;m a Full-Stack Developer and the University of Toronto Alumnus with a Certificate in Full-stack Application Development, boasting a remarkable graduation score of 96.07 (A). With a lifelong passion for programming and software development, I bring a blend of creativity, problem-solving skills, and a commitment to creating impactful solutions. </Text>
+                            <Text>
+                                Click on buttons below to proceed to my LinkedIn or GitHub profile.
+                            </Text>
+                        </CardBody>
+                        <CardFooter>
+                            <Button
+                                colorScheme="orange"
+                                size="md"
+                                variant="outline"
+                                border='none'
+                                gap={5}
+                            >
+                                <ChakraLink
+                                    as={ReactRouterLink}
+                                    to='https://www.linkedin.com/in/ehsan-ashrafipour-922056245/'
+                                    isExternal
+                                >
+                                    <i className="fa-brands fa-linkedin fa-beat fa-2xl"></i>
+                                </ChakraLink>
+                                <ChakraLink
+                                    as={ReactRouterLink}
+                                    to='https://github.com/EhsanAsh'
+                                    isExternal
+                                >
+                                    <i className="fa-brands fa-github fa-beat fa-2xl"></i>
+                                </ChakraLink>
+                            </Button>
+                        </CardFooter>
+                    </Card>
                 </Center>
+            </Box>
+            <Box
+                display={'flex'}
+                flexDir={'column'}
+                alignItems={'center'}
+                justifyContent={'center'}
+                justifyItems={'stretch'}
+                alignSelf={'stretch'}
+                width='100%'
+                gap={5}
+                p={2}
+            >
+                <Heading
+                    as="h2"
+                    size="lg"
+                    fontFamily={'josefinSlabTitle'}
+                    fontWeight={'700'}
+                    color='brand.darkBlue'
+                    borderBottom={'solid 2px'}
+                    borderColor={'brand.orange'}
+                >
+                    EDUCATION
+                </Heading>
+                <Box
+                    display={'flex'}
+                    flexDir={'column'}
+                    alignItems={'flex-start'}
+                    justifyContent={'center'}
+                    justifyItems={'stretch'}
+                    alignSelf={'stretch'}
+                    width='100%'
+                    gap={5}
+                    p={2}
+                >
+                    <Box
+                        bg='brand.orange'
+                        borderRadius={'full'}
+                        p={1.5}
+                        boxSize={'50px'}
+                        alignContent={'center'}
+
+                    >
+                        <i className="fa-duotone fa-graduation-cap fa-xl"></i>
+                    </Box>
+                    <Box
+                        bg='brand.orange'
+                        borderRadius={'full'}
+                        p={1.5}
+                        boxSize={'50px'}
+                        alignContent={'center'}
+                    >
+                        <i className="fa-duotone fa-graduation-cap fa-xl"></i>
+                    </Box>
+                </Box>
             </Box>
         </Flex>
 
