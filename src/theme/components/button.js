@@ -15,19 +15,53 @@ import { defineStyleConfig } from '@chakra-ui/react';
 const Button = defineStyleConfig({
 
     baseStyle: {
+        borderRadius: 0,
+        _hover: { color: 'brand.lightGreen' },
     },
 
     sizes: {
+        md: {
+            fontSize: ['16px', '16px', '18px'],
+            padding: ['15px', '15px', '20px'],
+        },
     },
 
     variants: {
+        outline: {
+            border: '2px solid',
+            borderColor: 'brand.orange',
+            color: 'brand.orange',
+            _hover: { bg: 'brand.orange', color: 'brand.darkBlue' },
+        },
+        socialMediaOrange: {
+            border: 'none',
+            color: 'brand.orange',
+            _hover: { color: 'brand.darkBlue' },
+            transition: 'all 0.2s',
+            gap: 5,
+        },
+        socialMediaDark: {
+            border: 'none',
+            color: 'brand.darkBlue',
+            _hover: { color: 'brand.orange', transform: 'translateY(-5px)' },
+        },
+        solid: {
+            bg: 'brand.orange',
+            color: 'brand.darkBlue',
+            _hover: { bg: 'brand.darkBlue', color: 'brand.orange' },
+        },
+        ghost: {
+            bg: 'transparent',
+            color: 'brand.orange',
+            _hover: { bg: 'brand.orange', color: 'brand.darkBlue' },
+        },
 
     },
     // The default size and variant values
     defaultProps: {
-        // size: 'lg',
-        // variant: 'solid',
-        // colorScheme: 'green',
+        size: 'md',
+        variant: 'outline',
+        colorScheme: 'orange',
     },
 });
 // ============================================================

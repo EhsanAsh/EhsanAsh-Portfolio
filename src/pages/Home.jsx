@@ -16,7 +16,19 @@ import {
     Center,
     Flex,
     Text,
+    List,
+    ListItem,
+    ListIcon,
 } from '@chakra-ui/react';
+import {
+    InfoOutlineIcon,
+    DragHandleIcon,
+    TimeIcon,
+    StarIcon,
+    SettingsIcon,
+    CheckIcon,
+    ExternalLinkIcon
+} from '@chakra-ui/icons';
 import { Link as ReactRouterLink } from 'react-router-dom';
 import { Link as ChakraLink } from '@chakra-ui/react';
 // ============================================================
@@ -48,11 +60,11 @@ function Home() {
             gap={20}
             px='60px'
             transform={[
-                'translateY(-52px)',
-                'translateY(-78px)',
-                'translateY(-78px)',
-                'translateY(-83px)',
-                'translateY(-92px)'
+                'translateY(-73px)',
+                'translateY(-77px)',
+                'translateY(-74px)',
+                'translateY(-77px)',
+                'translateY(-82px)'
             ]}
         >
             <Box
@@ -64,14 +76,10 @@ function Home() {
                 <Center>
                     {currentCard === 0 && (
                         <Card>
-                            <CardHeader
-                                borderBottom={'solid 2px'}
-                                borderColor={'brand.orange'}
-                                pb={2}
-                            >
+                            <CardHeader pb={2}>
                                 <Heading
                                     as="h2"
-                                    fontSize={['md', 'md', 'xl', '2xl', '3xl']}
+                                    fontSize={{ base: 'md', lg: 'xl', xl: '2xl' }}
                                     fontFamily={'josefinSlabTitle'}
                                     color='brand.darkBlue'
                                 >
@@ -83,13 +91,7 @@ function Home() {
                                 <Text>Click the button below to proceed to the Portfolio page.</Text>
                             </CardBody>
                             <CardFooter>
-                                <Button
-                                    colorScheme="orange"
-                                    size="md"
-                                    variant="outline"
-                                    borderRadius={0}
-                                    _hover={{ color: 'brand.lightGreen' }}
-                                >
+                                <Button>
                                     <ChakraLink as={ReactRouterLink} to='/portfolio'>
                                     Portfolio
                                     </ChakraLink>
@@ -99,14 +101,10 @@ function Home() {
                     )}
                     {currentCard === 1 && (
                         <Card>
-                            <CardHeader
-                                borderBottom={'solid 2px'}
-                                borderColor={'brand.orange'}
-                                pb={2}
-                            >
+                            <CardHeader pb={2}>
                                 <Heading
                                     as="h2"
-                                    fontSize={['lg', 'lg', 'xl', '2xl', '3xl']}
+                                    fontSize={{ base: 'lg', lg: 'xl', xl: '2xl' }}
                                     fontFamily={'josefinSlabTitle'}
                                     color='brand.darkBlue'
                                 >
@@ -118,13 +116,7 @@ function Home() {
                                 <Text>Click the button below to proceed to the Projects page.</Text>
                             </CardBody>
                             <CardFooter>
-                                <Button
-                                    colorScheme="orange"
-                                    size="md"
-                                    variant="outline"
-                                    borderRadius={0}
-                                    _hover={{ color: 'brand.lightGreen' }}
-                                >
+                                <Button>
                                     <ChakraLink as={ReactRouterLink} to='/projects'>
                                     Projects
                                     </ChakraLink>
@@ -134,14 +126,10 @@ function Home() {
                     )}
                     {currentCard === 2 && (
                         <Card>
-                            <CardHeader
-                                borderBottom={'solid 2px'}
-                                borderColor={'brand.orange'}
-                                pb={2}
-                            >
+                            <CardHeader pb={2}>
                                 <Heading
                                     as="h2"
-                                    fontSize={['lg', 'lg', 'xl', '2xl', '3xl']}
+                                    fontSize={{ base: 'lg', lg: 'xl', xl: '2xl' }}
                                     fontFamily={'josefinSlabTitle'}
                                     color='brand.darkBlue'
                                 >
@@ -151,17 +139,11 @@ function Home() {
                             <CardBody py={3}>
                                 <Text>I&apos;m a Full-Stack Developer and the University of Toronto Alumnus with a Certificate in Full-stack Application Development, boasting a remarkable graduation score of 96.07 (A). With a lifelong passion for programming and software development, I bring a blend of creativity, problem-solving skills, and a commitment to creating impactful solutions. </Text>
                                 <Text>
-                                Click on buttons below to proceed to my LinkedIn or GitHub profile.
+                                    Click on buttons below to proceed to my LinkedIn or GitHub profile.
                                 </Text>
                             </CardBody>
                             <CardFooter>
-                                <Button
-                                    colorScheme="orange"
-                                    size="md"
-                                    variant="outline"
-                                    border='none'
-                                    gap={5}
-                                >
+                                <Button variant='socialMediaOrange'>
                                     <ChakraLink
                                         as={ReactRouterLink}
                                         to='https://www.linkedin.com/in/ehsan-ashrafipour-922056245/'
@@ -169,6 +151,8 @@ function Home() {
                                     >
                                         <i className="fa-brands fa-linkedin fa-beat fa-2xl"></i>
                                     </ChakraLink>
+                                </Button>
+                                <Button variant='socialMediaOrange'>
                                     <ChakraLink
                                         as={ReactRouterLink}
                                         to='https://github.com/EhsanAsh'
@@ -192,6 +176,7 @@ function Home() {
                 width='100%'
                 gap={5}
                 p={2}
+                mb={20}
             >
                 <Heading
                     as="h2"
@@ -201,6 +186,7 @@ function Home() {
                     color='brand.darkBlue'
                     borderBottom={'solid 2px'}
                     borderColor={'brand.orange'}
+                    mb={'10'}
                 >
                     EDUCATION
                 </Heading>
@@ -216,23 +202,188 @@ function Home() {
                     p={2}
                 >
                     <Box
-                        bg='brand.orange'
-                        borderRadius={'full'}
-                        p={1.5}
-                        boxSize={'50px'}
-                        alignContent={'center'}
-
+                        display={'flex'}
+                        flexDir={'row'}
+                        alignItems={'center'}
+                        justifyContent={'flex-start'}
+                        alignSelf={'stretch'}
+                        width={'100%'}
+                        gap={5}
+                        p={2}
                     >
-                        <i className="fa-duotone fa-graduation-cap fa-xl"></i>
+                        <Box
+                            p={1.5}
+                            boxSize={'50px'}
+                            alignContent={'center'}
+                            bg='brand.orange'
+                            borderRadius={'full'}
+                            alignSelf={'flex-start'}
+                        >
+                            <i className="fa-duotone fa-graduation-cap fa-xl"></i>
+                        </Box>
+                        <Box width={'50%'}>
+                            <Card size={'md'}>
+                                <CardHeader>
+                                    <Heading
+                                        as="h3"
+                                        fontSize={{ base: 'lg', xl: 'xl' }}
+                                        fontFamily={'josefinSlabTitle'}
+                                    >
+                                        University of Toronto Certificate
+                                    </Heading>
+                                </CardHeader>
+                                <CardBody py={2}>
+                                    <List spacing={3}>
+                                        <ListItem>
+                                            <ListIcon as={InfoOutlineIcon} color='brand.orange' />
+                                                Full Stack Application Development
+                                        </ListItem>
+                                        <ListItem>
+                                            <ListIcon as={DragHandleIcon} color='brand.orange' />
+                                                University of Toronto, Toronto, Ontario
+                                        </ListItem>
+                                        <ListItem>
+                                            <ListIcon as={TimeIcon} color='brand.orange' />
+                                                July 2023 - January 2024
+                                        </ListItem>
+                                        <ListItem>
+                                            <ListIcon as={StarIcon} color='brand.orange' />
+                                                96.07 / 100 (A)
+                                        </ListItem>
+                                        <ListItem>
+                                            <ListIcon as={CheckIcon} color='brand.orange' />
+                                                HTML, CSS, JavaScript, React, NodeJS, Express, MongoDB, MySQL, and more...
+                                        </ListItem>
+                                        <ListItem>
+                                            <ListIcon as={SettingsIcon} color='brand.orange' />
+                                            Final Project |  <ChakraLink
+                                                as={ReactRouterLink}
+                                                to='https://www.adstrees.com/'
+                                                isExternal
+                                                color='brand.error'
+                                            >
+                                                AdsTrees<ExternalLinkIcon mx='2px' />
+                                            </ChakraLink>
+                                        </ListItem>
+                                    </List>
+                                </CardBody>
+                            </Card>
+                        </Box>
                     </Box>
                     <Box
-                        bg='brand.orange'
-                        borderRadius={'full'}
-                        p={1.5}
-                        boxSize={'50px'}
-                        alignContent={'center'}
+                        display={'flex'}
+                        flexDir={'row'}
+                        alignItems={'center'}
+                        justifyContent={'flex-start'}
+                        alignSelf={'stretch'}
+                        width={'100%'}
+                        gap={5}
+                        p={2}
                     >
-                        <i className="fa-duotone fa-graduation-cap fa-xl"></i>
+                        <Box
+                            p={1.5}
+                            boxSize={'50px'}
+                            alignContent={'center'}
+                            bg='brand.orange'
+                            borderRadius={'full'}
+                            alignSelf={'flex-start'}
+                        >
+                            <i className="fa-duotone fa-graduation-cap fa-xl"></i>
+                        </Box>
+                        <Box width={'50%'}>
+                            <Card size={'md'}>
+                                <CardHeader>
+                                    <Heading
+                                        as="h3"
+                                        fontSize={{ base: 'lg', xl: 'xl' }}
+                                        fontFamily={'josefinSlabTitle'}
+                                    >
+                                        Bachelor&apos;s Degree
+                                    </Heading>
+                                </CardHeader>
+                                <CardBody py={2}>
+                                    <List spacing={3}>
+                                        <ListItem>
+                                            <ListIcon as={InfoOutlineIcon} color='brand.orange' />
+                                                BEng Auto Mechanical Engineering
+                                        </ListItem>
+                                        <ListItem>
+                                            <ListIcon as={DragHandleIcon} color='brand.orange' />
+                                                Azad University, Fars, Iran
+                                        </ListItem>
+                                        <ListItem>
+                                            <ListIcon as={TimeIcon} color='brand.orange' />
+                                                January 2009 - February 2011
+                                        </ListItem>
+                                        <ListItem>
+                                            <ListIcon as={StarIcon} color='brand.orange' />
+                                                18.15 / 20 (A)
+                                        </ListItem>
+                                        <ListItem>
+                                            <ListIcon as={CheckIcon} color='brand.orange' />
+                                                Graduated with Honours
+                                        </ListItem>
+                                    </List>
+                                </CardBody>
+                            </Card>
+                        </Box>
+                    </Box>
+                    <Box
+                        display={'flex'}
+                        flexDir={'row'}
+                        alignItems={'center'}
+                        justifyContent={'flex-start'}
+                        alignSelf={'stretch'}
+                        gap={5}
+                        p={2}
+                    >
+                        <Box
+                            p={1.5}
+                            boxSize={'50px'}
+                            alignContent={'center'}
+                            bg='brand.orange'
+                            borderRadius={'full'}
+                            alignSelf={'flex-start'}
+                        >
+                            <i className="fa-duotone fa-graduation-cap fa-xl"></i>
+                        </Box>
+                        <Box width={'50%'}>
+                            <Card size={'md'}>
+                                <CardHeader>
+                                    <Heading
+                                        as="h3"
+                                        fontSize={{ base: 'lg', xl: 'xl' }}
+                                        fontFamily={'josefinSlabTitle'}
+                                    >
+                                        Associate&apos;s Degree
+                                    </Heading>
+                                </CardHeader>
+                                <CardBody py={2}>
+                                    <List spacing={3}>
+                                        <ListItem>
+                                            <ListIcon as={InfoOutlineIcon} color='brand.orange' />
+                                                Associate Degree in Automotive Maintenance Technology
+                                        </ListItem>
+                                        <ListItem>
+                                            <ListIcon as={DragHandleIcon} color='brand.orange' />
+                                                Shiraz University, Shiraz, Iran
+                                        </ListItem>
+                                        <ListItem>
+                                            <ListIcon as={TimeIcon} color='brand.orange' />
+                                                September 2004 - February 2007
+                                        </ListItem>
+                                        <ListItem>
+                                            <ListIcon as={StarIcon} color='brand.orange' />
+                                                18 / 20 (A)
+                                        </ListItem>
+                                        <ListItem>
+                                            <ListIcon as={CheckIcon} color='brand.orange' />
+                                                Graduated with Honours
+                                        </ListItem>
+                                    </List>
+                                </CardBody>
+                            </Card>
+                        </Box>
                     </Box>
                 </Box>
             </Box>
