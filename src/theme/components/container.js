@@ -16,7 +16,7 @@ const Container = defineStyleConfig({
     baseStyle: {
         display: 'flex',
         flexDirection: 'column',
-        alignItems: 'flex-start',
+        alignItems: { base: 'center', md: 'flex-start' },
         justifyContent: 'center',
         flex: '1 0',
         height: 'auto',
@@ -32,10 +32,10 @@ const Container = defineStyleConfig({
             p: '7px',
         },
         md: {
-            p: '10px',
+            p: '17px',
         },
         lg: {
-            p: '13px',
+            p: '20px',
         },
     },
 
@@ -43,7 +43,7 @@ const Container = defineStyleConfig({
 
         'hero': {
             fontFamily: 'josefinSlabTitle',
-            fontSize: ['xl', 'xl', '3xl', '4xl', '5xl'],
+            fontSize: ['3xl', '4xl', '4xl', '4xl', '5xl'],
             gap: '10px',
             fontStyle: 'normal',
             fontOpticalSizing: 'auto',

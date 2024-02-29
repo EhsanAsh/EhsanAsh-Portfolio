@@ -28,11 +28,10 @@ const baseStyle = definePartsStyle({
         paddingBottom: '2px',
     },
     body: {
-        paddingTop: '2px',
         fontSmooth: 'auto',
         fontOpticalSizing: 'auto',
         fontWeight: '400',
-        fontSize: 'xs',
+        fontSize: ['xs', 'sm'],
     },
     footer: {
         paddingTop: '4px'
@@ -46,13 +45,20 @@ const sizes = {
     md: definePartsStyle({
         container: {
             borderRadius: '0',
-            padding: '20px',
+            lineHeight: '1',
+            padding: '5px',
+        }
+    }),
+    lg: definePartsStyle({
+        container: {
+            borderRadius: '0',
         }
     }),
     xl: definePartsStyle({
         container: {
             borderRadius: '0',
             padding: '40px',
+            lineHeight: '1.7'
         }
     })
 };
@@ -66,6 +72,11 @@ const variants = {
             color: 'brand.darkBlue',
             border: 'none'
         },
+        header: {
+            borderBottom: 'solid 2px',
+            borderColor: 'brand.orange',
+            paddingBottom: '2px',
+        }
     })
 };
 // ============================================================

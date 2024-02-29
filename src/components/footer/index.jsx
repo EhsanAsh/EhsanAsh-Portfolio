@@ -24,7 +24,7 @@ import Copyright from './Copyright';
 const Footer = () => {
     return (
         <Flex
-            direction={'row'}
+            direction={{ base: 'column', md: 'row' }}
             width='100%'
             minWidth='max-content'
             height='auto'
@@ -61,12 +61,7 @@ const Footer = () => {
                         icon={<FaGithub />}
                         size="xs"
                         colorScheme="white"
-                        variant="outline"
-                        border="none"
-                        _hover={{
-                            transform: 'translateY(-5px)',
-                        }}
-                        transition="all 0.2s"
+                        variant="socialMediaDark"
                     />
                 </ChakraLink>
                 <ChakraLink
@@ -79,12 +74,7 @@ const Footer = () => {
                         icon={<FaLinkedin />}
                         colorScheme="white"
                         size="xs"
-                        variant="outline"
-                        border="none"
-                        _hover={{
-                            transform: 'translateY(-5px)',
-                        }}
-                        transition="all 0.2s"
+                        variant="socialMediaDark"
                     />
                 </ChakraLink>
                 <ChakraLink
@@ -97,12 +87,7 @@ const Footer = () => {
                         icon={<FaTwitterSquare />}
                         colorScheme="white"
                         size="xs"
-                        variant="outline"
-                        border="none"
-                        _hover={{
-                            transform: 'translateY(-5px)',
-                        }}
-                        transition="all 0.2s"
+                        variant="socialMediaDark"
                     />
                 </ChakraLink>
             </Box>
