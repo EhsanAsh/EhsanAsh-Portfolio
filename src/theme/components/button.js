@@ -22,7 +22,7 @@ const Button = defineStyleConfig({
     sizes: {
         md: {
             fontSize: ['16px', '16px', '18px'],
-            padding: ['15px', '15px', '20px'],
+            padding: '15px',
         },
     },
 
