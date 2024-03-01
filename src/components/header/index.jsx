@@ -80,6 +80,7 @@ const Header = () => {
                 fontSize='sm'
                 fontWeight={'500'}
                 borderColor={'whiteAlpha.800'}
+                mr={20}
             >
                 {menuItems.map(item => {
                 // Check if the link is external
@@ -104,7 +105,6 @@ const Header = () => {
                                 as={ReactRouterLink}
                                 to={item.to}
                                 key={item.label}
-                                // isActive={item.isActive}
                                 _hover={{ color: 'brand.orange' }}
                                 backgroundColor={'whiteAlpha.800'}
                             >

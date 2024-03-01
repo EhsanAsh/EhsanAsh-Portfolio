@@ -25,7 +25,6 @@ const styles = {
             fontStyle: 'normal',
             fontSize: ['md', 'lg'],
             gap: '7px',
-            // overflow: 'scroll',
         },
 
         '.page': {
