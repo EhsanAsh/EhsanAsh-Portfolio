@@ -62,6 +62,9 @@ const variants = {
             borderLeftColor: 'brand.darkBlue',
             boxShadow: '0px 3px 3px 1px #d8e2f8d2',
             mb: '10px',
+            _placeholder: {
+                color: 'brand.errorTransparent',
+            },
             _hover: {
                 bg: 'brand.lightBlueHover',
                 boxShadow: 'none',

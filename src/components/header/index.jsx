@@ -77,6 +77,8 @@ const Header = () => {
             py='12'
             gap='8'
             bgImage={Hero}
+            bgRepeat='no-repeat'
+            bgSize='cover'
             bgPosition='center'
         >
 

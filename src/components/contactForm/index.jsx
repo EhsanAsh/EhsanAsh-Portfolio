@@ -47,24 +47,16 @@ const ContactForm = ({
 
         <>
 
-            <Heading
-                as={'h1'}
-                size={{ base: 'lg', md: 'xl', lg: '2xl' }}
-                fontFamily={'josefinSlabTitle'}
-                fontWeight={'500'}
-                display={'inline-block'}
-            >
-                Welcome {formData.user_name}
-            </Heading>
             <Card size={'md'} variant={'contact'}>
                 <CardHeader>
                     <Heading
                         as={'h2'}
-                        size={{ base: 'lg', md: 'xl' }}
+                        size={{ base: 'md',sm: 'lg',md: 'xl' }}
                         fontFamily={'josefinSlabTitle'}
                         fontWeight={'500'}
+                        textAlign={'center'}
                     >
-                        Ways to contact me:
+                        Ways to contact me
                     </Heading>
                 </CardHeader>
                 <CardBody>
@@ -74,10 +66,14 @@ const ContactForm = ({
                         justifyContent={'flex-start'}
                         alignItems={'center'}
                         gap={'10px'}
+                        color={'brand.darkBlue'}
                     >
-                        <i className="fa-duotone fa-mailbox-flag-up fa-xl"></i>
-                        <Text color={'brand.error'}>
-                            Email: ehsan.ashrafipour@gmail.com
+                        <i className="fa-brands fa-google fa-xl"></i>
+                        <Text
+                            color={'brand.error'}
+                            fontSize={{ base: 'sm', md: 'md' }}
+                        >
+                            ehsan.ashrafipour
                         </Text>
                     </Box>
                     <Button
@@ -125,7 +121,9 @@ const ContactForm = ({
                 justifyContent={'center'}
                 alignItems={'flex-start'}
                 p={'20px'}
-                width={[400, 450, 500, 550, 600]}
+                width={'100%'}
+                maxWidth={'600px'}
+                minW={'300px'}
             >
                 <form onSubmit={sendEmail} id="contact-form">
 

@@ -123,10 +123,10 @@ const Contact = () => {
             height='auto'
             gap={2}
             mb={20}
+            p={7}
             bgImage={ContactPagePic}
             bgRepeat='no-repeat'
             bgSize='contain'
-            p={7}
             bgPosition={'right'}
         >
 

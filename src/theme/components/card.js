@@ -46,11 +46,16 @@ const sizes = {
             lineHeight: '2',
             padding: '5px',
             ml: '20px',
-            width: [350, 450, 500, 550, 600],
+            width: '100%',
+            maxWidth: '600px',
+            minWidth: '250px',
         },
         header: {
             paddingBottom: '10px',
         },
+        body: {
+            px: '10px',
+        }
     }),
     lg: definePartsStyle({
         container: {
@@ -117,6 +122,7 @@ const variants = {
         header: {
             borderBottom: 'solid 2px',
             borderBottomColor: 'brand.darkBlue',
+            color: 'brand.darkBlue',
         },
         body: {
             fontSize:'md',

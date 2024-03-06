@@ -15,6 +15,7 @@ const colors = {
         lightGray: '#e5e5e5',
         gray: '#c9c8c8',
         error: '#9a031e',
+        errorTransparent: '#9a031f74',
         lightGreen: '#9AA61A',
         menu: '#14213d1f',
     }
