@@ -38,7 +38,8 @@ const Footer = () => {
             color='brand.darkBlue'
             position= 'fixed'
             left= '0'
-            bottom= '0'
+            bottom='0'
+            zIndex='5'
         >
             <Box p={4}>
                 <Copyright />

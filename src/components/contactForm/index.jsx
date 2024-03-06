@@ -122,8 +122,8 @@ const ContactForm = ({
                 alignItems={'flex-start'}
                 p={'20px'}
                 width={'100%'}
-                maxWidth={'600px'}
-                minW={'300px'}
+                maxWidth={'640px'}
+                minW={'350px'}
             >
                 <form onSubmit={sendEmail} id="contact-form">
 

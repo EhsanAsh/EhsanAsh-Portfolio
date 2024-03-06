@@ -92,6 +92,8 @@ const Home = () => {
                 'translateY(-82px)'
             ]}
             mb={20}
+            position={'relative'}
+            zIndex={4}
         >
             <Box
                 gap={7}

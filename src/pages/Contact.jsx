@@ -13,7 +13,7 @@ import emailjs from '@emailjs/browser';
 // importing packages
 // ========================================================
 import { useState } from 'react';
-import { Flex } from '@chakra-ui/react';
+import { Flex, Box } from '@chakra-ui/react';
 // ========================================================
 
 // importing form component
@@ -122,22 +122,39 @@ const Contact = () => {
             alignSelf='stretch'
             height='auto'
             gap={2}
-            mb={20}
-            p={7}
+            mb={{ base: 20, md: 10 }}
+            p={10}
             bgImage={ContactPagePic}
             bgRepeat='no-repeat'
-            bgSize='contain'
-            bgPosition={'right'}
+            bgSize={{ base: 'cover', md: 'contain' }}
+            bgPosition={{ base: 'center', md: 'right' }}
+            bgAttachment='scroll'
+            _before={{ // Pseudo-element for overlay
+                content: '""',
+                position: 'absolute',
+                top: 0,
+                right: 0,
+                bottom: 0,
+                left: 0,
+                bg: 'rgba(255, 255, 255, 0.4)',
+                zIndex: 0,
+            }}
+            _after={{
+                content: '""',
+                position: 'absolute',
+                zIndex: 1,
+            }}
         >
-
-            <ContactForm
-                formData={formData}
-                setFormData={setFormData}
-                handleChange={handleChange}
-                sendEmail={sendEmail}
-                message={message}
-                setMessage={setMessage}
-            />
+            <Box position="relative" zIndex={2}>
+                <ContactForm
+                    formData={formData}
+                    setFormData={setFormData}
+                    handleChange={handleChange}
+                    sendEmail={sendEmail}
+                    message={message}
+                    setMessage={setMessage}
+                />
+            </Box>
 
         </Flex>
 

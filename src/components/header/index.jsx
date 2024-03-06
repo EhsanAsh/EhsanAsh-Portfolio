@@ -80,6 +80,8 @@ const Header = () => {
             bgRepeat='no-repeat'
             bgSize='cover'
             bgPosition='center'
+            position={'relative'}
+            zIndex={3}
         >
 
             {/* Render Menu or Tabs based on screen size */}
