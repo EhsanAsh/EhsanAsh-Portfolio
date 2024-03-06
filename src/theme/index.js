@@ -16,7 +16,7 @@ import colors from './foundations/colors';
 import fonts from './foundations/fonts';
 // Component style overrides
 import Button from './components/Button';
-import Input from './components/Input';
+import { inputTheme } from './components/Input';
 import { cardTheme } from './components/Card';
 import Container from './components/Container';
 // ============================================================
@@ -31,7 +31,7 @@ const overrides = {
     // Other foundational style overrides go here
     components: {
         Button,
-        Input,
+        Input: inputTheme,
         Card: cardTheme,
         Container,
     },

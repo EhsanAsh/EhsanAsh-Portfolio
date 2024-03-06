@@ -21,7 +21,7 @@ const styles = {
             color: 'brand.darkBlue',
             bg: 'brand.white',
             fontFamily: 'montserratBody',
-            fontWeight: 300,
+            fontWeight: 400,
             fontStyle: 'normal',
             fontSize: ['md', 'lg'],
             gap: '7px',

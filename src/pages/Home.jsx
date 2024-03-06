@@ -98,6 +98,7 @@ const Home = () => {
                 position="relative"
                 lineHeight='1.7'
                 width={[400, 450, 700, 850, 950]}
+                overflow={'hidden'}
             >
                 <Center>
                     <HomeInfoCard

@@ -512,5 +512,17 @@ template {
   font-style: normal;
 }
 
+.monoton-regular {
+  font-family: "Monoton", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.rubik-dirt-regular {
+  font-family: "Rubik Dirt", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
 /* End Google Fonts */
 /*********************************************************************/
