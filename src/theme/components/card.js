@@ -43,9 +43,14 @@ const sizes = {
     md: definePartsStyle({
         container: {
             borderRadius: '0',
-            lineHeight: '1',
+            lineHeight: '2',
             padding: '5px',
-        }
+            ml: '20px',
+            width: [350, 450, 500, 550, 600],
+        },
+        header: {
+            paddingBottom: '10px',
+        },
     }),
     lg: definePartsStyle({
         container: {
@@ -99,6 +104,26 @@ const variants = {
         body: {
             fontSize: 'xs',
             fontWeight: '500',
+        }
+    }),
+    contact: definePartsStyle({
+        container: {
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'center',
+            alignItems: 'space-evenly',
+            bg: 'brand.lightBlue',
+        },
+        header: {
+            borderBottom: 'solid 2px',
+            borderBottomColor: 'brand.darkBlue',
+        },
+        body: {
+            fontSize:'md',
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'flex-start',
+            alignItems:'flex-start',
         }
     })
 };

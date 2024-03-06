@@ -33,6 +33,20 @@ const Button = defineStyleConfig({
             color: 'brand.orange',
             _hover: { bg: 'brand.orange', color: 'brand.darkBlue' },
         },
+        outlineDark: {
+            borderLeft: '2px solid',
+            borderLeftColor: 'brand.darkBlue',
+            bg: 'brand.lightBlue',
+            borderTopRightRadius: 'full',
+            borderBottomRightRadius: 'full',
+            color: 'brand.darkBlue',
+            boxShadow: '0px 3px 5px 2px #d8e2f8d2',
+            _hover: {
+                bg: 'brand.darkBlue',
+                color: 'brand.lightGray',
+                boxShadow: 'none',
+            },
+        },
         socialMediaOrange: {
             border: 'none',
             color: 'brand.orange',
@@ -43,6 +57,13 @@ const Button = defineStyleConfig({
         socialMediaDark: {
             border: 'none',
             color: 'brand.darkBlue',
+            _hover: { color: 'brand.orange', transform: 'translateY(-5px)' },
+        },
+        socialMediaContact: {
+            border: 'none',
+            color: 'brand.darkBlue',
+            padding: 0,
+            fontWeight: 400,
             _hover: { color: 'brand.orange', transform: 'translateY(-5px)' },
         },
         solid: {

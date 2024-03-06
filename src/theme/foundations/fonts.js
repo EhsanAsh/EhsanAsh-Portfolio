@@ -36,6 +36,8 @@ const fonts = {
     montserratBody: 'Montserrat, sans-serif',
     josefinSlabTitle: 'Josefin Slab, serif',
     rubikDoodle: 'Rubik Doodle Shadow, system-ui',
+    monotonRegular: 'Monoton, sans-serif',
+    rubikDirtRegular: 'Rubik Dirt, system-ui',
 };
 // ============================================================
 
