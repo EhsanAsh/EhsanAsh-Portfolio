@@ -8,8 +8,12 @@ const colors = {
     brand: {
         white: '#fff',
         orange: '#fca311',
-        darkBlue: '#14213d',
+        darkBlue: '#0e2a67',//#14213d#1a2c53
+        lightBlue: '#dbe4f785',
+        lightBlueHover: '#dee7f829',
+        lightBlueActive: '#d8e2f8d2',
         lightGray: '#e5e5e5',
+        gray: '#c9c8c8',
         error: '#9a031e',
         lightGreen: '#9AA61A',
         menu: '#14213d1f',
