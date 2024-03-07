@@ -2,6 +2,8 @@
 // ========================================================
 // https://www.npmjs.com/package/@emailjs/browser
 // https://www.emailjs.com/docs/
+// <a
+// <a href="https://www.freepik.com/free-vector/all-day-support-round-clock-assistance-24-hours-call-centre-subscriber-help-aid-service-telephone-calls-messages-operator-cartoon-character_11669693.htm#fromView=search&page=5&position=2&uuid=e6335a91-e40b-4d13-86d0-2c756df76da9">Image by vectorjuice on Freepik</a>
 // ===================================================
 
 // Importing Validation function and EmailJS
@@ -126,7 +128,7 @@ const Contact = () => {
             p={10}
             bgImage={ContactPagePic}
             bgRepeat='no-repeat'
-            bgSize={{ base: 'cover', md: 'contain' }}
+            bgSize='contain'
             bgPosition={{ base: 'center', md: 'right' }}
             bgAttachment='scroll'
             _before={{ // Pseudo-element for overlay
@@ -136,7 +138,7 @@ const Contact = () => {
                 right: 0,
                 bottom: 0,
                 left: 0,
-                bg: 'rgba(255, 255, 255, 0.4)',
+                bg: 'rgba(255, 255, 255, 0.5)',
                 zIndex: 0,
             }}
             _after={{
