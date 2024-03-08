@@ -10,16 +10,16 @@
 // =========================================================
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
-    Table,
-    Thead,
-    Tbody,
-    Tr,
-    Th,
-    Td,
-    TableContainer,
+    Accordion,
+    AccordionItem,
+    AccordionButton,
+    AccordionPanel,
+    AccordionIcon,
     List,
     ListItem,
     Card,
+    Heading,
+    Box
 } from '@chakra-ui/react';
 // =========================================================
 
@@ -42,41 +42,42 @@ const SkillList = () => {
 
         return (
             <>
-                <Thead
-                    borderBottom={'2px solid'}
-                    borderColor={'brand.orange'}
-                >
-                    <Tr>
-                        <Th
-                            color={'brand.darkBlue'}
-                            textAlign={'center'}
-                            fontFamily={'josefinSlabTitle'}
-                            fontSize={{ base: 'xs', md: 'sm' }}
-                        >
-                            {title}
-                        </Th>
-                    </Tr>
-                </Thead>
-                <Tbody>
-                    <Tr>
-                        <Td>
-                            <List>
-                                {skills[0].items.map((item, index) => (
-                                    <ListItem
-                                        key={index}
-                                        maxW={'55px'}
-                                        p={1}
-                                        fontSize={'xs'}
-                                        fontWeight={'500'}
-                                    >
-                                        <FontAwesomeIcon icon={item.icon} />
-                                        {item.name}
-                                    </ListItem>
-                                ))}
-                            </List>
-                        </Td>
-                    </Tr>
-                </Tbody>
+                <AccordionItem>
+                    <Heading
+                        color={'brand.darkBlue'}
+                        textAlign={'center'}
+                        fontFamily={'josefinSlabTitle'}
+                        fontSize={{ base: 'xs', md: 'sm' }}
+                    >
+                        <AccordionButton>
+                            <Box as="span" flex='1' textAlign='left'>
+                                {title}
+                            </Box>
+                            <AccordionIcon />
+                        </AccordionButton>
+
+                    </Heading>
+                    <AccordionPanel>
+                        <List>
+                            {skills[0].items.map((item, index) => (
+                                <ListItem
+                                    display={'flex'}
+                                    justifyContent={'flex-start'}
+                                    alignItems={'center'}
+                                    key={index}
+                                    w={'100%'}
+                                    // maxW={'80px'}
+                                    p={1}
+                                    fontSize={'xs'}
+                                    fontWeight={'500'}
+                                >
+                                    <FontAwesomeIcon icon={item.icon} />
+                                    {item.name}
+                                </ListItem>
+                            ))}
+                        </List>
+                    </AccordionPanel>
+                </AccordionItem>
             </>
         );
     };
@@ -84,31 +85,22 @@ const SkillList = () => {
     return (
 
         <Card size={'sm'} variant={'skills'}>
-            <TableContainer
-                display={'flex'}
-                flexDirection={'column'}
-                justifyContent={'center'}
-                alignItems={'center'}
-                alignSelf={'center'}
-                w={'100%'}
-                maxW={'350px'}
-                minW={'300px'}
-                pb={5}
+            <Accordion
+                // display={'flex'}
+                // flexDirection={'column'}
+                // justifyContent={'center'}
+                // alignItems={'center'}
+                // alignSelf={'center'}
+                // w={'100%'}
+                // maxW={'350px'}
+                // minW={'300px'}
+                // pb={5}
             >
-                <Table
-                    variant='simple'
-                    colorScheme='whiteAlpha'
-                    size={{ base: 'xs', sm: 'sm', xl: 'md' }}
-                    borderBottom={'2px solid'}
-                    borderColor={'brand.orange'}
-                >
-                    {renderSkillSection('Languages and Technologies', language)}
-                    {renderSkillSection('Frameworks', frameworks)}
-                    {renderSkillSection('Database Management', database)}
-                    {renderSkillSection('Additional', additional)}
-
-                </Table>
-            </TableContainer>
+                {renderSkillSection('Languages and Technologies', language)}
+                {renderSkillSection('Frameworks', frameworks)}
+                {renderSkillSection('Database Management', database)}
+                {renderSkillSection('Additional', additional)}
+            </Accordion>
         </Card>
 
     );
