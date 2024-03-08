@@ -1,7 +1,9 @@
 // Desc: This file contains the code for the list
 //  component which will be used in Portfolio page.
-// Used the following as a reference:
+// Used followings as a reference:
 // https://fontawesome.com/docs/web/use-with/react/add-icons
+// https://chakra-ui.com/docs/components/table/usage
+// https://cssgradient.io/
 // =========================================================
 
 // Importing packages
@@ -15,10 +17,9 @@ import {
     Th,
     Td,
     TableContainer,
-    Box,
-    Center,
     List,
     ListItem,
+    Card,
 } from '@chakra-ui/react';
 // =========================================================
 
@@ -31,143 +32,84 @@ import { language, frameworks, database, additional} from '../../utils/listData'
 // =========================================================
 const SkillList = () => {
 
+    // Defining the renderSkillSection function to render the list
+    const renderSkillSection = (title, skills) => {
+
+        if (!Array.isArray(skills)) {
+            console.error(`Expected an array for skills, but received: ${typeof skills}`);
+            return null;
+        }
+
+        return (
+            <>
+                <Thead
+                    borderBottom={'2px solid'}
+                    borderColor={'brand.orange'}
+                >
+                    <Tr>
+                        <Th
+                            color={'brand.darkBlue'}
+                            textAlign={'center'}
+                            fontFamily={'josefinSlabTitle'}
+                            fontSize={{ base: 'xs', md: 'sm' }}
+                        >
+                            {title}
+                        </Th>
+                    </Tr>
+                </Thead>
+                <Tbody>
+                    <Tr>
+                        <Td>
+                            <List>
+                                {skills[0].items.map((item, index) => (
+                                    <ListItem
+                                        key={index}
+                                        maxW={'55px'}
+                                        p={1}
+                                        fontSize={'xs'}
+                                        fontWeight={'500'}
+                                    >
+                                        <FontAwesomeIcon icon={item.icon} />
+                                        {item.name}
+                                    </ListItem>
+                                ))}
+                            </List>
+                        </Td>
+                    </Tr>
+                </Tbody>
+            </>
+        );
+    };
+
     return (
 
-        <Box mt={6} p={10}>
+        <Card size={'sm'} variant={'skills'}>
             <TableContainer
                 display={'flex'}
                 flexDirection={'column'}
-                justifyContent={'flex-start'}
+                justifyContent={'center'}
                 alignItems={'center'}
+                alignSelf={'center'}
                 w={'100%'}
-                maxW={'300px'}
+                maxW={'350px'}
                 minW={'300px'}
+                pb={5}
             >
                 <Table
                     variant='simple'
                     colorScheme='whiteAlpha'
-                    size={'sm'}
+                    size={{ base: 'xs', sm: 'sm', xl: 'md' }}
                     borderBottom={'2px solid'}
                     borderColor={'brand.orange'}
-                    mb={4}
                 >
-                    <Thead
-                        borderBottom={'2px solid'}
-                        borderColor={'brand.orange'}
-                        bg={'brand.grayHeaders'}
-                    >
-                        <Tr>
-                            <Th
-                                color={'brand.darkBlue'}
-                                textAlign={'center'}
-                                fontFamily={'josefinSlabTitle'}
-                                fontSize={'sm'}
-                            >
-                                {language.title}
-                            </Th>
-                        </Tr>
-                    </Thead>
-                    <Tbody>
-                        <Tr>
-                            <Td>
-                                <List>
-                                    {language.items.map((item, index) => (
-                                        <ListItem
-                                            key={index}
-                                            maxW={'55px'}
-                                            p={1}
-                                            fontSize={'xs'}
-                                            fontWeight={'500'}
-                                        >
-                                            <FontAwesomeIcon icon={item.icon} />
-                                            {item.name}
-                                        </ListItem>
-                                    ))}
-                                </List>
-                            </Td>
-                        </Tr>
-                    </Tbody>
-                </Table>
-                <Table
-                    variant="simple"
-                    colorScheme="orange"
-                    alignSelf={'stretch'}
-                    maxH={'100px'}
-                    size={'sm'}
-                >
-                    <Thead>
-                        <Tr>
-                            <Th>{database.title}</Th>
-                        </Tr>
-                    </Thead>
-                    <Tbody>
-                        <Tr>
-                            <Td>
-                                <List>
-                                    {database.items.map((item, index) => (
-                                        <ListItem key={index} maxW={'55px'} p={1} fontSize={'xs'}>
-                                            <FontAwesomeIcon icon={item.icon} />
-                                            {item.name}
-                                        </ListItem>
-                                    ))}
-                                </List>
-                            </Td>
-                        </Tr>
-                    </Tbody>
-                </Table>
-                <Table
-                    variant="simple"
-                    colorScheme="teal"
-                    size={'sm'}
-                >
-                    <Thead>
-                        <Tr>
-                            <Th>{additional.title}</Th>
-                        </Tr>
-                    </Thead>
-                    <Tbody>
-                        <Tr>
-                            <Td>
-                                <List>
-                                    {additional.items.map((item, index) => (
-                                        <ListItem key={index} maxW={'55px'} p={1} fontSize={'xs'}>
-                                            <FontAwesomeIcon icon={item.icon} />
-                                            {item.name}
-                                        </ListItem>
-                                    ))}
-                                </List>
-                            </Td>
-                        </Tr>
-                    </Tbody>
-                </Table>
-                <Table
-                    variant="simple"
-                    colorScheme="teal"
-                    maxH={'100px'}
-                    size={'sm'}
-                >
-                    <Thead>
-                        <Tr>
-                            <Th>{frameworks.title}</Th>
-                        </Tr>
-                    </Thead>
-                    <Tbody>
-                        <Tr>
-                            <Td>
-                                <List>
-                                    {frameworks.items.map((item, index) => (
-                                        <ListItem key={index} maxW={'55px'} p={1} fontSize={'xs'}>
-                                            <FontAwesomeIcon icon={item.icon} />
-                                            {item.name}
-                                        </ListItem>
-                                    ))}
-                                </List>
-                            </Td>
-                        </Tr>
-                    </Tbody>
+                    {renderSkillSection('Languages and Technologies', language)}
+                    {renderSkillSection('Frameworks', frameworks)}
+                    {renderSkillSection('Database Management', database)}
+                    {renderSkillSection('Additional', additional)}
+
                 </Table>
             </TableContainer>
-        </Box>
+        </Card>
 
     );
 

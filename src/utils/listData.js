@@ -25,7 +25,7 @@ import {
 
 // Defining the data
 // =================================================================
-const language = {
+const language = [{
     title: 'Languages and Technologies',
     items: [
         {
@@ -57,9 +57,9 @@ const language = {
             icon: faPython,
         },
     ],
-};
+}];
 
-const frameworks= {
+const frameworks= [{
     title: 'Libraries and Frameworks',
     items: [
         {
@@ -115,9 +115,9 @@ const frameworks= {
             icon: faJs,
         },
     ],
-};
+}];
 
-const database = {
+const database = [{
     title: 'Database Management',
     items: [
         {
@@ -145,9 +145,9 @@ const database = {
             icon: faDatabase,
         },
     ],
-};
+}];
 
-const additional = {
+const additional = [{
     title: 'Additional Skills',
     items: [
         {
@@ -175,7 +175,7 @@ const additional = {
             icon: faCode,
         },
     ],
-};
+}];
 // =================================================================
 
 // Exporting the data
