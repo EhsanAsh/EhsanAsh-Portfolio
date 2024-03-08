@@ -2,7 +2,7 @@
 //  component which will be used in Portfolio page.
 // Used followings as a reference:
 // https://fontawesome.com/docs/web/use-with/react/add-icons
-// https://chakra-ui.com/docs/components/table/usage
+// https://chakra-ui.com/docs/components/accordion
 // https://cssgradient.io/
 // =========================================================
 
@@ -15,8 +15,6 @@ import {
     AccordionButton,
     AccordionPanel,
     AccordionIcon,
-    List,
-    ListItem,
     Card,
     Heading,
     Box
@@ -42,40 +40,49 @@ const SkillList = () => {
 
         return (
             <>
-                <AccordionItem>
-                    <Heading
-                        color={'brand.darkBlue'}
-                        textAlign={'center'}
-                        fontFamily={'josefinSlabTitle'}
-                        fontSize={{ base: 'xs', md: 'sm' }}
-                    >
+                <AccordionItem p={2}>
+                    <Heading>
                         <AccordionButton>
-                            <Box as="span" flex='1' textAlign='left'>
+                            <Box
+                                as="span"
+                                flex='1'
+                                textAlign='left'
+                                fontSize={{ base: 'sm', sm: 'md', md: 'lg' }}
+                                color={'brand.darkBlue'}
+                                fontFamily={'josefinSlabTitle'}
+                                fontWeight={'600'}
+                            >
                                 {title}
                             </Box>
                             <AccordionIcon />
                         </AccordionButton>
-
                     </Heading>
                     <AccordionPanel>
-                        <List>
-                            {skills[0].items.map((item, index) => (
-                                <ListItem
-                                    display={'flex'}
-                                    justifyContent={'flex-start'}
-                                    alignItems={'center'}
-                                    key={index}
+                        {skills[0].items.map((item, index) => (
+                            <Box
+                                display={'flex'}
+                                justifyContent={'flex-start'}
+                                alignItems={'center'}
+                                gap={0}
+                                key={index}
+                            >
+                                <Box
                                     w={'100%'}
-                                    // maxW={'80px'}
-                                    p={1}
+                                    maxW={'55px'}
                                     fontSize={'xs'}
-                                    fontWeight={'500'}
+                                    color={'brand.darkBlue'}
                                 >
                                     <FontAwesomeIcon icon={item.icon} />
+                                </Box>
+                                <Box
+                                    fontSize={{ base: 'xs', md: 'sm' }}
+                                    color={'brand.darkBlue'}
+                                    fontWeight={'500'}
+                                >
                                     {item.name}
-                                </ListItem>
-                            ))}
-                        </List>
+                                </Box>
+                            </Box>
+                        ))}
                     </AccordionPanel>
                 </AccordionItem>
             </>
@@ -85,17 +92,17 @@ const SkillList = () => {
     return (
 
         <Card size={'sm'} variant={'skills'}>
-            <Accordion
-                // display={'flex'}
-                // flexDirection={'column'}
-                // justifyContent={'center'}
-                // alignItems={'center'}
-                // alignSelf={'center'}
-                // w={'100%'}
-                // maxW={'350px'}
-                // minW={'300px'}
-                // pb={5}
-            >
+            <Accordion w={'100%'} p={4}>
+                <Heading
+                    textAlign='center'
+                    fontSize={{ base: 'lg', md: 'xl', lg: '2xl' }}
+                    color={'brand.error'}
+                    fontFamily={'josefinSlabTitle'}
+                    fontWeight={'700'}
+                    pb={4}
+                >
+                    Skills Overview
+                </Heading>
                 {renderSkillSection('Languages and Technologies', language)}
                 {renderSkillSection('Frameworks', frameworks)}
                 {renderSkillSection('Database Management', database)}

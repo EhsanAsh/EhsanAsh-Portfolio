@@ -14,7 +14,6 @@ import {
     faNodeJs,
     faPython,
     faNpm,
-    faGitAlt
 }from '@fortawesome/free-brands-svg-icons';
 import {
     faCode,
@@ -152,7 +151,7 @@ const additional = [{
     items: [
         {
             name: 'Git',
-            icon: faGitAlt,
+            icon: faCode,
         },
         {
             name: 'OOP',
