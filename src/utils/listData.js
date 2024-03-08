@@ -1,131 +1,178 @@
-// Desc: This file exports title and item data for the list component. There are two titles: Front - end Proficiency and Back - end Proficiency.
+// Desc: This file exports title and item data for the list component.
+// Used the following as a reference:
+// https://fontawesome.com/docs/web/use-with/react/add-icons
 // =================================================================
 
 // Importing packages
 // =================================================================
-// import {
-//     faHtml5,
-//     faCss3Alt,
-//     faJsSquare,
-//     faBootstrap,
-//     faReact,
-//     faNodeJs
-// }
-//     from '@fortawesome/free-brands-svg-icons';
-// import {
-//     faCode,
-//     faMobileAlt,
-//     faServer,
-//     faDatabase
-// }
-//     from '@fortawesome/free-solid-svg-icons';
+import {
+    faHtml5,
+    faCss3Alt,
+    faJs,
+    faBootstrap,
+    faReact,
+    faNodeJs,
+    faPython,
+    faNpm,
+    faGitAlt
+}from '@fortawesome/free-brands-svg-icons';
+import {
+    faCode,
+    faServer,
+    faDatabase,
+}from '@fortawesome/free-solid-svg-icons';
 // =================================================================
 
 // Defining the data
 // =================================================================
-const frontEnd = {
-    title: 'Front-end Proficiencies',
+const language = {
+    title: 'Languages and Technologies',
     items: [
         {
-            name: 'HTML',
-            // icon: faHtml5,
-            color: '#e34f26',
+            name: 'HTML5',
+            icon: faHtml5,
         },
         {
-            name: 'CSS',
-            // icon: faCss3Alt,
-            color: '#264de4',
+            name: 'CSS3',
+            icon: faCss3Alt,
         },
         {
             name: 'JavaScript',
-            // icon: faJsSquare,
-            color: '#f7df1e',
+            icon: faJs,
         },
         {
-            name: 'jQuery',
-            // icon: faCode,
-            color: '#0769ad',
+            name: 'Node.js',
+            icon: faNodeJs,
         },
         {
-            name: 'Bootstrap',
-            // icon: faBootstrap,
-            color: '#563d7c',
+            name: 'GraphQL',
+            icon: faServer,
         },
         {
-            name: 'Material UI',
-            // icon: faReact,
-            color: '#0081CB',
+            name: 'JSON',
+            icon: faCode,
         },
         {
-            name: 'Responsive Design',
-            // icon: faMobileAlt,
-            color: '#000000',
-        },
-        {
-            name: 'PWA',
-            // icon: faMobileAlt,
-            color: '#000000',
-        },
-        {
-            name: 'React',
-            // icon: faReact,
-            color: '#61DBFB',
-        },
-        {
-            name: 'Redux',
-            // icon: faReact,
-            color: '#764abc',
+            name: 'Python',
+            icon: faPython,
         },
     ],
 };
 
-const backEnd = {
-    title: 'Back-end Proficiencies',
+const frameworks= {
+    title: 'Libraries and Frameworks',
     items: [
         {
-            name: 'Node.js',
-            // icon: faNodeJs,
-            color: '#68a063',
+            name: 'React.js',
+            icon: faReact,
         },
         {
-            name: 'Express',
-            // icon: faServer,
-            color: '#000000',
+            name: 'Express.js',
+            icon: faServer,
         },
         {
-            name: 'MongoDB',
-            // icon: faDatabase,
-            color: '#47a248',
+            name: 'Bootstrap',
+            icon: faBootstrap,
         },
         {
-            name: 'MySQL and Sequelize',
-            // icon: faDatabase,
-            color: '#4479a1',
+            name: 'Chakra UI',
+            icon: faCss3Alt,
         },
         {
-            name: 'RESTful APIs',
-            // icon: faServer,
-            color: '#000000',
+            name: 'MUI',
+            icon: faCss3Alt,
         },
         {
-            name: 'GraphQL',
-            // icon: faServer,
-            color: '#e535ab',
+            name: 'Webpack',
+            icon: faCode,
         },
         {
             name: 'Apollo',
-            // icon: faServer,
-            color: '#000000',
+            icon: faServer,
         },
         {
             name: 'JWT',
-            // icon: faServer,
-            color: '#000000',
+            icon: faCode,
+        },
+        {
+            name: 'Work-box',
+            icon: faCode,
+        },
+        {
+            name: 'Vite',
+            icon: faCode,
+        },
+        {
+            name: 'NPM',
+            icon: faNpm,
+        },
+        {
+            name: 'React Router',
+            icon: faReact,
+        },
+        {
+            name: 'jQuery',
+            icon: faJs,
+        },
+    ],
+};
+
+const database = {
+    title: 'Database Management',
+    items: [
+        {
+            name: 'MySQL',
+            icon: faDatabase,
+        },
+        {
+            name: 'Sequelize',
+            icon: faDatabase,
+        },
+        {
+            name: 'MongoDB',
+            icon: faDatabase,
+        },
+        {
+            name: 'Mongoose',
+            icon: faDatabase,
+        },
+        {
+            name: 'ORM architecture',
+            icon: faDatabase,
+        },
+        {
+            name: 'MVC architecture',
+            icon: faDatabase,
+        },
+    ],
+};
+
+const additional = {
+    title: 'Additional Skills',
+    items: [
+        {
+            name: 'Git',
+            icon: faGitAlt,
+        },
+        {
+            name: 'OOP',
+            icon: faCode,
+        },
+        {
+            name: 'RESTful APIs',
+            icon: faCode,
         },
         {
             name: 'MERN Stack',
-            // icon: faServer,
-            color: '#000000',
+            icon: faCode,
+        },
+        {
+            name: 'Agile Development',
+            icon: faCode,
+        },
+        {
+            name: 'PWA Development',
+            icon: faCode,
         },
     ],
 };
@@ -133,5 +180,5 @@ const backEnd = {
 
 // Exporting the data
 // =================================================================
-export { frontEnd, backEnd };
+export { language, frameworks, database, additional };
 // =================================================================
