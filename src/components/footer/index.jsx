@@ -34,7 +34,7 @@ const Footer = () => {
             flexShrink={0}
             px='3'
             py='1'
-            bg='brand.lightGray'
+            bg='brand.grayHeaders'
             color='brand.darkBlue'
             position= 'fixed'
             left= '0'
