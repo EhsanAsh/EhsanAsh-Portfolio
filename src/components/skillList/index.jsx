@@ -40,7 +40,11 @@ const SkillList = () => {
 
         return (
             <>
-                <AccordionItem p={2}>
+                <AccordionItem
+                    p={2}
+                    borderBottom={'2px, solid'}
+                    borderColor={'#afb9bda4'}
+                >
                     <Heading>
                         <AccordionButton>
                             <Box
