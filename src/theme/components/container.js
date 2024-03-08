@@ -50,6 +50,15 @@ const Container = defineStyleConfig({
             fontWeight: 500,
         },
 
+        'portfolio': {
+            fontFamily: 'josefinSlabTitle',
+            fontSize: ['md', 'md', 'lg', 'lg', 'xl'],
+            fontStyle: 'normal',
+            fontOpticalSizing: 'auto',
+            fontWeight: 400,
+            bg: 'brand.lightBlue',
+        },
+
     },
 
     defaultProps: {

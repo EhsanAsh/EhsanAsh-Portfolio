@@ -40,6 +40,17 @@ const baseStyle = definePartsStyle({
 // define custom styles for sizes
 // ============================================================
 const sizes = {
+
+    sm: definePartsStyle({
+        container: {
+            borderRadius: '40px',
+            p: '20px',
+            width: '100%',
+            maxWidth: '450px',
+            minWidth: '400px',
+            height: '100%',
+        }
+    }),
     md: definePartsStyle({
         container: {
             borderRadius: '0',
@@ -130,6 +141,13 @@ const variants = {
             flexDirection: 'column',
             justifyContent: 'flex-start',
             alignItems:'flex-start',
+        }
+    }),
+    skills: definePartsStyle({
+        container: {
+            alignSelf: 'flex-end',
+            border: 'none',
+            bg: 'radial-gradient(circle, rgba(241,212,167,0.75) 0%, rgba(167,199,236,0.8) 100%)',
         }
     })
 };
