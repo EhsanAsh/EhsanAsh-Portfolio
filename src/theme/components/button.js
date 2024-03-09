@@ -47,6 +47,21 @@ const Button = defineStyleConfig({
                 boxShadow: 'none',
             },
         },
+        portfolio: {
+            borderLeft: '2px solid',
+            borderLeftColor: 'brand.darkBlue',
+            borderTopRightRadius: 'full',
+            borderBottomRightRadius: 'full',
+            color: 'brand.error',
+            fontWeight: '700',
+            boxShadow: '1px 3px 4px 3px #d8e2f8d2',
+            fontSize: ['md', 'md', 'lg', 'lg', 'xl'],
+            _hover: {
+                bg: 'brand.darkBlue',
+                color: 'brand.lightGray',
+                boxShadow: 'none',
+            },
+        },
         socialMediaOrange: {
             border: 'none',
             color: 'brand.orange',

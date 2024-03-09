@@ -145,9 +145,10 @@ const variants = {
     }),
     skills: definePartsStyle({
         container: {
-            alignSelf: 'flex-end',
+            alignSelf: 'center',
             border: 'none',
-            bg: 'radial-gradient(circle, rgba(241,212,167,0.75) 0%, rgba(167,199,236,0.8) 100%)',
+            bg: 'linear-gradient(180deg, rgba(171,214,236,0.63) 0%, rgba(201,238,230,0.65) 50%, rgba(251,199,127,0.66) 100%)',
+            boxShadow: '0px 2px 5px 3px #d8e2f8d2',
         }
     })
 };
