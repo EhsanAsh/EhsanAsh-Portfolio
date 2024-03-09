@@ -13,29 +13,12 @@ import {
     Button
 } from '@chakra-ui/react';
 import SkillList from '../components/skillList';
+import PortfolioCard from '../components/portfolioCard';
 // ============================================================
 
 // Functional component
 // ============================================================
 const Portfolio = () => {
-
-    const socialLinks = [
-        {
-            name: 'Github',
-            url: 'https://github.com/EhsanAsh',
-            icon: 1,
-        },
-        {
-            name: 'LinkedIn',
-            url: 'https://www.linkedin.com/in/ehsan-ashrafipour-922056245/',
-            icon: 2,
-        },
-        {
-            name: 'Twitter',
-            url: 'https://twitter.com/EhsanAsh_5123',
-            icon: 3,
-        },
-    ];
 
     const handleClick = () => {
         const publicUrl = `${window.location.protocol}//${window.location.host}`;
@@ -87,7 +70,7 @@ const Portfolio = () => {
                     </Text>
                     <Box alignSelf={'center'} m={2}>
                         <Button onClick={handleClick} variant={'portfolio'}>
-                        Download Ehsan&apos;s Resume
+                            Download Ehsan&apos;s Resume
                         </Button>
                     </Box>
                 </Container>
@@ -96,14 +79,20 @@ const Portfolio = () => {
                 display={'flex'}
                 flexDirection={'column'}
                 alignItems={'center'}
-                alignSelf={'flex-start'}
+                alignSelf={'center'}
                 justifyContent={'center'}
                 width={'100%'}
                 height={'auto'}
                 ml={{ base: 0, lg: 10 }}
-                mt={{ base: 10, lg: 0 }}
+                my={{ base: 10, lg: 0 }}
+                gap={'10'}
             >
-                <SkillList/>
+                <Box>
+                    <SkillList />
+                </Box>
+                <Box>
+                    <PortfolioCard/>
+                </Box>
             </Box>
         </Flex>
 
