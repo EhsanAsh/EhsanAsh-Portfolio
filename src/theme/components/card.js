@@ -43,11 +43,11 @@ const sizes = {
 
     sm: definePartsStyle({
         container: {
-            borderRadius: '40px',
+            borderRadius: '20px',
             p: '20px',
             width: '100%',
             maxWidth: '450px',
-            minWidth: '400px',
+            minWidth: '300px',
             height: '100%',
         }
     }),
@@ -150,7 +150,24 @@ const variants = {
             bg: 'linear-gradient(180deg, rgba(171,214,236,0.63) 0%, rgba(201,238,230,0.65) 50%, rgba(251,199,127,0.66) 100%)',
             boxShadow: '0px 2px 5px 3px #d8e2f8d2',
         }
-    })
+    }),
+    links: definePartsStyle({
+        container: {
+            alignSelf: 'flex-end',
+            border: 'none',
+            bg: 'linear-gradient(270deg, rgba(171,214,236,0.63) 0%, rgba(201,238,230,0.65) 50%, rgba(251,199,127,0.66) 100%)',
+            boxShadow: '0px 2px 5px 3px #d8e2f8d2',
+        },
+        body: {
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'center',
+            alignItems: 'flex-start',
+            alignContent: 'flex-start',
+            alignSelf: 'stretch',
+            gap: '20px',
+        }
+    }),
 };
 // ============================================================
 

@@ -60,8 +60,10 @@ const Container = defineStyleConfig({
             border: 'none',
             boxShadow: '0px 2px 5px 5px #d8e2f8d2',
             borderRadius: '20px',
+            p: '10px',
+            color: 'brand.darkBlue',
             background: 'linear-gradient(90deg, rgba(171,214,236,0.63) 0%, rgba(201,238,230,0.65) 50%, rgba(251,199,127,0.66) 100%)',
-            alignSelf: 'flex-end',
+            alignSelf: [{ base: 'center', lg: 'flex-end' }],
         },
 
     },
