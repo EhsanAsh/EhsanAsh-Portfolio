@@ -20,7 +20,7 @@ const projectsData = [
         description:
             'AdsTrees is a revolutionary web application that intertwines the power of advertising with environmental sustainability.',
         image: AdsTrees,
-        deployed: 'https://adstrees.onrender.com/',
+        deployed: 'https://adstrees.com/',
         github: 'https://github.com/EhsanAsh/AdsTrees',
     },
 

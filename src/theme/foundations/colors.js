@@ -15,6 +15,7 @@ const colors = {
         lightGray: '#e5e5e5',
         gray: '#c9c8c8',
         grayHeaders: '#edf2f4',
+        grayProjectCard: '#4e4d4d54',
         error: '#9a031e',
         errorTransparent: '#9a031f74',
         lightGreen: '#9AA61A',
