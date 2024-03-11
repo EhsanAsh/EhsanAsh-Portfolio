@@ -15,10 +15,10 @@ import borders from './foundations/borders';
 import colors from './foundations/colors';
 import fonts from './foundations/fonts';
 // Component style overrides
-import Button from './components/Button';
-import { inputTheme } from './components/Input';
-import { cardTheme } from './components/Card';
-import Container from './components/Container';
+import Button from './components/button';
+import { inputTheme } from './components/input';
+import { cardTheme } from './components/card';
+import Container from './components/container';
 // ============================================================
 
 // Define Overrides and configs for changing the color mode
