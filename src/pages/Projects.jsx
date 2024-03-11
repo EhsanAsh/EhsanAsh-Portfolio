@@ -4,17 +4,41 @@
 
 // Importing packages and components
 // ===============================================================
+import { useRef, useEffect } from 'react';
+import gsap from 'gsap';
 import { Grid } from '@chakra-ui/react';
 import ProjectCard from '../components/projectCard';
+import projectsData from '../utils/projectsData';
 // ===============================================================
 
 // Creating the Projects component
 // ===============================================================
 const Projects = () => {
 
+    // GSAP animations to fade in the projects
+    const gridRef = useRef(null);
+
+    // Animate the projects when the component mounts
+    useEffect(() => {
+        // Target all GridItems within the grid container
+        gsap.fromTo(
+            gridRef.current.children,
+            { autoAlpha: 0, y: 30 },
+            {
+                autoAlpha: 1,
+                y: 0,
+                // Stagger the animation of each GridItem
+                stagger: 0.5,
+                ease: 'Power3.easeOut',
+                duration: 3,
+            }
+        );
+    }, []);
+
     return (
 
         <Grid
+            ref={gridRef}
             templateRows={{
                 base: 'repeat(6, 1fr)',
                 md: 'repeat(3, 1fr)',
@@ -27,12 +51,14 @@ const Projects = () => {
             }}
             gap={5}
             p={10}
-            mb={{ base: 10, md: 0 }}
+            mb={10}
             justifyContent='center'
             justifyItems='center'
             alignItems='stretch'
         >
-            <ProjectCard />
+            {projectsData.map((project, index) => (
+                <ProjectCard key={project.id} project={project} index={index} />
+            ))}
         </Grid>
 
     );
