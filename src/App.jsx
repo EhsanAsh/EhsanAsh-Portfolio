@@ -6,9 +6,6 @@
 // Importing modules
 // ============================================================
 import { Outlet } from 'react-router-dom';
-// CssBaseline kickstart an elegant, consistent, and simple baseline to build upon.
-import CssBaseline from '@mui/material/CssBaseline';
-import { ThemeProvider } from '@mui/material/styles';
 // ============================================================
 
 // Importing styles
@@ -16,29 +13,21 @@ import { ThemeProvider } from '@mui/material/styles';
 import './App.css';
 // ============================================================
 
-// Importing Theme
-// ============================================================
-import theme from './utils/theme.js';
-// ============================================================
-
 // Importing components
 // ============================================================
-import Header from './components/header/Header';
-import Footer from './components/footer/Footer';
+import Header from './components/header';
+import Footer from './components/footer';
 // ============================================================
 
 // Creating the component
 // ============================================================
 const App = () => {
     return (
-
-        <ThemeProvider theme={theme}>
-            <CssBaseline />
+        <>
             <Header />
-            <Outlet />
+            <Outlet className="page" />
             <Footer />
-        </ThemeProvider>
-
+        </>
     );
 };
 // ============================================================

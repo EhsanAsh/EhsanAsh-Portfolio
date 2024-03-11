@@ -1,138 +1,108 @@
-// Desc: This is the Portfolio page of the website where the user
-// can view the projects I have worked on.there will be six projects
-// all with a description, a link to the deployed application, and a
-// link to the GitHub repository and a picture of that project which
-// will be clickable.all cards should animated when the page loads
-// using material ui framework.also useState and useEffect hooks will
-// be used to set the state of the projects and to render them to the page.
-// ===============================================================
+// This file is for the Portfolio page. It is a simple page
+//  that displays a short description of the website and the developer.
+// ============================================================
 
-// Importing all necessary packages
-// ===============================================================
-import { useState, useEffect } from 'react';
-import { styled } from '@mui/system';
-import { Typography } from '@mui/material';
-import { Card } from '@mui/material';
-import { CardContent } from '@mui/material';
-import { CardMedia } from '@mui/material';
-import { Grid } from '@mui/material';
-import { Grow } from '@mui/material';
-import { CardActions } from '@mui/material';
-import { Button } from '@mui/material';
-import projectsData from '../utils/projectsData';
-// ===============================================================
+// Importing packages and components
+// ============================================================
+import {
+    Flex,
+    Box,
+    Container,
+    Heading,
+    Text,
+    Button
+} from '@chakra-ui/react';
+import SkillList from '../components/skillList';
+import PortfolioCard from '../components/portfolioCard';
+// ============================================================
 
-// Creating Styled Components
-// ===============================================================
-const Root = styled('div')(({ theme }) => ({
-    flexGrow: 1,
-    backgroundColor: theme.palette.background.main,
-}));
-
-const Main = styled('div')({
-    marginTop: '1rem',
-    marginBottom: '1rem',
-});
-
-const StyledCard = styled(Card)(({ theme }) => ({
-    maxWidth: 345,
-    maxHeight: 'auto',
-    marginLeft: '1.5rem',
-    [theme.breakpoints.up('sm')]: {
-        marginRight: '1.5rem',
-    },
-}));
-
-const StyledMedia = styled(CardMedia)(({ theme }) => ({
-    backgroundSize: 'cover',
-    width: '100%',
-    paddingTop: '75%', // Set padding-top to maintain the 4:3 aspect ratio
-    [theme.breakpoints.up('sm')]: {
-        paddingTop: '75%',
-    },
-    [theme.breakpoints.up('md')]: {
-        paddingTop: '75%',
-    },
-    [theme.breakpoints.up('lg')]: {
-        paddingTop: '75%',
-    },
-}));
-// ===============================================================
-
-// Creating the Portfolio component
-// ===============================================================
+// Functional component
+// ============================================================
 const Portfolio = () => {
 
-    // Creating a state to hold the projects
-    // ===============================================================
-    const [projects, /*setProjects*/] = useState(projectsData);
+    const handleClick = () => {
+        const publicUrl = `${window.location.protocol}//${window.location.host}`;
+        window.open(`${publicUrl}/EhsanAsh-CV.docx`);
+    };
 
-    // Creating a function to add a new project for further development
-    // setProjects(prevProjects => [...prevProjects, newProject]);
-    // ===============================================================
 
-    // Creating a state to hold the checked value
-    // ===============================================================
-    const [checked, setChecked] = useState(false);
-    const GROW_TIMEOUT = 1000;
-    useEffect(() => {
-        setChecked(true);
-    }, []);
-    // ===============================================================
-
-    // Returning the JSX
-    // ===============================================================
     return (
-        <Root>
-            <Main>
-                <Typography variant="h3" sx={{ textAlign: 'center', color:'#457b9d'}} gutterBottom>
-                    Projects
-                </Typography>
-                <Grid container alignItems={'stretch'} spacing={2}>
-                    {projects.map((project) => (
-                        <Grid item xs={12} sm={6} md={6} lg={4} key={project.name}>
-                            <Grow
-                                in={checked}
-                                {...(checked ? { timeout: GROW_TIMEOUT } : {})}
-                            >
-                                <StyledCard>
-                                    <StyledMedia
-                                        image={project.image}
-                                        title={project.name}
-                                        alt={project.name}
-                                    />
-                                    <CardContent>
-                                        <Typography gutterBottom variant="h5" component="div">
-                                            {project.name}
-                                        </Typography>
-                                        <Typography variant="body2" color="text.secondary">
-                                            {project.description}
-                                        </Typography>
-                                    </CardContent>
-                                    <CardActions>
-                                        <Button
-                                            size="small"
-                                            href={project.deployed}
-                                            target="_blank"
-                                        >
-                                            Deployed
-                                        </Button>
-                                        <Button size="small" href={project.github} target="_blank">
-                                            GitHub
-                                        </Button>
-                                    </CardActions>
-                                </StyledCard>
-                            </Grow>
-                        </Grid>
-                    ))};
-                </Grid>
-            </Main>
-        </Root>
-    );
-};
-// ===============================================================
 
-// Exporting the Portfolio component
-// ===============================================================
+        <Flex
+            flexDirection={{ base: 'column', lg: 'row' }}
+            justifyContent={'space-between'}
+            alignItems={'center'}
+            alignSelf={'center'}
+            px={7}
+            my={20}
+            pb={10}
+            flex={'1 0'}
+            w={'100%'}
+            gap={0}
+        >
+            <Box
+                display={'flex'}
+                flexDirection={'column'}
+                justifyContent={'center'}
+                alignItems={'center'}
+                gap={'0'}
+                alignSelf={'center'}
+                width={'100%'}
+                height={'auto'}
+            >
+                <Container variant={'portfolio'} m={0} size={'lg'}>
+                    <Heading
+                        as={'h1'}
+                        fontSize={{ base: 'xl', md: '2xl', lg: '3xl', xl: '5xl' }}
+                        fontWeight={'700'}
+                        color={'brand.error'}
+                        textAlign={'center'}
+                        mb={0}
+                        pl={4}
+                        fontFamily={'josefinSlabTitle'}
+                        borderLeft={'3px solid'}
+                        borderColor={'brand.darkBlue'}
+                    >
+                        Summary
+                    </Heading>
+                    <Text p={4}>
+                        An innovative and passionate Full-Stack Developer, recently graduated from the University of Toronto with a remarkable graduation score of 96.07 (A). I bring a rich and diverse background, combining over 10 years of experience in sales and marketing in the home and kitchen appliance sector, along with a recent but intensive journey into full-stack development. Known for an indescribable enthusiasm for coding, I am a self-proclaimed hard worker, fast learner, goal-oriented, and a collaborative team member. My career is punctuated by a childhood dream to become a programmer and application developer, a dream that I have pursued with relentless dedication. I thrive in environments that require creativity and problem-solving, always eager to develop innovative solutions that positively impact people&apos;s lives and the environment. My technical proficiency spans across various languages and frameworks, with a particular comfort in MERN stack technologies and a propensity for writing logical codes over styling and designing.
+                    </Text>
+                    <Box alignSelf={'center'} m={2}>
+                        <Button onClick={handleClick} variant={'portfolio'}>
+                            Download Ehsan&apos;s Resume
+                        </Button>
+                    </Box>
+                </Container>
+            </Box>
+            <Box
+                display={'flex'}
+                flexDirection={'column'}
+                alignItems={'center'}
+                alignSelf={'center'}
+                justifyContent={'center'}
+                width={'100%'}
+                height={'auto'}
+                ml={{ base: 0, lg: 10 }}
+                my={{ base: 10, lg: 0 }}
+                gap={'10'}
+            >
+                <Box>
+                    <SkillList />
+                </Box>
+                <Box>
+                    <PortfolioCard/>
+                </Box>
+            </Box>
+        </Flex>
+
+    );
+
+};
+// ============================================================
+
+// Exporting the functional component
+// ============================================================
 export default Portfolio;
-// ===============================================================
+// ============================================================
+
