@@ -5,24 +5,18 @@
 // ============================================================
 import { createRoot } from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { ChakraProvider } from '@chakra-ui/react';
 // ============================================================
 
 // Importing pages and components
 // ============================================================
 import App from './App.jsx';
-import About from './pages/About.jsx';
 import Contact from './pages/Contact.jsx';
 import Portfolio from './pages/Portfolio.jsx';
-import Resume from './pages/Resume.jsx';
-import Error from './pages/Error.jsx';
-// ============================================================
-
-// Importing fontsource
-// ============================================================
-import '@fontsource/roboto/300.css';
-import '@fontsource/roboto/400.css';
-import '@fontsource/roboto/500.css';
-import '@fontsource/roboto/700.css';
+import ErrorPage from './pages/ErrorPage.jsx';
+import Projects from './pages/Projects.jsx';
+import Home from './pages/Home.jsx';
+import theme from './theme';
 // ============================================================
 
 // Creating routes
@@ -31,27 +25,23 @@ const routes = [
     {
         path: '/',
         element: <App />,
-        errorElement: <Error message='Sorry, an unexpected error has occurred.' />,
+        errorElement: <ErrorPage />,
         children: [
             {
                 index: true,
-                element: <About />,
+                element: <Home />,
             },
             {
                 path: '/portfolio',
                 element: <Portfolio />,
             },
             {
-                path: '/resume',
-                element: <Resume />,
+                path: '/projects',
+                element: <Projects />,
             },
             {
                 path: '/contact',
                 element: <Contact />,
-            },
-            {
-                path: '*',
-                element: <Error message='Sorry, the page you requested could not be found.' />,
             },
         ],
     }
@@ -69,8 +59,8 @@ const root = createRoot(rootElement);
 // Rendering the app
 // ============================================================
 root.render(
-    <RouterProvider router={router}>
-        <App />
-    </RouterProvider>,
+    <ChakraProvider theme={theme}>
+        <RouterProvider router={router} />
+    </ChakraProvider>
 );
 // ============================================================

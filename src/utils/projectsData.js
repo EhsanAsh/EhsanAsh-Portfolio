@@ -18,9 +18,9 @@ const projectsData = [
         id: 1,
         name: 'AdsTrees',
         description:
-            'AdsTrees is a revolutionary web application that intertwines the power of advertising with environmental sustainability.',
+            'AdsTrees is a revolutionary web application that intertwines the power of advertising with environmental sustainability. It offers a unique platform where viewers can watch premium ads voluntarily, and in return, trees are planted, contributing to a greener planet.',
         image: AdsTrees,
-        deployed: 'https://adstrees.onrender.com/',
+        deployed: 'https://adstrees.com/',
         github: 'https://github.com/EhsanAsh/AdsTrees',
     },
 
@@ -28,7 +28,7 @@ const projectsData = [
         id: 2,
         name: 'TravIS',
         description:
-            'TravIS is a web-based application designed to simplify travel itinerary management for frequent travelers.',
+            'TravIs is a web-based application designed to simplify travel itinerary management for frequent travelers. This application provides users with the ability to effortlessly create and manage their trip itineraries, ensuring efficient travel planning and organization.',
         image: TravIS,
         deployed: 'https://travis231017-9762a24c277b.herokuapp.com/',
         github: 'https://github.com/EhsanAsh/TravIs',
@@ -48,7 +48,7 @@ const projectsData = [
         id: 4,
         name: 'JATE',
         description:
-            'A browser-based text editor designed to function as a Progressive Web Application (PWA).',
+            'This project is a browser-based text editor designed to function as a Progressive Web Application (PWA). It allows developers to create and manage notes or code snippets, with or without an internet connection.',
         image: JATE,
         deployed: 'https://jate-b00o.onrender.com/',
         github: 'https://github.com/EhsanAsh/JATE',

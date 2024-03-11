@@ -1,82 +1,69 @@
-// Desc: This file contains the navbar component for the app.
-// It is a child component of the header component.
+// Desc: This file exports the NavBar component
+// to be used in the Header component
+// Used followings as a reference:
+// https://chakra-ui.com/docs/components/tabs
+// https://chakra-ui.com/docs/components/link
 // ============================================================
 
 // Importing modules
 // ============================================================
-import { Link as RouterLink } from 'react-router-dom';
-import { styled } from '@mui/material/styles';
-import AppBar from '@mui/material/AppBar';
-import Box from '@mui/material/Box';
-import Toolbar from '@mui/material/Toolbar';
-import Button from '@mui/material/Button';
-import IconButton from '@mui/material/IconButton';
-import Typography from '@mui/material/Typography';
-import MenuIcon from '@mui/icons-material/Menu';
-import { useScrollTrigger } from '@mui/material';
-import { Slide } from '@mui/material';
+import {
+    Box,
+    Tabs,
+    TabList,
+    Tab
+} from '@chakra-ui/react';
+import { Link as ChakraLink } from '@chakra-ui/react';
+import { Link as ReactRouterLink } from 'react-router-dom';
+import { ExternalLinkIcon } from '@chakra-ui/icons';
 // ============================================================
 
-// Styling the component
-// ============================================================
-const Link = styled(RouterLink)`
-    color: white;
-    text-decoration: none;
-    &:hover {
-        color: #ffcc00;
-    }
-`;
-// ============================================================
 
-// Creating the component
+// The Navbar component
 // ============================================================
-const Navbar = () => {
-    const trigger = useScrollTrigger();
+const Navbar = ({ tabs }) => {
+
     return (
 
-        <Box sx={{ flexGrow: 1 }}>
-            <Slide appear={false} direction="down" in={!trigger}>
-                <AppBar position="static">
-                    <Toolbar>
-                        <IconButton
-                            size="large"
-                            edge="start"
-                            color="inherit"
-                            aria-label="menu"
-                            sx={{ mr: 2 }}
+        <Box>
+            <Tabs
+                position="relative"
+                variant="unstyled"
+                zIndex={10}
+            >
+                <TabList>
+                    {tabs.map((tab, index) => (
+
+                        <Tab
+                            key={index}
+                            borderBottom={tab.isActive ? '1px solid' : undefined}
+                            borderColor={tab.isActive ? 'brand.orange' : undefined}
+                            transform={tab.isActive ? 'scale(1.2)' : undefined}
                         >
-                            <MenuIcon />
-                        </IconButton>
-                        <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-                            <Link to="/" style={{ textDecoration: 'none' }}>
-                            About
-                            </Link>
-                        </Typography>
-                        <Button color="inherit">
-                            <Link to="/portfolio" style={{ textDecoration: 'none' }}>
-                            Portfolio
-                            </Link>
-                        </Button>
-                        <Button color="inherit">
-                            <Link to="/contact" style={{ textDecoration: 'none' }}>
-                            Contact
-                            </Link>
-                        </Button>
-                        <Button color="inherit">
-                            <Link to="/resume" style={{ textDecoration: 'none' }}>
-                            Resume
-                            </Link>
-                        </Button>
-                    </Toolbar>
-                </AppBar>
-            </Slide>
+
+                            <ChakraLink
+                                as={ReactRouterLink}
+                                to={tab.route}
+                                isExternal={tab.isExternal}
+                                fontSize={['xs', 'xs', 'sm', 'md']}
+                            >
+                                {tab.name}
+                                {tab.isExternal && <ExternalLinkIcon mx='2px' />}
+                            </ChakraLink>
+
+                        </Tab>
+
+                    ))}
+                </TabList>
+            </Tabs>
         </Box>
 
     );
+
 };
 // ============================================================
 
-// Exporting the component
+// Export the Navbar component
 // ============================================================
 export default Navbar;
 // ============================================================
