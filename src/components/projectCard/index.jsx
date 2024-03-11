@@ -29,7 +29,11 @@ const ProjectCard = () => {
         <>
             {projectsData.map((project) => (
                 <GridItem key={project.id}>
-                    <Card maxW={'sm'} variant={'projects'}>
+                    <Card
+                        boxShadow={'2xl'}
+                        maxW={'sm'}
+                        variant={'projects'}
+                    >
                         <CardBody>
                             <Image
                                 pt={8}

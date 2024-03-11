@@ -14,7 +14,14 @@ const Projects = () => {
 
     return (
 
-        <Grid gap={5} p={10}>
+        <Grid
+            templateColumns='repeat(3, 1fr)'
+            gap={5}
+            p={10}
+            justifyContent='center'
+            justifyItems='center'
+            alignItems='flex-start'
+        >
             <ProjectCard />
         </Grid>
 
