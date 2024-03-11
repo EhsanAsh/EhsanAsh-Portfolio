@@ -15,12 +15,22 @@ const Projects = () => {
     return (
 
         <Grid
-            templateColumns='repeat(3, 1fr)'
+            templateRows={{
+                base: 'repeat(6, 1fr)',
+                md: 'repeat(3, 1fr)',
+                lg: 'repeat(2, 1fr)'
+            }}
+            templateColumns={{
+                base: 'repeat(1, 1fr)',
+                md: 'repeat(2, 1fr)',
+                xl: 'repeat(3, 1fr)'
+            }}
             gap={5}
             p={10}
+            mb={{ base: 10, md: 0 }}
             justifyContent='center'
             justifyItems='center'
-            alignItems='flex-start'
+            alignItems='stretch'
         >
             <ProjectCard />
         </Grid>

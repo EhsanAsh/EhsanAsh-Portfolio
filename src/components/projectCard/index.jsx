@@ -28,9 +28,12 @@ const ProjectCard = () => {
 
         <>
             {projectsData.map((project) => (
-                <GridItem key={project.id}>
+                <GridItem
+                    key={project.id}
+                    display={'flex'}
+                    height={'100%'}
+                >
                     <Card
-                        boxShadow={'2xl'}
                         maxW={'sm'}
                         variant={'projects'}
                     >
