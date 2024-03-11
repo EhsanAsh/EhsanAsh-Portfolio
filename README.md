@@ -15,7 +15,6 @@
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
 ![Vite](https://img.shields.io/badge/vite-%23646CFF.svg?style=for-the-badge&logo=vite&logoColor=white)
 ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
-![MUI](https://img.shields.io/badge/MUI-%230081CB.svg?style=for-the-badge&logo=mui&logoColor=white)
 ![React Router](https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white)
 ![Netlify](https://img.shields.io/badge/netlify-%23000000.svg?style=for-the-badge&logo=netlify&logoColor=#00C7B7)
 
@@ -30,16 +29,16 @@
 >This React portfolio is a single-page application that showcases my work samples and provides information about me as a web developer. It allows you to navigate between different sections of the portfolio without the need for page reloading, providing a smooth user experience. The key features and functionality include:
 
 - A header with my name and navigation links to different sections of the portfolio.
-- Navigation titles for "About Me," "Portfolio," "Contact," and "Resume."
+- Navigation titles for "Home," "Portfolio," "Contact," and "Projects."
 - Highlighted navigation titles corresponding to the current section.
 - Clicking on a navigation title displays the corresponding section below without page reloading.
-- Default selection of the "About Me" section when first loading the portfolio.
-- "About Me" section includes a recent photo or avatar and a short bio about me.
-- "Portfolio" section displays titled images of six of my applications with links to deployed apps and GitHub repositories.
+- Default selection of the "Home" section when first loading the portfolio.
+- "Header" section includes a recent photo or avatar and a short bio about me.
+- "Projects" section displays titled images of six of my applications with links to deployed apps and GitHub repositories.
 - "Contact" section provides a contact form with fields for name, email address, and message.
 - Field validation and notifications for required fields and invalid email addresses.
-- "Resume" section includes a link to download my resume and a list of my proficiencies.
-- Footer with links to my GitHub, LinkedIn, and another platform (Stack Overflow, Twitter).
+- "Portfolio" section includes a link to download my resume and a list of my proficiencies.
+- Footer with links to my GitHub, LinkedIn, and Twitter.
 
 ---
 
@@ -70,19 +69,19 @@
 
 >Once you have the portfolio running locally or access it through the provided link, you can navigate through the different sections using the navigation links. Here's how you can use the portfolio:
 
-- Click on "About Me" to learn more about me, view my photo, and read a short bio.
-- Visit the "Portfolio" section to see images of my applications and access links to both the deployed apps and their GitHub repositories.
+- Click on "Portfolio" to learn more about me, view my photo, and read a short bio.
+- Visit the "Projects" section to see images of my applications and access links to both the deployed apps and their GitHub repositories.
 - Use the "Contact" section to get in touch with me by filling out the contact form.
-- Check out my "Resume" section to download my resume and see my list of proficiencies.
+- Check out my "Portfolio" section to download my resume and see my list of proficiencies.
 - Feel free to explore and assess my work samples to determine if I am a suitable candidate for your open position.
 
 ---
 
 ## Demo
 
-![Demo](./src/assets/image/Demo.jpg)
+![Demo](./src/assets/image/EhsanAsh.jpg)
 
-[Link to deployed application](https://ehsanashportfolio.netlify.app/)
+[Link to deployed application](https://ehsan-ash.com/)
 
 ---
 
@@ -93,20 +92,21 @@
 - React
 - Vite
 - NPM
-- MUI
+- Chakra UI
 - React Router
 - ESLint
-- Netlify
+- Render
 
 > I also followed the following documentations:
 
 [Emailjs](https://www.emailjs.com/docs/)
-[Netlify](https://www.netlify.com/)
 [NPM](https://www.npmjs.com/package/@react-pdf/renderer)
 [Vite](https://vitejs.dev/guide/)
 [React Router](https://reactrouter.com/en/main/start/overview)
 [React](https://react.dev/learn)
-[MUI](https://mui.com/material-ui/getting-started/)
+[Chakra UI](https://chakra-ui.com/getting-started)
+[GSAP](https://gsap.com/docs/v3/)
+[FontAwesome](https://docs.fontawesome.com/)
 
 ---
 
