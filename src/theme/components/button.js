@@ -20,6 +20,11 @@ const Button = defineStyleConfig({
     },
 
     sizes: {
+        sm: {
+            fontSize: 'sm',
+            padding: '10px',
+            pt: '13px',
+        },
         md: {
             fontSize: ['16px', '16px', '18px'],
             padding: '15px',
@@ -100,6 +105,11 @@ const Button = defineStyleConfig({
             _hover: { color: 'brand.orange', transform: 'translateY(-5px)' },
         },
         solid: {
+            bg: 'brand.orange',
+            color: 'brand.darkBlue',
+            _hover: { bg: 'brand.darkBlue', color: 'brand.orange' },
+        },
+        solidProjectCard: {
             bg: 'brand.orange',
             color: 'brand.darkBlue',
             _hover: { bg: 'brand.darkBlue', color: 'brand.orange' },

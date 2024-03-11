@@ -168,6 +168,29 @@ const variants = {
             gap: '20px',
         }
     }),
+    projects: definePartsStyle({
+        container: {
+            border: 'none',
+            bg: 'brand.grayProjectCard',
+            boxShadow: '0px 2px 5px 3px #d8e2f8d2',
+            pt: '0px',
+            pb: '20px',
+        },
+        body: {
+            mb: '10px',
+            borderBottom: 'solid 2px',
+            borderColor: 'brand.orange',
+        },
+        footer: {
+            display: 'flex',
+            flexDirection: 'row',
+            justifyContent: 'space-between',
+            alignItems: 'center',
+            alignContent: 'center',
+            alignSelf: 'stretch',
+            my: '10px',
+        }
+    }),
 };
 // ============================================================
 
