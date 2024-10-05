@@ -53,23 +53,23 @@ const Portfolio = () => {
 						Summary
 					</Heading>
 					<Text p={4}>
-						An innovative and passionate Full-Stack Developer, recently
-						graduated from the University of Toronto with a remarkable
-						graduation score of 96.07 (A). I bring a rich and diverse
-						background, combining over 10 years of experience in sales and
-						marketing in the home and kitchen appliance sector, along with a
-						recent but intensive journey into full-stack development. Known for
-						an indescribable enthusiasm for coding, I am a self-proclaimed hard
-						worker, fast learner, goal-oriented, and a collaborative team
-						member. My career is punctuated by a childhood dream to become a
-						programmer and application developer, a dream that I have pursued
-						with relentless dedication. I thrive in environments that require
-						creativity and problem-solving, always eager to develop innovative
-						solutions that positively impact people&apos;s lives and the
-						environment. My technical proficiency spans across various languages
-						and frameworks, with a particular comfort in MERN stack technologies
-						and a propensity for writing logical codes over styling and
-						designing.
+						An innovative and passionate Full-Stack Developer, with a BE in
+						Mechanical Engineering,recently graduated from the University of
+						Toronto with a remarkable graduation score of 96 (A). I bring a rich
+						and diverse background, combining over 10 years of experience in
+						Automotive industry, along with a recent but intensive journey into
+						full-stack development. Known for an indescribable enthusiasm for
+						coding, I am a self-proclaimed hard worker, fast learner,
+						goal-oriented, and a collaborative team member. My career is
+						punctuated by a childhood dream to become a programmer and
+						application developer, a dream that I have pursued with relentless
+						dedication. I thrive in environments that require creativity and
+						problem-solving, always eager to develop innovative solutions that
+						positively impact people&apos;s lives and the environment. My
+						technical proficiency spans across various languages and frameworks,
+						with a particular comfort in MERN stack technologies, JavaScript
+						Development, and a propensity for writing logical codes over styling
+						and designing.
 					</Text>
 					<Box alignSelf={'center'} m={2}>
 						<Button onClick={handleClick} variant={'portfolio'}>
