@@ -22,32 +22,35 @@ import theme from './theme';
 // Creating routes
 // ============================================================
 const routes = [
-    {
-        path: '/',
-        element: <App />,
-        errorElement: <ErrorPage />,
-        children: [
-            {
-                index: true,
-                element: <Home />,
-            },
-            {
-                path: '/portfolio',
-                element: <Portfolio />,
-            },
-            {
-                path: '/projects',
-                element: <Projects />,
-            },
-            {
-                path: '/contact',
-                element: <Contact />,
-            },
-        ],
-    }
+	{
+		path: '/',
+		element: <App />,
+		errorElement: <ErrorPage />,
+		children: [
+			{
+				index: true,
+				element: <Home />,
+			},
+			{
+				path: '/portfolio',
+				element: <Portfolio />,
+			},
+			{
+				path: '/projects',
+				element: <Projects />,
+			},
+			{
+				path: '/contact',
+				element: <Contact />,
+			},
+		],
+	},
 ];
 
-const router = createBrowserRouter(routes);
+const router = createBrowserRouter(routes, {
+	basename: '/',
+	notFoundElement: <ErrorPage />,
+});
 // ============================================================
 
 // Selecting the root element
@@ -59,8 +62,8 @@ const root = createRoot(rootElement);
 // Rendering the app
 // ============================================================
 root.render(
-    <ChakraProvider theme={theme}>
-        <RouterProvider router={router} />
-    </ChakraProvider>
+	<ChakraProvider theme={theme}>
+		<RouterProvider router={router} />
+	</ChakraProvider>
 );
 // ============================================================
