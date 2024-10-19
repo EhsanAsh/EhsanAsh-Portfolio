@@ -10,6 +10,7 @@ import AdsTrees from '../assets/image/AdsTrees.jpg';
 import WDS from '../assets/image/WDS.jpg';
 import CodeQuiz from '../assets/image/CodeQuiz.jpg';
 import Movie from '../assets/image/Movie.jpg';
+import SocialNetwork from '../assets/image/SocialNetwork.jpg';
 // ===============================================================
 
 // Creating an array of objects to hold the data for each project
@@ -67,6 +68,15 @@ const projectsData = [
 
 	{
 		id: 6,
+		name: 'Social Network API',
+		description:
+			'This project is a backend API for a social media startup, designed to handle large amounts of unstructured data using a NoSQL database. It leverages Node.js, Express.js, and Mongoose to provide a robust and scalable solution for managing social network data. The API supports operations on users, thoughts, reactions, and friends, offering a comprehensive suite of functionalities for a dynamic social media experience.',
+		image: SocialNetwork,
+		github: 'https://github.com/EhsanAsh/social-network-api',
+	},
+
+	{
+		id: 8,
 		name: 'Work Day Scheduler',
 		description:
 			"This workday scheduler is designed specifically for busy employees. Recognizing the importance of effective time management in today's fast-paced work environment, this tool allows users to seamlessly add essential events to a daily planner. ",
@@ -76,7 +86,7 @@ const projectsData = [
 	},
 
 	{
-		id: 7,
+		id: 9,
 		name: 'Code quiz',
 		description:
 			'This application is designed to test your coding knowledge with a set of 8 different questions. With a time limit set to 80 seconds, it creates a challenging and engaging environment to demonstrate your skills and see how quickly you can answer the questions.',
