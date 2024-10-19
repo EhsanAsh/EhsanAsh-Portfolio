@@ -11,7 +11,7 @@ import WDS from '../assets/image/WDS.jpg';
 import CodeQuiz from '../assets/image/CodeQuiz.jpg';
 import Movie from '../assets/image/Movie.jpg';
 import SocialNetwork from '../assets/image/SocialNetwork.jpg';
-import ECommerce from '../assets/image/ECommerce.jpg';
+import ECommerce from '../assets/image/E-Commerce.jpg';
 // ===============================================================
 
 // Creating an array of objects to hold the data for each project
