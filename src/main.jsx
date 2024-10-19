@@ -4,7 +4,8 @@
 // Importing libraries
 // ============================================================
 import { createRoot } from 'react-dom/client';
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { RouterProvider } from 'react-router-dom';
+import { HashRouter, createHashRouter } from 'react-router-dom';
 import { ChakraProvider } from '@chakra-ui/react';
 // ============================================================
 
@@ -47,7 +48,7 @@ const routes = [
 	},
 ];
 
-const router = createBrowserRouter(routes, {
+const router = createHashRouter(routes, {
 	basename: '/',
 	notFoundElement: <ErrorPage />,
 });
@@ -63,7 +64,9 @@ const root = createRoot(rootElement);
 // ============================================================
 root.render(
 	<ChakraProvider theme={theme}>
-		<RouterProvider router={router} />
+		<HashRouter>
+			<RouterProvider router={router} />
+		</HashRouter>
 	</ChakraProvider>
 );
 // ============================================================
