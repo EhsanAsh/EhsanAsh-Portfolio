@@ -82,7 +82,7 @@ const projectsData = [
 		description:
 			'The E-commerce Backend Application is a Node.js based application designed for internet retail company managers who wish to have a powerful back end for their e-commerce website with the latest technologies.',
 		image: ECommerce,
-		github: 'https://github.com/EhsanAsh/social-network-api',
+		github: 'https://github.com/EhsanAsh/e-commerce-backend',
 	},
 
 	{
