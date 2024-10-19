@@ -6,178 +6,217 @@
 // Importing packages
 // =================================================================
 import {
-    faHtml5,
-    faCss3Alt,
-    faJs,
-    faBootstrap,
-    faReact,
-    faNodeJs,
-    faPython,
-    faNpm,
-}from '@fortawesome/free-brands-svg-icons';
+	faHtml5,
+	faCss3Alt,
+	faJs,
+	faBootstrap,
+	faReact,
+	faNodeJs,
+	// faPython,
+} from '@fortawesome/free-brands-svg-icons';
 import {
-    faCode,
-    faServer,
-    faDatabase,
-}from '@fortawesome/free-solid-svg-icons';
+	faCode,
+	faServer,
+	faDatabase,
+} from '@fortawesome/free-solid-svg-icons';
 // =================================================================
 
 // Defining the data
 // =================================================================
-const language = [{
-    title: 'Languages and Technologies',
-    items: [
-        {
-            name: 'HTML5',
-            icon: faHtml5,
-        },
-        {
-            name: 'CSS3',
-            icon: faCss3Alt,
-        },
-        {
-            name: 'JavaScript',
-            icon: faJs,
-        },
-        {
-            name: 'Node.js',
-            icon: faNodeJs,
-        },
-        {
-            name: 'GraphQL',
-            icon: faServer,
-        },
-        {
-            name: 'JSON',
-            icon: faCode,
-        },
-        {
-            name: 'Python',
-            icon: faPython,
-        },
-    ],
-}];
+const language = [
+	{
+		title: 'Languages',
+		items: [
+			{
+				name: 'JavaScript',
+				icon: faJs,
+			},
+			{
+				name: 'Node.js',
+				icon: faNodeJs,
+			},
+		],
+	},
+];
 
-const frameworks= [{
-    title: 'Libraries and Frameworks',
-    items: [
-        {
-            name: 'React.js',
-            icon: faReact,
-        },
-        {
-            name: 'Express.js',
-            icon: faServer,
-        },
-        {
-            name: 'Bootstrap',
-            icon: faBootstrap,
-        },
-        {
-            name: 'Chakra UI',
-            icon: faCss3Alt,
-        },
-        {
-            name: 'MUI',
-            icon: faCss3Alt,
-        },
-        {
-            name: 'Webpack',
-            icon: faCode,
-        },
-        {
-            name: 'Apollo',
-            icon: faServer,
-        },
-        {
-            name: 'JWT',
-            icon: faCode,
-        },
-        {
-            name: 'Work-box',
-            icon: faCode,
-        },
-        {
-            name: 'Vite',
-            icon: faCode,
-        },
-        {
-            name: 'NPM',
-            icon: faNpm,
-        },
-        {
-            name: 'React Router',
-            icon: faReact,
-        },
-        {
-            name: 'jQuery',
-            icon: faJs,
-        },
-    ],
-}];
+const frontend = [
+	{
+		title: 'Frontend Frameworks/Libraries',
+		items: [
+			{
+				name: 'HTML5',
+				icon: faHtml5,
+			},
+			{
+				name: 'CSS3',
+				icon: faCss3Alt,
+			},
+			{
+				name: 'React.js',
+				icon: faReact,
+			},
+			{
+				name: 'Redux',
+				icon: faCode,
+			},
+			{
+				name: 'React Router',
+				icon: faReact,
+			},
+			{
+				name: 'React Bootstrap',
+				icon: faBootstrap,
+			},
+			{
+				name: 'Chakra UI',
+				icon: faCss3Alt,
+			},
+			{
+				name: 'MUI',
+				icon: faCss3Alt,
+			},
+			{
+				name: 'Apollo Client',
+				icon: faCode,
+			},
+			{
+				name: 'Vite',
+				icon: faCode,
+			},
+			{
+				name: 'jQuery',
+				icon: faJs,
+			},
+			{
+				name: 'Axios',
+				icon: faCode,
+			},
+		],
+	},
+];
 
-const database = [{
-    title: 'Database Management',
-    items: [
-        {
-            name: 'MySQL',
-            icon: faDatabase,
-        },
-        {
-            name: 'Sequelize',
-            icon: faDatabase,
-        },
-        {
-            name: 'MongoDB',
-            icon: faDatabase,
-        },
-        {
-            name: 'Mongoose',
-            icon: faDatabase,
-        },
-        {
-            name: 'ORM architecture',
-            icon: faDatabase,
-        },
-        {
-            name: 'MVC architecture',
-            icon: faDatabase,
-        },
-    ],
-}];
+const backend = [
+	{
+		title: 'Backend Frameworks/Libraries',
+		items: [
+			{
+				name: 'Express.js',
+				icon: faServer,
+			},
+			{
+				name: 'MySQL',
+				icon: faDatabase,
+			},
+			{
+				name: 'MongoDB',
+				icon: faDatabase,
+			},
+			{
+				name: 'Mongoose',
+				icon: faDatabase,
+			},
+			{
+				name: 'dotenv',
+				icon: faDatabase,
+			},
+			{
+				name: 'Apollo Server',
+				icon: faServer,
+			},
+		],
+	},
+];
 
-const additional = [{
-    title: 'Additional Skills',
-    items: [
-        {
-            name: 'Git',
-            icon: faCode,
-        },
-        {
-            name: 'OOP',
-            icon: faCode,
-        },
-        {
-            name: 'RESTful APIs',
-            icon: faCode,
-        },
-        {
-            name: 'MERN Stack',
-            icon: faCode,
-        },
-        {
-            name: 'Agile Development',
-            icon: faCode,
-        },
-        {
-            name: 'PWA Development',
-            icon: faCode,
-        },
-    ],
-}];
+const deploy = [
+	{
+		title: 'Deployment',
+		items: [
+			{
+				name: 'Render',
+				icon: faServer,
+			},
+			{
+				name: 'Netlify',
+				icon: faServer,
+			},
+			{
+				name: 'Heroku',
+				icon: faServer,
+			},
+		],
+	},
+];
+
+const architecture = [
+	{
+		title: 'Architecture',
+		items: [
+			{
+				name: 'MVC architecture',
+				icon: faDatabase,
+			},
+			{
+				name: 'PWA Development',
+				icon: faCode,
+			},
+			{
+				name: 'OOP',
+				icon: faCode,
+			},
+			{
+				name: 'RESTful APIs',
+				icon: faCode,
+			},
+			{
+				name: 'MERN Stack',
+				icon: faCode,
+			},
+			{
+				name: 'SPA',
+				icon: faCode,
+			},
+		],
+	},
+];
+
+const additional = [
+	{
+		title: 'Additional Skills',
+		items: [
+			{
+				name: 'Git Version Control',
+				icon: faCode,
+			},
+			{
+				name: 'Stripe Payment Gateway',
+				icon: faServer,
+			},
+			{
+				name: 'GraphQL',
+				icon: faServer,
+			},
+			{
+				name: 'Agile Development',
+				icon: faCode,
+			},
+			{
+				name: 'JWT',
+				icon: faCode,
+			},
+			{
+				name: 'Dom Manipulation',
+				icon: faCode,
+			},
+			{
+				name: 'Jest',
+				icon: faCode,
+			},
+		],
+	},
+];
 // =================================================================
 
 // Exporting the data
 // =================================================================
-export { language, frameworks, database, additional };
+export { language, frontend, backend, deploy, architecture, additional };
 // =================================================================
