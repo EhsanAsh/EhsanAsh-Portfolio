@@ -11,6 +11,7 @@ import WDS from '../assets/image/WDS.jpg';
 import CodeQuiz from '../assets/image/CodeQuiz.jpg';
 import Movie from '../assets/image/Movie.jpg';
 import SocialNetwork from '../assets/image/SocialNetwork.jpg';
+import ECommerce from '../assets/image/ECommerce.jpg';
 // ===============================================================
 
 // Creating an array of objects to hold the data for each project
@@ -70,8 +71,17 @@ const projectsData = [
 		id: 6,
 		name: 'Social Network API',
 		description:
-			'This project is a backend API for a social media startup, designed to handle large amounts of unstructured data using a NoSQL database. It leverages Node.js, Express.js, and Mongoose to provide a robust and scalable solution for managing social network data. The API supports operations on users, thoughts, reactions, and friends, offering a comprehensive suite of functionalities for a dynamic social media experience.',
+			'This project is a backend API for a social media startup, designed to handle large amounts of unstructured data using a NoSQL database. It leverages Node.js, Express.js, and Mongoose to provide a robust and scalable solution.',
 		image: SocialNetwork,
+		github: 'https://github.com/EhsanAsh/social-network-api',
+	},
+
+	{
+		id: 7,
+		name: 'E-Commerce Backend',
+		description:
+			'The E-commerce Backend Application is a Node.js based application designed for internet retail company managers who wish to have a powerful back end for their e-commerce website with the latest technologies.',
+		image: ECommerce,
 		github: 'https://github.com/EhsanAsh/social-network-api',
 	},
 
