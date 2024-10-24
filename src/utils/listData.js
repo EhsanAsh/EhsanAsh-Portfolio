@@ -35,6 +35,10 @@ const language = [
 				name: 'Node.js',
 				icon: faNodeJs,
 			},
+			{
+				name: 'TypeScript',
+				icon: faCode,
+			},
 		],
 	},
 ];
@@ -57,6 +61,10 @@ const frontend = [
 			},
 			{
 				name: 'Redux',
+				icon: faCode,
+			},
+			{
+				name: 'Next.js',
 				icon: faCode,
 			},
 			{
@@ -91,6 +99,10 @@ const frontend = [
 				name: 'Axios',
 				icon: faCode,
 			},
+			{
+				name: 'Responsive Web Design',
+				icon: faCode,
+			},
 		],
 	},
 ];
@@ -113,6 +125,18 @@ const backend = [
 			},
 			{
 				name: 'Mongoose',
+				icon: faDatabase,
+			},
+			{
+				name: 'MySQL',
+				icon: faDatabase,
+			},
+			{
+				name: 'SQL',
+				icon: faDatabase,
+			},
+			{
+				name: 'Sequelize',
 				icon: faDatabase,
 			},
 			{
@@ -209,6 +233,14 @@ const additional = [
 			},
 			{
 				name: 'Jest',
+				icon: faCode,
+			},
+			{
+				name: 'JSON',
+				icon: faCode,
+			},
+			{
+				name: 'AJAX',
 				icon: faCode,
 			},
 		],

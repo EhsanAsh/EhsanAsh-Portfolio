@@ -14,7 +14,7 @@ import PortfolioCard from '../components/portfolioCard';
 const Portfolio = () => {
 	const handleClick = () => {
 		const publicUrl = `${window.location.protocol}//${window.location.host}`;
-		window.open(`${publicUrl}/EHSAN-ASH-Resume.pdf`);
+		window.open(`${publicUrl}/Ehsan-Ashrafipour-Resume.pdf`);
 	};
 
 	return (
