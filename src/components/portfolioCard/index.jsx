@@ -34,8 +34,8 @@ const PortfolioCard = () => {
 			to: 'https://ehsanash.github.io/movie-search/',
 		},
 		{
-			label: 'TNG',
-			to: 'https://uoftgroup3.github.io/toronto-newcomers-guide/',
+			label: 'React Tic-Tac-Toe Game',
+			to: 'https://react-tic-tac-toe-hko1.onrender.com/',
 		},
 	];
 
