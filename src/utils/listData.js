@@ -103,6 +103,14 @@ const frontend = [
 				name: 'Responsive Web Design',
 				icon: faCode,
 			},
+			{
+				name: 'Tailwindcss',
+				icon: faCode,
+			},
+			{
+				name: 'Styled Components',
+				icon: faCode,
+			},
 		],
 	},
 ];

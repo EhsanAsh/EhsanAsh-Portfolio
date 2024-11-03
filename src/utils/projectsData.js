@@ -15,6 +15,7 @@ import ECommerce from '../assets/image/E-Commerce.jpg';
 import EmployeeTracker from '../assets/image/Employee-Tracker.png';
 import ReadmeGenerator from '../assets/image/Readme-Generator.jpg';
 import Tic from '../assets/image/Tic.jpg';
+import RIC from '../assets/image/RIC.jpg';
 // ===============================================================
 
 // Creating an array of objects to hold the data for each project
@@ -62,6 +63,16 @@ const projectsData = [
 
 	{
 		id: 5,
+		name: 'React Investment Calculator',
+		description:
+			"Investment Calculator is a powerful tool that allows users to calculate potential future values for their investments based on a variety of parameters. Users can input details such as initial investment, expected return, duration, and additional contributions to get precise projections of their investment's growth over time.",
+		image: RIC,
+		deployed: 'https://react-investment-calculator-ll70.onrender.com/',
+		github: 'https://github.com/EhsanAsh/react-investment-calculator',
+	},
+
+	{
+		id: 6,
 		name: 'TNG',
 		description:
 			"Welcome to the Toronto Newcomers' Guide! This platform is crafted specifically for newcomers to the Greater Toronto Area (GTA). The guide aims to provide you with valuable information to ease your transition and adaptation to your new environment.",
@@ -71,7 +82,7 @@ const projectsData = [
 	},
 
 	{
-		id: 6,
+		id: 7,
 		name: 'JATE',
 		description:
 			'This project is a browser-based text editor designed to function as a Progressive Web Application (PWA). It allows developers to create and manage notes or code snippets, with or without an internet connection.',
@@ -81,7 +92,7 @@ const projectsData = [
 	},
 
 	{
-		id: 7,
+		id: 8,
 		name: 'Social Network API',
 		description:
 			'This project is a backend API for a social media startup, designed to handle large amounts of unstructured data using a NoSQL database. It leverages Node.js, Express.js, and Mongoose to provide a robust and scalable solution.',
@@ -90,7 +101,7 @@ const projectsData = [
 	},
 
 	{
-		id: 8,
+		id: 9,
 		name: 'E-Commerce Backend',
 		description:
 			'The E-commerce Backend Application is a Node.js based application designed for internet retail company managers who wish to have a powerful back end for their e-commerce website with the latest technologies.',
@@ -99,7 +110,7 @@ const projectsData = [
 	},
 
 	{
-		id: 9,
+		id: 10,
 		name: 'Employee Tracker',
 		description:
 			'The Employee Tracker is a command-line application designed to assist business owners in viewing and managing the departments, roles, and employees in their company. This application helps in organizing and planning businesses efficiently by providing options to view all departments, roles, and employees.',
@@ -108,7 +119,7 @@ const projectsData = [
 	},
 
 	{
-		id: 10,
+		id: 11,
 		name: 'Professional README Generator',
 		description:
 			'The Professional README Generator is a command-line application designed to facilitate developers in creating comprehensive, well-structured README files for their projects without the hassle of manual formatting. By answering a series of prompts, users can automatically generate a README file.',
@@ -117,7 +128,7 @@ const projectsData = [
 	},
 
 	{
-		id: 11,
+		id: 12,
 		name: 'Work Day Scheduler',
 		description:
 			"This workday scheduler is designed specifically for busy employees. Recognizing the importance of effective time management in today's fast-paced work environment, this tool allows users to seamlessly add essential events to a daily planner. ",
@@ -127,7 +138,7 @@ const projectsData = [
 	},
 
 	{
-		id: 12,
+		id: 13,
 		name: 'Code quiz',
 		description:
 			'This application is designed to test your coding knowledge with a set of 8 different questions. With a time limit set to 80 seconds, it creates a challenging and engaging environment to demonstrate your skills and see how quickly you can answer the questions.',
