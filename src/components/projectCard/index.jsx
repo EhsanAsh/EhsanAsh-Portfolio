@@ -27,7 +27,7 @@ const ProjectCard = ({ project, index }) => {
 
 	return (
 		<GridItem ref={cardRef} display={'flex'} height={'100%'}>
-			<Card maxW={'sm'} variant={'projects'}>
+			<Card maxW={'sm'} maxH="700px" variant={'projects'}>
 				<CardBody>
 					<Image
 						pt={8}
@@ -39,7 +39,7 @@ const ProjectCard = ({ project, index }) => {
 					<Box pb={4}>
 						<Heading
 							as={'h1'}
-							fontSize={{ base: 'xl', lg: '2xl', xl: '3xl' }}
+							fontSize={{ base: 'lg', lg: 'xl', xl: '2xl' }}
 							fontWeight={'700'}
 							color={'brand.darkBlue'}
 							textAlign={'left'}
