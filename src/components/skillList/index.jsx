@@ -27,7 +27,7 @@ import {
 	language,
 	frontend,
 	backend,
-	deploy,
+	devops,
 	architecture,
 	additional,
 } from '../../utils/listData';
@@ -110,7 +110,7 @@ const SkillList = () => {
 				{renderSkillSection('Languages', language)}
 				{renderSkillSection('Frontend Frameworks/Libraries', frontend)}
 				{renderSkillSection('Backend Frameworks/Libraries', backend)}
-				{renderSkillSection('Deployment', deploy)}
+				{renderSkillSection('DevOps', devops)}
 				{renderSkillSection('Architecture', architecture)}
 				{renderSkillSection('Additional Skills', additional)}
 			</Accordion>

@@ -53,9 +53,9 @@ const Portfolio = () => {
 						Summary
 					</Heading>
 					<Text p={4}>
-						An innovative and passionate Full-Stack Developer, with a BE in
-						Mechanical Engineering,recently graduated from the University of
-						Toronto with a remarkable graduation score of 96 (A). I bring a rich
+						A passionate Full-Stack Developer, with a BE in
+						Mechanical Engineering, recently graduated from the University of
+						Toronto with a graduation score of 96 (A). I bring a rich
 						and diverse background, combining over 10 years of experience in
 						Automotive industry, along with a recent but intensive journey into
 						full-stack development. Known for an indescribable enthusiasm for

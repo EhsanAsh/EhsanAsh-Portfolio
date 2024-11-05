@@ -159,7 +159,7 @@ const backend = [
 	},
 ];
 
-const deploy = [
+const devops = [
 	{
 		title: 'Deployment',
 		items: [
@@ -258,5 +258,5 @@ const additional = [
 
 // Exporting the data
 // =================================================================
-export { language, frontend, backend, deploy, architecture, additional };
+export { language, frontend, backend, devops, architecture, additional };
 // =================================================================
